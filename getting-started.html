@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>idyll-lang.github</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/"><img src="/logo-text.svg" alt="idyll-lang.github" class="minidocs-logo" /></a></h1>
+    </div>
+    <div class="_689fec56 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">About</a></div><div><a href="/getting-started" class="content-link active">Getting started</a></div><div><a href="/configuration-and-themes" class="content-link ">Configuration and themes</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="getting-started"><a href="#getting-started" class="anchor"></a>Getting Started</h1><p>The easiest way to get started with Idyll is to use the project generator.
+It will help get you set up using custom components, datasets, and stylesheets. 
+To use the generator:</p>
+<pre><code class="lang-sh">$ npm install -g yo generator-idyll
+$ yo idyll
+</code></pre>
+<p>The generator will produce a structure that looks like this:</p>
+<pre><code class="lang-sh">$  tree -I node_modules
+.
+├── _index.html
+├── components
+│   └── custom-component.js
+├── data
+│   └── example-data.json
+├── images
+│   └── idyll.png
+├── index.idl
+├── package.json
+└── styles.css
+
+3 directories, 7 files
+</code></pre>
+<p>The files do the following:</p>
+<ul>
+<li><code>index.idl</code> - The main Idyll file, write your text in here.</li>
+<li><code>styles.css</code> - By putting CSS in here you can override the default styles.</li>
+<li><code>components/</code> - The folder for custom components. Any component defined in this folder can be invoked in the .idl file.</li>
+<li><code>data/</code> - If you want to include a dataset in your project, put it in here.</li>
+<li><code>images/</code> - A folder for static images.</li>
+<li><code>_index.html</code> - A barebones HTML file that will be used if you publish your project to the web.</li>
+<li><code>package.json</code> - This file contains all the metadata for your project.</li>
+</ul>
+<p>To get started, from a terminal in that directory run <code>npm start</code> and Idyll will compile your 
+file and open it in your web browser. Every time you save the <code>index.idl</code> the system will automatically recompile 
+everything and update the page in the browser.</p>
+<p>If you instead just want to test things out quickly, the simplest way is to
+install it from npm, create a new file and start writing:</p>
+<pre><code class="lang-sh">$ npm install -g idyll
+$ idyll my-file.idl
+</code></pre>
+<p>The <code>idyll</code> command will automatically compile everything and load the
+interactive page in your web browser.</p>
+<p>To use a custom stylesheet, use the <code>--css</code> flag.</p>
+<pre><code class="lang-sh">$ idyll my-file.idl --css styles.css
+</code></pre>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>
