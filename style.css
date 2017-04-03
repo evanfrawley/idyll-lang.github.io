@@ -64,4 +64,15 @@ h1,h2,h3,h4,h5,h6,
   .minidocs-main {
     padding: 20px;
   }
+
+  .minidocs-menu-toggle {
+    font-size: 0;
+  }
+
+  .minidocs-menu-toggle:before {
+    background: lightgray;
+    box-shadow: 0 0.25em 0 0 lightgray, 0 0.5em 0 0 lightgray;
+    font-size: 40px;
+  }
+
 }
