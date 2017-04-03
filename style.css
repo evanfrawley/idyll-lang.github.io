@@ -54,6 +54,11 @@ h1,h2,h3,h4,h5,h6,
 
 }
 
+.markdown-body img {
+  max-width: 75%;
+  margin: 60px auto;
+  display: block;
+}
 
 
 @media all and (max-width: 600px) {
@@ -77,4 +82,8 @@ h1,h2,h3,h4,h5,h6,
     font-size: 40px !important;
   }
 
+  .markdown-body img {
+    max-width: 100%;
+    margin: 30px auto;
+  }
 }
