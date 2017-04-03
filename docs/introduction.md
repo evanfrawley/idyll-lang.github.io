@@ -40,8 +40,8 @@ display code, and using stars to display inline **bold** and *italics*.
 
 It is built on top of React, taking advantage of the one-way data 
 binding pattern to make it easy to create custom JavaScript components
-that act as first class elements in the markup. Idyll also makes it 
-easy to create data-driven articles,
+that act as first class elements in the markup. Idyll makes it 
+easy to create data-driven articles
 
 ```
 [data name:"cooldataset"  src:"cooldata.json" /]
@@ -53,7 +53,7 @@ Check out this chart:
 
 ![chart](images/chart.png)
 
-and handles variable binding for you
+and handles variable binding for you.
 
 ```
 [var name:"myVar" value:10 /]

@@ -4,7 +4,7 @@
 
 Idyll ships with a handful of components that
 handle common tasks. They are broken into 
-two categories:
+three categories:
 
 * [Layout](#layout) - these components help manage page layout, for example putting text in the `Aside` component will render it in the article margin instead of inline with the rest of your text.
   * [Aside](#aside)
@@ -23,6 +23,10 @@ component takes data as input and can display several types of charts.
   * [SVG](#svg)
   * [Table](#table)
   * [VegaLite](#vegalite)
+
+* [Helpers](#helpers) - these components don't affect the page content, but help with common tasks. The `Analytics` component makes it
+easy to add Google Analytics to your page.
+  * [Analytics](#analytics)
 
 ## Layout
 
@@ -121,8 +125,8 @@ This component makes it easy to add a title, subtitle, and byline to your articl
 
 ```
 [Header 
-  hed:"The Title of my Article"
-  dek:"The subtitle of my article"
+  title:"The Title of my Article"
+  subtitle:"The subtitle of my article"
   author:"Matthew Conlen"
   authorLink:"https://github.com/mathisonian/"
   /]
@@ -215,6 +219,16 @@ Render a [Vega Lite](https://vega.github.io/vega-lite/) spec, using https://gith
     y: {field: "b", type: "quantitative"}
   }
 }`]
+```
+
+## Helpers
+
+### Analytics
+
+This component makes it easy to insert a Google Analytics code on your page. 
+
+```
+[Analytics google:"UA-XXXXXXXXX" /]
 ```
 
 Continue to read about making [custom components](/components-custom).
