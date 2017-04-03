@@ -62,15 +62,15 @@ to denote headers, using three backticks to
 display code, and using stars to display inline <strong>bold</strong> and <em>italics</em>.</p>
 <p>It is built on top of React, taking advantage of the one-way data 
 binding pattern to make it easy to create custom JavaScript components
-that act as first class elements in the markup. Idyll also makes it 
-easy to create data-driven articles,</p>
+that act as first class elements in the markup. Idyll makes it 
+easy to create data-driven articles</p>
 <pre><code>[data <span class="hljs-string">name:</span><span class="hljs-string">"cooldataset"</span>  <span class="hljs-string">src:</span><span class="hljs-string">"cooldata.json"</span> /]
 
 Check out <span class="hljs-keyword">this</span> <span class="hljs-string">chart:</span>
 
 [Chart <span class="hljs-string">data:</span>cooldataset <span class="hljs-string">type:</span><span class="hljs-string">"line"</span> /]
 </code></pre><p><img src="images/chart.png" alt="chart"></p>
-<p>and handles variable binding for you</p>
+<p>and handles variable binding for you.</p>
 <pre><code>[var <span class="hljs-string">name:</span><span class="hljs-string">"myVar"</span> <span class="hljs-string">value:</span><span class="hljs-number">10</span> /]
 
 [Range <span class="hljs-string">value:</span>myVar <span class="hljs-string">min:</span><span class="hljs-number">0</span> <span class="hljs-string">max:</span><span class="hljs-number">100</span> /]
