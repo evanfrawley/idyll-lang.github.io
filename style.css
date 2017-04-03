@@ -67,6 +67,8 @@ h1,h2,h3,h4,h5,h6,
 
   .minidocs-menu-toggle {
     font-size: 0;
+    top: 15px;
+    left: 20px;
   }
 
   .minidocs-menu-toggle:before {
