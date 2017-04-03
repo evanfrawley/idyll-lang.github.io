@@ -19,6 +19,7 @@ Check out some articles create with Idyll:
 * The Etymology of Trig Functions - https://mathisonian.github.io/trig/etymology/
 * Seattle PD’s Dashcam Problem - https://mathisonian.github.io/dashcam/
 * United Complaints of America - https://mathisonian.github.io/consumer-complaints/
+* A Scrolling Introduction to Idyll - <a href="https://idyll-lang.github.io/idyll/scroll/" target="_blank">https://idyll-lang.github.io/idyll/scroll/<a/>
 
 ```md
 # Idyll
@@ -42,7 +43,7 @@ binding pattern to make it easy to create custom JavaScript components
 that act as first class elements in the markup. Idyll also makes it 
 easy to create data-driven articles,
 
-```md
+```
 [data name:"cooldataset"  src:"cooldata.json" /]
 
 Check out this chart:
@@ -50,20 +51,19 @@ Check out this chart:
 [Chart data:cooldataset type:"line" /]
 ```
 
+![chart](images/chart.png)
+
 and handles variable binding for you
 
-```md
-[var name:"myVariable" value:50 ]
-
-This will show a range slider with the value of 
-`myVariable`:
-
-[Range value:myVariable min:0 max:100 /]
-
-If a user interacts with it, `myVariable` will get updated, and
-any components that use `myVariable` will update as well
-
-[CustomComponent opacity:myVariable /]
 ```
+[var name:"myVar" value:10 /]
+
+[Range value:myVar min:0 max:100 /]
+[DisplayVar var:myVar /]
+```
+
+![displayvar](images/displayvar.gif)
+
+
 
 Continue to the [next section](/getting-started) for more details.
