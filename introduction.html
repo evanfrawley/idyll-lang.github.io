@@ -70,19 +70,12 @@ Check out this chart:
 [Chart data:cooldataset type:&quot;line&quot; /]
 </code></pre>
 <p>and handles variable binding for you</p>
-<pre><code class="lang-md">[var name:"myVariable" value:50 ]
+<p><img src="images/displayvar.gif" alt="displayvar"></p>
+<pre><code>[var <span class="hljs-string">name:</span><span class="hljs-string">"myVar"</span> <span class="hljs-string">value:</span><span class="hljs-number">10</span> /]
 
-This will show a range slider with the value of 
-<span class="hljs-code">`myVariable`</span>:
-
-[Range value:myVariable min:0 max:100 /]
-
-If a user interacts with it, <span class="hljs-code">`myVariable`</span> will get updated, and
-any components that use <span class="hljs-code">`myVariable`</span> will update as well
-
-[CustomComponent opacity:myVariable /]
-</code></pre>
-<p>Continue to the <a href="/getting-started">next section</a> for more details.</p>
+[Range <span class="hljs-string">value:</span>myVar <span class="hljs-string">min:</span><span class="hljs-number">0</span> <span class="hljs-string">max:</span><span class="hljs-number">100</span> /]
+[DisplayVar <span class="hljs-string">var:</span>myVar /]
+</code></pre><p>Continue to the <a href="/getting-started">next section</a> for more details.</p>
 </div>
   </div>
       </div>
