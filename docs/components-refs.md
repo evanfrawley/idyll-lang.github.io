@@ -51,3 +51,6 @@ lots of text here
 The above code will create a section of text that fades out as the user scrolls to the bottom of it.
 `scrollProgress.y` in this case is a value from 0 to 1 that Idyll automatically computes,
 providing the percentage that a user has scrolled through a certain component.
+
+
+You've leared all about Idyll! All that's left is [deploying you project to the web](/publishing-deploying-to-the-web).

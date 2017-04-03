@@ -133,7 +133,7 @@ This component makes it easy to add a title, subtitle, and byline to your articl
 This component just acts as syntactic sugar for displaying links inline in your text.
 
 ```
-[link text:"the text" url:"https://some.url" ]
+[link text:"the text" url:"https://some.url" /]
 
 is equivalent to [a href:"https://some.url"]the text[/a].
 ```
@@ -216,3 +216,5 @@ Render a [Vega Lite](https://vega.github.io/vega-lite/) spec, using https://gith
   }
 }`]
 ```
+
+Continue to read about making [custom components](/components-custom).

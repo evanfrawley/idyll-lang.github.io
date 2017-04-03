@@ -25,3 +25,5 @@ it as input to two components.
 Idyll handles all of the updating and rerendering of components for you,
 so when someone interacts with the range slider, the display will be updated
 automatically!
+
+Continue to learn how to use [references](/components-refs) to make your page more dynamic.

@@ -40,7 +40,7 @@ The files do the following:
 * `package.json` - This file contains all the metadata for your project.
 
 To get started, from a terminal in that directory run `npm start` and Idyll will compile your 
-file and open it in your web browser. Every time you save the `index.idl` the system will automatically recompile 
+file and open it in your web browser. Every time you save the `index.idl` file, the system will automatically recompile 
 everything and update the page in the browser.
 
 If you instead just want to test things out quickly, the simplest way is to
@@ -59,3 +59,5 @@ To use a custom stylesheet, use the `--css` flag.
 ```sh
 $ idyll my-file.idl --css styles.css
 ```
+
+Continue to the [next section](/configuration-and-styles) to learn more.

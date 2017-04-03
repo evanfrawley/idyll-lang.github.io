@@ -1,14 +1,14 @@
 module.exports = {
   "Overview": {
-    About: "introduction.md",
+    Introduction: "introduction.md",
     "Getting started": "getting-started.md",
-    "Configuration and themes": "configuration-and-themes.md"
+    "Configuration and styles": "configuration-and-styles.md"
   },
   Components: {
     Overview: "components-overview.md",
-    "Variables and datasets": "components-variables-and-datasets.md",
     "Built-in components": "components-built-in.md",
     "Custom components": "components-custom.md",
+    "Variables and datasets": "components-variables-and-datasets.md",
     "Refs": "components-refs.md"
   },
   Publishing: {

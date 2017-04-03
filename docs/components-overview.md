@@ -87,3 +87,6 @@ So, for example,
 // exist.
 [somethingElse /]
 ```
+
+
+Continue to read about [Idyll's built-in components](/components-built-in).
