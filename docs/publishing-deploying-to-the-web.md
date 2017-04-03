@@ -7,7 +7,7 @@ to build and deploy the project to github pages are available. Once you've initi
 project with a repo on github, run the command 
 
 ```sh
-$ npm deploy
+$ npm run deploy
 ``` 
 
 this will compile the assets and push it to github 

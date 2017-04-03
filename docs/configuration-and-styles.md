@@ -36,9 +36,9 @@ put notes and other callouts.
 The scroll layout leaves more space for a fixed element, and adds margins between text sections, 
 making it easy to trigger events when a certain section enters the viewport.
 
-
 ![scroll](images/scroll.gif)
 
+See https://github.com/idyll-lang/idyll/blob/master/examples/scroll/index.idl for example usage of the scroll layout.
 
 ### Themes
 
