@@ -34,7 +34,7 @@
     
     
     <div><h1 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-In Components</h1><p>Idyll ships with a handful of components that
-handle common tasks. They are broken into 
+handle common tasks. They are broken into
 three categories:</p>
 <ul>
 <li><p><a href="#layout">Layout</a> - these components help manage page layout, for example putting text in the <code>Aside</code> component will render it in the article margin instead of inline with the rest of your text.</p>
@@ -63,6 +63,7 @@ component takes data as input and can display several types of charts.</p>
 easy to add Google Analytics to your page.</p>
 <ul>
 <li><a href="#analytics">Analytics</a></li>
+<li><a href="#meta">Meta</a></li>
 </ul>
 </li>
 </ul>
@@ -77,7 +78,7 @@ easy to add Google Analytics to your page.</p>
 <pre><code>[fixed]
 [Chart type:<span class="hljs-string">"scatter"</span> data:dynamicData /]
 [/fixed]
-</code></pre><h3 id="inline"><a href="#inline" class="anchor"></a>Inline</h3><p>The <code>inline</code> component adds the <code>display: inline-block</code> style property, so that items inside of <code>inline</code> component will 
+</code></pre><h3 id="inline"><a href="#inline" class="anchor"></a>Inline</h3><p>The <code>inline</code> component adds the <code>display: inline-block</code> style property, so that items inside of <code>inline</code> component will
 be displayed next to eachother. For example, this code,</p>
 <pre><code>[section]
 [<span class="hljs-string">inline</span>][<span class="hljs-symbol">img src:"..." /</span>][<span class="hljs-string">/inline</span>]
@@ -112,7 +113,7 @@ be displayed next to eachother. For example, this code,</p>
 [DisplayVar <span class="hljs-string">var:</span>myVar /]
 </code></pre><h3 id="header"><a href="#header" class="anchor"></a>Header</h3><p>This component makes it easy to add a title, subtitle, and byline to your article:</p>
 <p><img src="images/header.png" alt="header"></p>
-<pre><code>[Header 
+<pre><code>[Header
 <span class="hljs-symbol">  title:</span><span class="hljs-string">"The Title of my Article"</span>
 <span class="hljs-symbol">  subtitle:</span><span class="hljs-string">"The subtitle of my article"</span>
 <span class="hljs-symbol">  author:</span><span class="hljs-string">"Matthew Conlen"</span>
@@ -134,7 +135,7 @@ be displayed next to eachother. For example, this code,</p>
 
 [Range <span class="hljs-string">value:</span>myVar <span class="hljs-string">min:</span><span class="hljs-number">0</span> <span class="hljs-string">max:</span><span class="hljs-number">100</span> /]
 [DisplayVar <span class="hljs-string">var:</span>myVar /]
-</code></pre><h3 id="slideshow-slide"><a href="#slideshow-slide" class="anchor"></a>Slideshow / Slide</h3><p>This component is used to dynamically display different content. It can be used to make slideshows, 
+</code></pre><h3 id="slideshow-slide"><a href="#slideshow-slide" class="anchor"></a>Slideshow / Slide</h3><p>This component is used to dynamically display different content. It can be used to make slideshows,
 but is generally useful for dynamically displaying different content of any type.</p>
 <p><img src="images/slides.gif" alt="slides"></p>
 <pre><code>[var <span class="hljs-keyword">name</span>:<span class="hljs-string">"slide"</span> value:<span class="hljs-number">1</span> /]
@@ -148,7 +149,7 @@ but is generally useful for dynamically displaying different content of any type
 [Button onClick:`<span class="hljs-built_in">slide</span> = <span class="hljs-number">1</span>`]Slide <span class="hljs-number">1</span>[/Button]
 [Button onClick:`<span class="hljs-built_in">slide</span> = <span class="hljs-number">2</span>`]Slide <span class="hljs-number">2</span>[/Button]
 [Button onClick:`<span class="hljs-built_in">slide</span> = <span class="hljs-number">3</span>`]Slide <span class="hljs-number">3</span>[/Button]
-</code></pre><h3 id="svg"><a href="#svg" class="anchor"></a>SVG</h3><p>This component will display an SVG file inline using <a href="https://github.com/matthewwithanm/react-inlinesvg">https://github.com/matthewwithanm/react-inlinesvg</a>. This makes it 
+</code></pre><h3 id="svg"><a href="#svg" class="anchor"></a>SVG</h3><p>This component will display an SVG file inline using <a href="https://github.com/matthewwithanm/react-inlinesvg">https://github.com/matthewwithanm/react-inlinesvg</a>. This makes it
 easy to style the SVG with css, as opposed to displaying the svg inside of an image tag.</p>
 <p>Usage:</p>
 <pre><code>[SVG src=<span class="hljs-string">"path/to/filg.svg"</span> /]
@@ -165,9 +166,20 @@ easy to style the SVG with css, as opposed to displaying the svg inside of an im
 <span class="hljs-symbol">    y:</span> {<span class="hljs-string">field:</span> <span class="hljs-string">"b"</span>, <span class="hljs-string">type:</span> <span class="hljs-string">"quantitative"</span>}
   }
 }`]
-</code></pre><h2 id="helpers"><a href="#helpers" class="anchor"></a>Helpers</h2><h3 id="analytics"><a href="#analytics" class="anchor"></a>Analytics</h3><p>This component makes it easy to insert a Google Analytics code on your page. </p>
+</code></pre><h2 id="helpers"><a href="#helpers" class="anchor"></a>Helpers</h2><h3 id="analytics"><a href="#analytics" class="anchor"></a>Analytics</h3><p>This component makes it easy to insert a Google Analytics code on your page.</p>
 <pre><code>[Analytics google:<span class="hljs-string">"UA-XXXXXXXXX"</span> /]
-</code></pre><p>Continue to read about making <a href="/components-custom">custom components</a>.</p>
+</code></pre><h3 id="meta"><a href="#meta" class="anchor"></a>Meta</h3><p>The meta component adds context to the page template when building your app for publication. The following variables are available and will be inserted
+as <code>&lt;meta&gt;</code> properties into the head of your HTML page if you define them:</p>
+<ul>
+<li><code>title</code> - the page title</li>
+<li><code>description</code> - a short description of your project</li>
+<li><code>url</code> - the canonical URL from this project</li>
+<li><code>twitterHandle</code> - the author&#39;s twitter handle, it will create a link in the twitter card</li>
+<li><code>shareImageUrl</code> - the URL of an image to be shared on social media (twitter cards, etc.). This must be a fully qualified URL, e.g. <a href="https://idyll-lang.github.io/images/logo.png">https://idyll-lang.github.io/images/logo.png</a>.</li>
+<li><code>shareImageWidth</code> - the width of the share image in pixels</li>
+<li><code>shareImageHeight</code> - the height of the share image in pixels</li>
+</ul>
+<p>Continue to read about making <a href="/components-custom">custom components</a>.</p>
 </div>
   </div>
       </div>
