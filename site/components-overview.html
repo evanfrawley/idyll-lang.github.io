@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>idyll-lang.github</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/"><img src="/logo-text.svg" alt="idyll-lang.github" class="minidocs-logo" /></a></h1>
+    </div>
+    <div class="_689fec56 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">About</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-themes" class="content-link ">Configuration and themes</a></div><div class="h1">Components</div><div>
+            <a href="/components-overview" class="content-link active">Overview</a>
+            <div class="minidocs-menu-toc">
+              <a href="#syntax" class="h3 content-link">Syntax</a><a href="#component-properties" class="h3 content-link">Component Properties</a><a href="#component-name-resolution" class="h3 content-link">Component Name Resolution</a>
+            </div>
+          </div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="components"><a href="#components" class="anchor"></a>Components</h1><h2 id="syntax"><a href="#syntax" class="anchor"></a>Syntax</h2><p>Besides text, components are the other basic building block of an Idyll document. 
+Components are denoted with brackets, and can be invoked in one of two ways: they can be self
+closing,</p>
+<pre><code>[<span class="hljs-built_in">Range</span> <span class="hljs-built_in">min</span>:<span class="hljs-number">0</span> <span class="hljs-built_in">max</span>:<span class="hljs-number">10</span> <span class="hljs-keyword">value</span>:<span class="hljs-keyword">value</span> /]
+</code></pre><p>or have a closing and opening tag with content in between.</p>
+<pre><code><span class="hljs-string">[Button]</span>
+Click Me
+<span class="hljs-string">[/Button]</span>
+</code></pre><h2 id="component-properties"><a href="#component-properties" class="anchor"></a>Component Properties</h2><p>Properties can be passed into components
+in the following ways:</p>
+<h3 id="number-string"><a href="#number-string" class="anchor"></a>Number, String</h3><p>Numbers or string literals may be used.</p>
+<pre><code>[Component propName:<span class="hljs-number">10</span> /]
+[Component propName:<span class="hljs-string">"propValue"</span> /]
+</code></pre><h3 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or Dataset</h3><p>A variable or dataset can be passed in directly, this will
+automatically create a binding between that variable and property,
+more on this in the next section.</p>
+<pre><code>[Component propName:myVar /]
+</code></pre><h3 id="expression"><a href="#expression" class="anchor"></a>Expression</h3><p>Use backticks to pass an evaluated expression:</p>
+<pre><code>[<span class="hljs-name">Component</span> propName:`<span class="hljs-number">2</span> * <span class="hljs-number">2</span> * <span class="hljs-number">2</span>` /]
+[<span class="hljs-name">Component</span> propName:`{ an: <span class="hljs-string">"object"</span> }` /]
+</code></pre><p>If the property expects a function,
+the expression will automatically be
+converted to a callback. This is convenient
+for updating variables on events, for example.</p>
+<pre><code>[<span class="hljs-name">Component</span> onClick:`myVar++` /]
+</code></pre><p>Idyll uses naming conventions to determine if the expression should be converted to a callback.
+Properties that are named <code>onXxxxx</code> (e.g. <code>onClick</code>) or <code>handleYyyyy</code> (e.g. <code>handleMouseMove</code>) are 
+assumed to expect callbacks.</p>
+<h2 id="component-name-resolution"><a href="#component-name-resolution" class="anchor"></a>Component Name Resolution</h2><p>Components are resolved according to following algorithm. First, map the 
+name of your component in camel case to kebab case (e.g. <code>ComponentName</code> becomes <code>component-name</code>)</p>
+<ul>
+<li>If there is a custom component with this name, use it.</li>
+<li>If there is a built-in component with this name, use it.</li>
+<li>If there is a valid HTML tag with this name, use it.</li>
+<li>If none of the above, just use a div, but give it the class of the component name</li>
+</ul>
+<p>So, for example,</p>
+<pre><code><span class="hljs-comment">// Renders `&lt;img /&gt;` because it is a valid  HTML tag</span>
+<span class="hljs-selector-attr">[img /]</span>
+
+<span class="hljs-comment">// Renders `&lt;div class="somethingElse"&gt;&lt;/div&gt;`,</span>
+<span class="hljs-comment">// assuming a custom component somethingElse doesn't</span>
+<span class="hljs-comment">// exist.</span>
+<span class="hljs-selector-attr">[somethingElse /]</span>
+</code></pre></div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>

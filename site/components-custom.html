@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>idyll-lang.github</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/"><img src="/logo-text.svg" alt="idyll-lang.github" class="minidocs-logo" /></a></h1>
+    </div>
+    <div class="_689fec56 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">About</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-themes" class="content-link ">Configuration and themes</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link active">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="custom-components"><a href="#custom-components" class="anchor"></a>Custom Components</h1><p>Idyll is designed for people to use their own custom components as well.
+Under the hood an Idyll component just needs to be anything that will
+function as a React component. If you create a custom component in
+JavaScript, point Idyll to the folder where you created it and
+everything will just work, no need to worry about compiling, bundling,
+or module loading.</p>
+<p>For example, this custom component</p>
+<pre><code>const <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t');
+const <span class="hljs-type">IdyllComponent</span> = require(<span class="hljs-symbol">'idyll</span>-component');
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;div {...<span class="hljs-keyword">this</span>.props}&gt;
+        <span class="hljs-type">This</span> is a custom component
+      &lt;/div&gt;
+    );
+  }
+}
+
+module.exports = <span class="hljs-type">CustomComponent</span>;
+</code></pre><p>could be invoked inside of an Idyll file with the
+following code:</p>
+<pre><code>[CustomComponent /]
+</code></pre><p>The <code>IdyllComponent</code> class adds an
+<code>updateProps</code> method that is used to keep
+variables in sync with the rest of the document, and also
+adds a property <code>onEnteredView</code> that can be used to
+trigger events in scroll-based narratives.</p>
+<p>For example, a component can change the value of a
+property that it receives, and Idyll will propegate
+the change to any bound variables on the page.</p>
+<pre><code>const <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t');
+const <span class="hljs-type">IdyllComponent</span> = require(<span class="hljs-symbol">'idyll</span>-component');
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Incrementer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
+
+  increment() {
+    <span class="hljs-keyword">this</span>.updateProps({
+      value: <span class="hljs-keyword">this</span>.props.value + <span class="hljs-number">1</span>
+    })
+  }
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;div onClick={<span class="hljs-keyword">this</span>.increment.bind(<span class="hljs-keyword">this</span>)}&gt;
+        <span class="hljs-type">Click</span> me.
+      &lt;/div&gt;
+    );
+  }
+}
+
+module.exports = <span class="hljs-type">Incrementer</span>;
+</code></pre><p>The <code>Incrementer</code> component could then be used as follows:</p>
+<pre><code>[var name:<span class="hljs-string">"clickCount"</span> value:<span class="hljs-number">0</span> /]
+
+[Incrementer value:clickCount /]
+[DisplayVar var:clickCount /]
+</code></pre><p>Notice that even thought the <code>Incrementer</code> component doesn&#39;t know
+anything about the variable <code>clickCount</code>, it will still correctly
+update.</p>
+<p>Of course, this trivial example could be accomplished using built-in components:</p>
+<pre><code>[var name:<span class="hljs-string">"clickCount"</span> value:<span class="hljs-number">0</span> /]
+
+[<span class="hljs-symbol">Button</span> onClick:<span class="hljs-string">`clickCount+=1`</span> ]<span class="hljs-symbol">Click</span> <span class="hljs-symbol">Me</span>.[/<span class="hljs-symbol">Button</span>]
+[<span class="hljs-symbol">DisplayVar</span> var:clickCount /]
+</code></pre><p>Custom component are meant for times when more complex and custom
+code is needed. By default Idyll will look for your custom components 
+inside of a folder called <code>components/</code>. If you wish to change the custom 
+component path, specify it with the <code>--components</code> option, e.g. 
+<code>idyll index.idl --css styles.css --components custom/component/path/</code>.</p>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>
