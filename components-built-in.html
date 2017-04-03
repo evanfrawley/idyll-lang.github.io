@@ -21,7 +21,7 @@
         <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div>
             <a href="/components-built-in" class="content-link active">Built-in components</a>
             <div class="minidocs-menu-toc">
-              <a href="#layout" class="h3 content-link">Layout</a><a href="#presentation" class="h3 content-link">Presentation</a>
+              <a href="#layout" class="h3 content-link">Layout</a><a href="#presentation" class="h3 content-link">Presentation</a><a href="#helpers" class="h3 content-link">Helpers</a>
             </div>
           </div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
@@ -35,7 +35,7 @@
     
     <div><h1 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-In Components</h1><p>Idyll ships with a handful of components that
 handle common tasks. They are broken into 
-two categories:</p>
+three categories:</p>
 <ul>
 <li><p><a href="#layout">Layout</a> - these components help manage page layout, for example putting text in the <code>Aside</code> component will render it in the article margin instead of inline with the rest of your text.</p>
 <ul>
@@ -58,6 +58,9 @@ component takes data as input and can display several types of charts.</p>
 <li><a href="#table">Table</a></li>
 <li><a href="#vegalite">VegaLite</a></li>
 </ul>
+</li>
+<li><p><a href="#helpers">Helpers</a> - these components don&#39;t affect the page content, but help with common tasks. The <code>Analytics</code> component makes it
+easy to add Google Analytics to your page.</p>
 </li>
 </ul>
 <h2 id="layout"><a href="#layout" class="anchor"></a>Layout</h2><h3 id="aside"><a href="#aside" class="anchor"></a>Aside</h3><p>Content inside of an aside component will be displayed in the margin of your document. For example, the <a href="https://mathisonian.github.io/consumer-complaints/">consumer complaints</a> article uses the aside component to display a small chart and caption:</p>
@@ -159,6 +162,8 @@ easy to style the SVG with css, as opposed to displaying the svg inside of an im
 <span class="hljs-symbol">    y:</span> {<span class="hljs-string">field:</span> <span class="hljs-string">"b"</span>, <span class="hljs-string">type:</span> <span class="hljs-string">"quantitative"</span>}
   }
 }`]
+</code></pre><h2 id="helpers"><a href="#helpers" class="anchor"></a>Helpers</h2><h3 id="analytics"><a href="#analytics" class="anchor"></a>Analytics</h3><p>This component makes it easy to insert a Google Analytics code on your page. </p>
+<pre><code>[Analytics google:<span class="hljs-string">"UA-XXXXXXXXX"</span> /]
 </code></pre><p>Continue to read about making <a href="/components-custom">custom components</a>.</p>
 </div>
   </div>
