@@ -3,7 +3,7 @@
 # Built-In Components
 
 Idyll ships with a handful of components that
-handle common tasks. They are broken into 
+handle common tasks. They are broken into
 three categories:
 
 * [Layout](#layout) - these components help manage page layout, for example putting text in the `Aside` component will render it in the article margin instead of inline with the rest of your text.
@@ -27,6 +27,7 @@ component takes data as input and can display several types of charts.
 * [Helpers](#helpers) - these components don't affect the page content, but help with common tasks. The `Analytics` component makes it
 easy to add Google Analytics to your page.
   * [Analytics](#analytics)
+  * [Meta](#meta)
 
 ## Layout
 
@@ -57,7 +58,7 @@ Content inside of a `fixed` component will be locked in place, even when the res
 
 ### Inline
 
-The `inline` component adds the `display: inline-block` style property, so that items inside of `inline` component will 
+The `inline` component adds the `display: inline-block` style property, so that items inside of `inline` component will
 be displayed next to eachother. For example, this code,
 
 ```
@@ -124,7 +125,7 @@ This component makes it easy to add a title, subtitle, and byline to your articl
 ![header](images/header.png)
 
 ```
-[Header 
+[Header
   title:"The Title of my Article"
   subtitle:"The subtitle of my article"
   author:"Matthew Conlen"
@@ -163,7 +164,7 @@ This component displays a range slider. The properties are:
 
 ### Slideshow / Slide
 
-This component is used to dynamically display different content. It can be used to make slideshows, 
+This component is used to dynamically display different content. It can be used to make slideshows,
 but is generally useful for dynamically displaying different content of any type.
 
 ![slides](images/slides.gif)
@@ -186,7 +187,7 @@ but is generally useful for dynamically displaying different content of any type
 
 ### SVG
 
-This component will display an SVG file inline using https://github.com/matthewwithanm/react-inlinesvg. This makes it 
+This component will display an SVG file inline using https://github.com/matthewwithanm/react-inlinesvg. This makes it
 easy to style the SVG with css, as opposed to displaying the svg inside of an image tag.
 
 Usage:
@@ -225,10 +226,23 @@ Render a [Vega Lite](https://vega.github.io/vega-lite/) spec, using https://gith
 
 ### Analytics
 
-This component makes it easy to insert a Google Analytics code on your page. 
+This component makes it easy to insert a Google Analytics code on your page.
 
 ```
 [Analytics google:"UA-XXXXXXXXX" /]
 ```
+
+### Meta
+
+The meta component adds context to the page template when building your app for publication. The following variables are available and will be inserted
+as `<meta>` properties into the head of your HTML page if you define them:
+
+* `title` - the page title
+* `description` - a short description of your project
+* `url` - the canonical URL from this project
+* `twitterHandle` - the author's twitter handle, it will create a link in the twitter card
+* `shareImageUrl` - the URL of an image to be shared on social media (twitter cards, etc.). This must be a fully qualified URL, e.g. https://idyll-lang.github.io/images/logo.png.
+* `shareImageWidth` - the width of the share image in pixels
+* `shareImageHeight` - the height of the share image in pixels
 
 Continue to read about making [custom components](/components-custom).

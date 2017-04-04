@@ -12,28 +12,28 @@ The `idyll` command line tool accepts the following options
 * `--theme` the name of the theme to use. By default this is `idyll`. More on themes below.
 * `--build` the build flag tells Idyll to output the compiled JavaScript instead of running a server and opening your page in a web browser, `$ idyll index.idl --build > output.js`.
 
-If you are using Idyll via the project generator, open `package.json` to change these options. 
+If you are using Idyll via the project generator, open `package.json` to change these options.
 
 ## Themes and Page Layout
 
-Idyll exposes two options to help you style your project, `layout` and `theme`. `layout` deals with CSS styles related to how your content is 
-layed out on the page: width, columns, etc. The `theme` option allows you to choose diffent stylesheets to change the aesthetics of the content. 
+Idyll exposes two options to help you style your project, `layout` and `theme`. `layout` deals with CSS styles related to how your content is
+layed out on the page: width, columns, etc. The `theme` option allows you to choose diffent stylesheets to change the style of the content itself (text color, font, and so on).
 
 ### Layout
 
-Idyll currently ships with two different page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles 
+Idyll currently ships with two different page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles
 for you project.
 
 #### Blog
 
-This is the default layout. The `blog` layout is fairly traditional article layout with room in the margin to 
-put notes and other callouts. 
+This is the default layout. The `blog` layout is fairly traditional article layout with room in the margin to
+put notes and other callouts.
 
 ![blog](images/blog.gif)
 
 #### Scroll
 
-The scroll layout leaves more space for a fixed element, and adds margins between text sections, 
+The scroll layout leaves more space for a fixed element, and adds margins between text sections,
 making it easy to trigger events when a certain section enters the viewport.
 
 ![scroll](images/scroll.gif)
@@ -42,7 +42,7 @@ See https://github.com/idyll-lang/idyll/blob/master/examples/scroll/index.idl fo
 
 ### Themes
 
-There currently is only one default theme, expect more soon. 
+There currently is only one default theme, expect more soon.
 
 
 Continue to the next section to learn about [Idyll components](/components-overview).
