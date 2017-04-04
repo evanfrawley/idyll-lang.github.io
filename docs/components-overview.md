@@ -79,16 +79,16 @@ So, for example, assume we have one custom component, named `Custom`.
 
 ```
 // Renders our custom component
-[custom /]
+[Custom /]
 
 // Renders the built-in range component
-[range /]
+[Range /]
 
 // Renders `<img />` because it is a valid  HTML tag
-[img /]
+[Img /]
 
-// Renders `<div class="somethingElse"></div>`
-[somethingElse /]
+// Renders `<div class="SomethingElse"></div>`
+[SomethingElse /]
 ```
 
 Continue to read about [Idyll's built-in components](/components-built-in).
