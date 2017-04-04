@@ -29,6 +29,9 @@ easy to add Google Analytics to your page.
   * [Analytics](#analytics)
   * [Meta](#meta)
 
+All built-in compononents expose a property `onEnteredView` that can be used to trigger events when a reader scrolls the page to 
+reveal specific content.
+
 ## Layout
 
 ### Aside

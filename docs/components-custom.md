@@ -1,6 +1,8 @@
 
 # Custom Components
 
+## Overview
+
 Idyll is designed for people to use their own custom components as well.
 Under the hood an Idyll component just needs to be anything that will
 function as a React component. If you create a custom component in
@@ -14,7 +16,7 @@ For example, this custom component
 const React = require('react');
 const IdyllComponent = require('idyll-component');
 
-class CustomComponent extends IdyllComponent {
+class Custom extends IdyllComponent {
   render() {
     return (
       <div {...this.props}>
@@ -24,21 +26,25 @@ class CustomComponent extends IdyllComponent {
   }
 }
 
-module.exports = CustomComponent;
+module.exports = Custom;
 ```
 
 could be invoked inside of an Idyll file with the
 following code:
 
 ```
-[CustomComponent /]
+[Custom /]
 ```
+
+## Idyll Component
 
 The `IdyllComponent` class adds an
 `updateProps` method that is used to keep
 variables in sync with the rest of the document, and also
 adds a property `onEnteredView` that can be used to
 trigger events in scroll-based narratives.
+
+### Example
 
 For example, a component can change the value of a
 property that it receives, and Idyll will propegate
@@ -89,6 +95,13 @@ Of course, this trivial example could be accomplished using built-in components:
 [Button onClick:`clickCount+=1` ]Click Me.[/Button]
 [DisplayVar var:clickCount /]
 ```
+
+## Name Resolution
+
+Components lookup is based on filenames. If your component name 
+is in `CamelCase`, it will automatically be converted to `kebab-case`,
+so for example if you want to create a component named `CustomComponent`,
+it should be stored in a file called `custom-component.js`.
 
 Custom component are meant for times when more complex and custom
 code is needed. By default Idyll will look for your custom components 
