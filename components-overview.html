@@ -21,7 +21,7 @@
         <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div>
             <a href="/components-overview" class="content-link active">Overview</a>
             <div class="minidocs-menu-toc">
-              <a href="#syntax" class="h3 content-link">Syntax</a><a href="#component-properties" class="h3 content-link">Component Properties</a><a href="#component-name-resolution" class="h3 content-link">Component Name Resolution</a>
+              <a href="#syntax" class="h3 content-link">Syntax</a><a href="#component-properties" class="h3 content-link">Component Properties</a><a href="#component-resolution" class="h3 content-link">Component Resolution</a>
             </div>
           </div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
@@ -61,21 +61,24 @@ for updating variables on events, for example.</p>
 </code></pre><p>Idyll uses naming conventions to determine if the expression should be converted to a callback.
 Properties that are named <code>onXxxxx</code> (e.g. <code>onClick</code>) or <code>handleYyyyy</code> (e.g. <code>handleMouseMove</code>) are 
 assumed to expect callbacks.</p>
-<h2 id="component-name-resolution"><a href="#component-name-resolution" class="anchor"></a>Component Name Resolution</h2><p>Components are resolved according to following algorithm. First, map the 
-name of your component in camel case to kebab case (e.g. <code>ComponentName</code> becomes <code>component-name</code>)</p>
+<h2 id="component-resolution"><a href="#component-resolution" class="anchor"></a>Component Resolution</h2><p>Components are resolved according to following algorithm:</p>
 <ul>
 <li>If there is a custom component with this name, use it.</li>
 <li>If there is a built-in component with this name, use it.</li>
 <li>If there is a valid HTML tag with this name, use it.</li>
 <li>If none of the above, just use a div, but give it the class of the component name</li>
 </ul>
-<p>So, for example,</p>
-<pre><code><span class="hljs-comment">// Renders `&lt;img /&gt;` because it is a valid  HTML tag</span>
+<p>So, for example, assume we have one custom component, named <code>Custom</code>.</p>
+<pre><code><span class="hljs-comment">// Renders our custom component</span>
+<span class="hljs-selector-attr">[custom /]</span>
+
+<span class="hljs-comment">// Renders the built-in range component</span>
+<span class="hljs-selector-attr">[range /]</span>
+
+<span class="hljs-comment">// Renders `&lt;img /&gt;` because it is a valid  HTML tag</span>
 <span class="hljs-selector-attr">[img /]</span>
 
-<span class="hljs-comment">// Renders `&lt;div class="somethingElse"&gt;&lt;/div&gt;`,</span>
-<span class="hljs-comment">// assuming a custom component somethingElse doesn't</span>
-<span class="hljs-comment">// exist.</span>
+<span class="hljs-comment">// Renders `&lt;div class="somethingElse"&gt;&lt;/div&gt;`</span>
 <span class="hljs-selector-attr">[somethingElse /]</span>
 </code></pre><p>Continue to read about <a href="/components-built-in">Idyll&#39;s built-in components</a>.</p>
 </div>

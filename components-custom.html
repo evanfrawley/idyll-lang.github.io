@@ -18,7 +18,12 @@
     <button class="minidocs-menu-toggle">Menu</button>
     <div class="minidocs-menu menu-closed menu-small">
       <div class="minidocs-menu-wrapper">
-        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link active">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div>
+            <a href="/components-custom" class="content-link active">Custom components</a>
+            <div class="minidocs-menu-toc">
+              <a href="#overview" class="h3 content-link">Overview</a><a href="#idyll-component" class="h3 content-link">Idyll Component</a><a href="#name-resolution" class="h3 content-link">Name Resolution</a>
+            </div>
+          </div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
     </div>
   </div>
@@ -28,7 +33,7 @@
         <div class="_3f4b1fbc minidocs-content">
     
     
-    <div><h1 id="custom-components"><a href="#custom-components" class="anchor"></a>Custom Components</h1><p>Idyll is designed for people to use their own custom components as well.
+    <div><h1 id="custom-components"><a href="#custom-components" class="anchor"></a>Custom Components</h1><h2 id="overview"><a href="#overview" class="anchor"></a>Overview</h2><p>Idyll is designed for people to use their own custom components as well.
 Under the hood an Idyll component just needs to be anything that will
 function as a React component. If you create a custom component in
 JavaScript, point Idyll to the folder where you created it and
@@ -38,7 +43,7 @@ or module loading.</p>
 <pre><code>const <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t');
 const <span class="hljs-type">IdyllComponent</span> = require(<span class="hljs-symbol">'idyll</span>-component');
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Custom</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
   render() {
     <span class="hljs-keyword">return</span> (
       &lt;div {...<span class="hljs-keyword">this</span>.props}&gt;
@@ -48,16 +53,16 @@ const <span class="hljs-type">IdyllComponent</span> = require(<span class="hljs-
   }
 }
 
-module.exports = <span class="hljs-type">CustomComponent</span>;
+module.exports = <span class="hljs-type">Custom</span>;
 </code></pre><p>could be invoked inside of an Idyll file with the
 following code:</p>
-<pre><code>[CustomComponent /]
-</code></pre><p>The <code>IdyllComponent</code> class adds an
+<pre><code>[Custom /]
+</code></pre><h2 id="idyll-component"><a href="#idyll-component" class="anchor"></a>Idyll Component</h2><p>The <code>IdyllComponent</code> class adds an
 <code>updateProps</code> method that is used to keep
 variables in sync with the rest of the document, and also
 adds a property <code>onEnteredView</code> that can be used to
 trigger events in scroll-based narratives.</p>
-<p>For example, a component can change the value of a
+<h3 id="example"><a href="#example" class="anchor"></a>Example</h3><p>For example, a component can change the value of a
 property that it receives, and Idyll will propegate
 the change to any bound variables on the page.</p>
 <pre><code>const <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t');
@@ -94,7 +99,11 @@ update.</p>
 
 [<span class="hljs-symbol">Button</span> onClick:<span class="hljs-string">`clickCount+=1`</span> ]<span class="hljs-symbol">Click</span> <span class="hljs-symbol">Me</span>.[/<span class="hljs-symbol">Button</span>]
 [<span class="hljs-symbol">DisplayVar</span> var:clickCount /]
-</code></pre><p>Custom component are meant for times when more complex and custom
+</code></pre><h2 id="name-resolution"><a href="#name-resolution" class="anchor"></a>Name Resolution</h2><p>Components lookup is based on filenames. If your component name 
+is in <code>CamelCase</code>, it will automatically be converted to <code>kebab-case</code>,
+so for example if you want to create a component named <code>CustomComponent</code>,
+it should be stored in a file called <code>custom-component.js</code>.</p>
+<p>Custom component are meant for times when more complex and custom
 code is needed. By default Idyll will look for your custom components 
 inside of a folder called <code>components/</code>. If you wish to change the custom 
 component path, specify it with the <code>--components</code> option, e.g. 
