@@ -16,6 +16,7 @@ component takes data as input and can display several types of charts.
   * [Button](#button)
   * [Chart](#chart)
   * [DisplayVar](#displayvar)
+  * [Equation](#equation)
   * [Header](#header)
   * [Link](#link)
   * [Range](#range)
@@ -29,7 +30,7 @@ easy to add Google Analytics to your page.
   * [Analytics](#analytics)
   * [Meta](#meta)
 
-All built-in compononents expose a property `onEnteredView` that can be used to trigger events when a reader scrolls the page to 
+All built-in compononents expose a property `onEnteredView` that can be used to trigger events when a reader scrolls the page to
 reveal specific content.
 
 ## Layout
@@ -119,6 +120,18 @@ This will render the value of a variable to the screen. It is mostly useful for 
 
 [Range value:myVar min:0 max:100 /]
 [DisplayVar var:myVar /]
+```
+
+### Equation
+
+This uses [KaTeX](https://github.com/Khan/KaTeX) to typeset mathematical equations. Example:
+
+![equation](images/equation.png)
+
+```
+[Equation]
+  y = \int x^2 dx
+[/Equation]
 ```
 
 ### Header
