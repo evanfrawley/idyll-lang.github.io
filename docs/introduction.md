@@ -1,11 +1,11 @@
 
 # Introducing Idyll
 
-Idyll is a tool that makes it easier to author interactive narratives 
+Idyll is a tool that makes it easier to author interactive narratives
 for the web. The goal of the project is to provide a friendly
 markup language — and an associated toolchain —
-that can be used to create dynamic, text-driven web pages. 
- 
+that can be used to create dynamic, text-driven web pages.
+
 Idyll lowers the barrier to entry for
 individuals to create documents that use common narrative techniques
 such as embedding interactive charts and graphs,
@@ -14,12 +14,21 @@ its readable format facilitates
 collaboration between writers, editors, designers,
 and programmers on complex projects.
 
+## Examples
+
 Check out some articles create with Idyll:
 
 * The Etymology of Trig Functions - https://mathisonian.github.io/trig/etymology/
 * Seattle PD’s Dashcam Problem - https://mathisonian.github.io/dashcam/
 * United Complaints of America - https://mathisonian.github.io/consumer-complaints/
-* A Scrolling Introduction to Idyll - <a href="https://idyll-lang.github.io/idyll/scroll/" target="_blank">https://idyll-lang.github.io/idyll/scroll/<a/>
+
+and examples of common use cases:
+
+* A Scrolling Introduction to Idyll - <a href="https://idyll-lang.github.io/idyll/scroll/" data-router-ignore>https://idyll-lang.github.io/idyll/scroll/<a/>
+* Using Idyll with [d3](https://d3js.org/) - <a href="https://idyll-lang.github.io/idyll-d3-component/" data-router-ignore>https://idyll-lang.github.io/idyll-d3-component/<a/>
+* Using Idyll with [regl](https://github.com/regl-project/regl) - <a href="https://idyll-lang.github.io/idyll-regl-component/" data-router-ignore>https://idyll-lang.github.io/idyll-regl-component/<a/>
+
+## Syntax
 
 ```md
 # Idyll
@@ -38,9 +47,10 @@ syntax, for example using a `#` pound sign
 to denote headers, using three backticks to
 display code, and using stars to display inline **bold** and *italics*.
 
-It is built on top of React, taking advantage of the one-way data 
-binding pattern to make it easy to create custom JavaScript components
-that act as first class elements in the markup. Idyll makes it 
+It is built on top of [React](https://facebook.github.io/react/), a JavaScript library
+made by Facebook, taking advantage of the one-way data
+binding pattern to make it easy to create reactive JavaScript components
+that act as first class elements in the markup. Idyll makes it
 easy to create data-driven articles
 
 ```
