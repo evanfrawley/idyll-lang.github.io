@@ -18,7 +18,12 @@
     <button class="minidocs-menu-toggle">Menu</button>
     <div class="minidocs-menu menu-closed menu-small">
       <div class="minidocs-menu-wrapper">
-        <div class="h1">Overview</div><div><a href="/introduction" class="content-link active">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+        <div class="h1">Overview</div><div>
+            <a href="/introduction" class="content-link active">Introduction</a>
+            <div class="minidocs-menu-toc">
+              <a href="#examples" class="h3 content-link">Examples</a><a href="#syntax" class="h3 content-link">Syntax</a>
+            </div>
+          </div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
     </div>
   </div>
@@ -39,7 +44,7 @@ responding to scroll events, and <a href="http://explorableexplanations.com/">ex
 its readable format facilitates
 collaboration between writers, editors, designers,
 and programmers on complex projects.</p>
-<p>Check out some articles create with Idyll:</p>
+<h2 id="examples"><a href="#examples" class="anchor"></a>Examples</h2><p>Check out some articles create with Idyll:</p>
 <ul>
 <li>The Etymology of Trig Functions - <a href="https://mathisonian.github.io/trig/etymology/">https://mathisonian.github.io/trig/etymology/</a></li>
 <li>Seattle PD’s Dashcam Problem - <a href="https://mathisonian.github.io/dashcam/">https://mathisonian.github.io/dashcam/</a></li>
@@ -51,7 +56,7 @@ and programmers on complex projects.</p>
 <li>Using Idyll with <a href="https://d3js.org/">d3</a> - <a href="https://idyll-lang.github.io/idyll-d3-component/" data-router-ignore>https://idyll-lang.github.io/idyll-d3-component/<a/></li>
 <li>Using Idyll with <a href="https://github.com/regl-project/regl">regl</a> - <a href="https://idyll-lang.github.io/idyll-regl-component/" data-router-ignore>https://idyll-lang.github.io/idyll-regl-component/<a/></li>
 </ul>
-<pre><code class="lang-md"><span class="hljs-section"># Idyll</span>
+<h2 id="syntax"><a href="#syntax" class="anchor"></a>Syntax</h2><pre><code class="lang-md"><span class="hljs-section"># Idyll</span>
 
 This is <span class="hljs-emphasis">*Idyll*</span> markup. By default, everything is text,
 using some common markdown syntax.
@@ -65,8 +70,9 @@ supports a subset of commonly used markdown
 syntax, for example using a <code>#</code> pound sign
 to denote headers, using three backticks to
 display code, and using stars to display inline <strong>bold</strong> and <em>italics</em>.</p>
-<p>It is built on top of React, taking advantage of the one-way data
-binding pattern to make it easy to create custom JavaScript components
+<p>It is built on top of <a href="https://facebook.github.io/react/">React</a>, a JavaScript library
+made by Facebook, taking advantage of the one-way data
+binding pattern to make it easy to create reactive JavaScript components
 that act as first class elements in the markup. Idyll makes it
 easy to create data-driven articles</p>
 <pre><code>[data <span class="hljs-string">name:</span><span class="hljs-string">"cooldataset"</span>  <span class="hljs-string">src:</span><span class="hljs-string">"cooldata.json"</span> /]
