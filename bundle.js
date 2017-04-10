@@ -31,7 +31,7 @@ module.exports = function (opts) {
             if (!node) return
             if (node.localName !== 'a') return traverse(node.parentNode)
             if (node.href === undefined) return traverse(node.parentNode)
-            if (window.location.host !== node.host) return traverse(node.parentNode)
+            // if (window.location.host !== node.host) return traverse(node.parentNode)
             return node
           })(e.target)
 
