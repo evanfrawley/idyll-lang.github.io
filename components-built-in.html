@@ -50,7 +50,9 @@ component takes data as input and can display several types of charts.</p>
 <li><a href="#button">Button</a></li>
 <li><a href="#chart">Chart</a></li>
 <li><a href="#displayvar">DisplayVar</a></li>
+<li><a href="#dynamic">Dynamic</a></li>
 <li><a href="#equation">Equation</a></li>
+<li><a href="#gist">Gist</a></li>
 <li><a href="#header">Header</a></li>
 <li><a href="#link">Link</a></li>
 <li><a href="#range">Range</a></li>
@@ -114,7 +116,19 @@ be displayed next to eachother. For example, this code,</p>
 
 [Range <span class="hljs-string">value:</span>myVar <span class="hljs-string">min:</span><span class="hljs-number">0</span> <span class="hljs-string">max:</span><span class="hljs-number">100</span> /]
 [DisplayVar <span class="hljs-string">var:</span>myVar /]
-</code></pre><h3 id="equation"><a href="#equation" class="anchor"></a>Equation</h3><p>This uses <a href="https://github.com/Khan/KaTeX">KaTeX</a> to typeset mathematical equations. Example:</p>
+</code></pre><h3 id="dynamic"><a href="#dynamic" class="anchor"></a>Dynamic</h3><p>This will render a dynamic variable to the screen.</p>
+<p><img src="images/dynamic.gif" alt="dynamic"></p>
+<pre><code>[var name:<span class="hljs-string">"myVar"</span> value:<span class="hljs-number">10</span> /]
+
+[Dynamic value:myVar /]
+</code></pre><p>The properties are:</p>
+<ul>
+<li><code>value</code>: The value to display</li>
+<li><code>max</code>: The maximum value.</li>
+<li><code>min</code>: The minimum value.</li>
+<li><code>interval</code>: The granularity of the changes</li>
+</ul>
+<h3 id="equation"><a href="#equation" class="anchor"></a>Equation</h3><p>This uses <a href="https://github.com/Khan/KaTeX">KaTeX</a> to typeset mathematical equations. Example:</p>
 <p><img src="images/equation.png" alt="equation"></p>
 <pre><code><span class="hljs-string">[Equation]</span>
   y = \int x^<span class="hljs-number">2</span> dx
@@ -127,6 +141,9 @@ be displayed next to eachother. For example, this code,</p>
 <span class="hljs-symbol">  author:</span><span class="hljs-string">"Matthew Conlen"</span>
 <span class="hljs-symbol">  authorLink:</span><span class="hljs-string">"https://github.com/mathisonian/"</span>
   /]
+</code></pre><h3 id="gist"><a href="#gist" class="anchor"></a>Gist</h3><p>Embed a github gist</p>
+<p><img src="images/gist.png" alt="gist"></p>
+<pre><code>[gist <span class="hljs-string">gist:</span><span class="hljs-string">"0f83a12e29b268ffca39f471ecf39e91"</span> <span class="hljs-string">file:</span><span class="hljs-string">"particles.idl"</span> /]
 </code></pre><h3 id="link"><a href="#link" class="anchor"></a>Link</h3><p>This component just acts as syntactic sugar for displaying links inline in your text.</p>
 <pre><code>[link <span class="hljs-built_in">text</span>:<span class="hljs-string">"the text"</span> url:<span class="hljs-string">"https://some.url"</span> /]
 
@@ -134,7 +151,7 @@ be displayed next to eachother. For example, this code,</p>
 </code></pre><h3 id="range"><a href="#range" class="anchor"></a>Range</h3><p>This component displays a range slider. The properties are:</p>
 <ul>
 <li><code>value</code>: The value to display; if this is a variable, the variable will automatically be updated when the slider is moved.</li>
-<li><code>man</code>: The maximum value.</li>
+<li><code>max</code>: The maximum value.</li>
 <li><code>min</code>: The minimum value.</li>
 <li><code>step</code>: The granularity of the slider</li>
 </ul>
