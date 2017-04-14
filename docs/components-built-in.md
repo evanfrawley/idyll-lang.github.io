@@ -16,7 +16,9 @@ component takes data as input and can display several types of charts.
   * [Button](#button)
   * [Chart](#chart)
   * [DisplayVar](#displayvar)
+  * [Dynamic](#dynamic)
   * [Equation](#equation)
+  * [Gist](#gist)
   * [Header](#header)
   * [Link](#link)
   * [Range](#range)
@@ -122,6 +124,25 @@ This will render the value of a variable to the screen. It is mostly useful for 
 [DisplayVar var:myVar /]
 ```
 
+### Dynamic
+
+This will render a dynamic variable to the screen.
+
+![dynamic](images/dynamic.gif)
+
+```
+[var name:"myVar" value:10 /]
+
+[Dynamic value:myVar /]
+```
+
+The properties are:
+
+* `value`: The value to display
+* `max`: The maximum value.
+* `min`: The minimum value.
+* `interval`: The granularity of the changes
+
 ### Equation
 
 This uses [KaTeX](https://github.com/Khan/KaTeX) to typeset mathematical equations. Example:
@@ -149,6 +170,16 @@ This component makes it easy to add a title, subtitle, and byline to your articl
   /]
 ```
 
+### Gist
+
+Embed a github gist
+
+![gist](images/gist.png)
+
+```
+[gist gist:"0f83a12e29b268ffca39f471ecf39e91" file:"particles.idl" /]
+```
+
 ### Link
 
 This component just acts as syntactic sugar for displaying links inline in your text.
@@ -164,7 +195,7 @@ is equivalent to [a href:"https://some.url"]the text[/a].
 This component displays a range slider. The properties are:
 
 * `value`: The value to display; if this is a variable, the variable will automatically be updated when the slider is moved.
-* `man`: The maximum value.
+* `max`: The maximum value.
 * `min`: The minimum value.
 * `step`: The granularity of the slider
 
