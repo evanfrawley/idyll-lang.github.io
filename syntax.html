@@ -21,7 +21,7 @@
         <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div>
             <a href="/syntax" class="content-link active">Syntax</a>
             <div class="minidocs-menu-toc">
-              <a href="#text" class="h3 content-link">Text</a><a href="#components" class="h3 content-link">Components</a><a href="#component-properties" class="h3 content-link">Component Properties</a>
+              <a href="#text" class="h3 content-link">Text</a><a href="#components" class="h3 content-link">Components</a>
             </div>
           </div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
@@ -62,16 +62,16 @@ closing,</p>
 <pre><code><span class="hljs-string">[Button]</span>
 Click Me
 <span class="hljs-string">[/Button]</span>
-</code></pre><h2 id="component-properties"><a href="#component-properties" class="anchor"></a>Component Properties</h2><p>Properties can be passed into components
+</code></pre><h3 id="component-properties"><a href="#component-properties" class="anchor"></a>Component Properties</h3><p>Properties can be passed into components
 in the following ways:</p>
-<h3 id="number-string"><a href="#number-string" class="anchor"></a>Number, String</h3><p>Numbers or string literals may be used.</p>
+<h4 id="number-string"><a href="#number-string" class="anchor"></a>Number, String</h4><p>Numbers or string literals may be used.</p>
 <pre><code>[Component propName:<span class="hljs-number">10</span> /]
 [Component propName:<span class="hljs-string">"propValue"</span> /]
-</code></pre><h3 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or Dataset</h3><p>A variable or dataset can be passed in directly, this will
+</code></pre><h4 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or Dataset</h4><p>A variable or dataset can be passed in directly, this will
 automatically create a binding between that variable and property,
 more on this in the next section.</p>
 <pre><code>[Component propName:myVar /]
-</code></pre><h3 id="expression"><a href="#expression" class="anchor"></a>Expression</h3><p>Use backticks to pass an evaluated expression:</p>
+</code></pre><h4 id="expression"><a href="#expression" class="anchor"></a>Expression</h4><p>Use backticks to pass an evaluated expression:</p>
 <pre><code>[<span class="hljs-name">Component</span> propName:`<span class="hljs-number">2</span> * <span class="hljs-number">2</span> * <span class="hljs-number">2</span>` /]
 [<span class="hljs-name">Component</span> propName:`{ an: <span class="hljs-string">"object"</span> }` /]
 </code></pre><p>If the property expects a function,
