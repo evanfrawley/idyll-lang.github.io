@@ -21,28 +21,62 @@ layed out on the page: width, columns, etc. The `theme` option allows you to cho
 
 ### Layout
 
-Idyll currently ships with two different page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles
+Idyll currently ships with several page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles
 for you project.
+
+#### Centered
+
+This is the default layout. It puts your content in the center of the page and is mobile responsive.
 
 #### Blog
 
-This is the default layout. The `blog` layout is fairly traditional article layout with room in the margin to
-put notes and other callouts.
+The `blog` layout is fairly traditional article layout with room in the margin to
+put notes and other callouts. See https://mathisonian.github.io/trig/etymology/ for an example of this layout.
 
-![blog](images/blog.gif)
+#### None
 
-#### Scroll
-
-The scroll layout leaves more space for a fixed element, and adds margins between text sections,
-making it easy to trigger events when a certain section enters the viewport.
-
-![scroll](images/scroll.gif)
-
-See https://github.com/idyll-lang/idyll/blob/master/examples/scroll/index.idl for example usage of the scroll layout.
+If you set `--layout none` Idyll won't provide any structural CSS, allowing you to customize things to your
+heart's content.
 
 ### Themes
 
-There currently is only one default theme, expect more soon.
+#### Github
 
+This is the default theme, it uses CSS that resembles the styles in GitHub READMEs.
+
+#### Idyll
+
+This theme uses custom styles that go along with Idyll's look and feel. See https://mathisonian.github.io/trig/etymology/ for an example of this style.
+
+## Using Idyll as an API
+
+You can use Idyll directly from JavaScript as well.
+
+### API:
+
+`idyll(idyllFile, options, callback)`
+
+### Example
+
+```
+var idyll = require('idyll');
+
+idyll('index.idl', {
+  output: 'build/',
+  htmlTemplate: '_index.html',
+  componentFolder: './components/',
+  defaultComponents: './components/default/',
+  dataFolder: './data',
+  layout: 'centered',
+  theme: 'github',
+  compilerOptions: {
+    spellcheck: true
+  },
+  build: true
+}, function() {
+  // calls when Idyll is finished building
+});
+```
 
 Continue to the next section to learn about [Idyll components](/components-overview).
+

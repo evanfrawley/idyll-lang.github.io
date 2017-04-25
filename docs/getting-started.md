@@ -2,7 +2,7 @@
 # Getting Started
 
 The easiest way to get started with Idyll is to use the project generator.
-It will help get you set up using custom components, datasets, and stylesheets. 
+It will help get you set up using custom components, datasets, and stylesheets.
 To use the generator:
 
 ```sh
@@ -39,8 +39,8 @@ The files do the following:
 * `_index.html` - A barebones HTML file that will be used if you publish your project to the web.
 * `package.json` - This file contains all the metadata for your project.
 
-To get started, from a terminal in that directory run `npm start` and Idyll will compile your 
-file and open it in your web browser. Every time you save the `index.idl` file, the system will automatically recompile 
+To get started, from a terminal in that directory run `npm start` and Idyll will compile your
+file and open it in your web browser. Every time you save the `index.idl` file, the system will automatically recompile
 everything and update the page in the browser.
 
 If you instead just want to test things out quickly, the simplest way is to
@@ -60,4 +60,4 @@ To use a custom stylesheet, use the `--css` flag.
 $ idyll my-file.idl --css styles.css
 ```
 
-Continue to the [next section](/configuration-and-styles) to learn more.
+Continue to the [next section](/syntax) to learn how to use Idyll's syntax.

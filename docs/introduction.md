@@ -6,74 +6,89 @@ for the web. The goal of the project is to provide a friendly
 markup language — and an associated toolchain —
 that can be used to create dynamic, text-driven web pages.
 
-Idyll lowers the barrier to entry for
-individuals to create documents that use common narrative techniques
+Idyll helps you create documents that use common narrative techniques
 such as embedding interactive charts and graphs,
 responding to scroll events, and [explorable explanations](http://explorableexplanations.com/). Additionally,
 its readable format facilitates
 collaboration between writers, editors, designers,
 and programmers on complex projects.
 
-## Examples
+In Idyll the entire document is reactive, built on top of Facebook's React framework. Changes
+immediately propagate through the entire page, taking the pain out of creating
+data-driven experiences that respond to reader input. You don't need to know anything about React
+to use Idyll, but if you do, it is easy to extend with your own custom components.
 
-Check out some articles create with Idyll:
+### Examples
 
-* The Etymology of Trig Functions - https://mathisonian.github.io/trig/etymology/
-* Seattle PD’s Dashcam Problem - https://mathisonian.github.io/dashcam/
-* United Complaints of America - https://mathisonian.github.io/consumer-complaints/
+##### Full Articles
 
-and examples of common use cases:
+<div class="example">
+  <a href="https://mathisonian.github.io/trig/etymology/">
+    <div class="example-image" style="background-image: url(./images/trig.png)"></div>
+     The Etymology of Trig Functions
+  </a>
+</div>
 
-* A Scrolling Introduction to Idyll - <a href="https://idyll-lang.github.io/idyll/scroll/" data-router-ignore>https://idyll-lang.github.io/idyll/scroll/<a/>
-* Using Idyll with [d3](https://d3js.org/) - <a href="https://idyll-lang.github.io/idyll-d3-component/" data-router-ignore>https://idyll-lang.github.io/idyll-d3-component/<a/>
-* Using Idyll with [regl](https://github.com/regl-project/regl) - <a href="https://idyll-lang.github.io/idyll-regl-component/" data-router-ignore>https://idyll-lang.github.io/idyll-regl-component/<a/>
+<div class="example">
+  <a href="https://mathisonian.github.io/dashcam/">
+    <div class="example-image" style="background-image: url(https://mathisonian.github.io/dashcam/images/share.png)"></div>
+    Seattle PD’s Dashcam Problem
+  </a>
+</div>
 
-## Syntax
+<div class="example">
+  <a href="https://mathisonian.github.io/consumer-complaints/">
+    <div class="example-image" style="background-image: url(./images/complaints-2.gif)"></div>
+    The United Complaints of America
+  </a>
+</div>
 
-```md
-# Idyll
-
-This is *Idyll* markup. By default, everything is text,
-using some common markdown syntax.
-
-But you can include custom JavaScript components inline:
-
-[DynamicComponent property:"value" /]
-```
-
-The project is inspired by markdown, and
-supports a subset of commonly used markdown
-syntax, for example using a `#` pound sign
-to denote headers, using three backticks to
-display code, and using stars to display inline **bold** and *italics*.
-
-It is built on top of [React](https://facebook.github.io/react/), a JavaScript library
-made by Facebook, taking advantage of the one-way data
-binding pattern to make it easy to create reactive JavaScript components
-that act as first class elements in the markup. Idyll makes it
-easy to create data-driven articles
-
-```
-[data name:"cooldataset"  src:"cooldata.json" /]
-
-Check out this chart:
-
-[Chart data:cooldataset type:"line" /]
-```
-
-![chart](images/chart.png)
-
-and handles variable binding for you.
-
-```
-[var name:"myVar" value:10 /]
-
-[Range value:myVar min:0 max:100 /]
-[DisplayVar var:myVar /]
-```
-
-![displayvar](images/displayvar.gif)
+##### With Popular JavaScript Libraries
 
 
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll-d3-component//">
+    <div class="example-image" style="background-image: url(./images/d3.png)"></div>
+     D3
+  </a>
+</div>
 
-Continue to the [next section](/getting-started) for more details.
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll-regl-component/">
+    <div class="example-image" style="background-image: url(./images/regl.png)"></div>
+    regl
+  </a>
+</div>
+
+<div class="example">
+  <a href="https://idyll-lang.github.io/examples/csv/">
+    <div class="example-image" style="background-image: url(./images/vl.png)"></div>
+    Vega Lite
+  </a>
+</div>
+
+##### Other Examples
+
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll-d3-component//">
+    <div class="example-image" style="background-image: url(./images/lorenz.png)"></div>
+     Lorenz Attractor
+  </a>
+</div>
+
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll-regl-component/">
+    <div class="example-image" style="background-image: url(./images/nonlinear.png)"></div>
+    Nonlinear Sliders
+  </a>
+</div>
+
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll/scroll/">
+    <div class="example-image" style="background-image: url(./images/scroll.gif)"></div>
+    Scrolly Idyll
+  </a>
+</div>
+
+
+Continue to the [next section](/getting-started) to start using Idyll.

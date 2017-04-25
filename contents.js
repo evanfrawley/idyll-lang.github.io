@@ -2,6 +2,7 @@ module.exports = {
   "Overview": {
     Introduction: "introduction.md",
     "Getting started": "getting-started.md",
+    "Syntax": "syntax.md",
     "Configuration and styles": "configuration-and-styles.md"
   },
   Components: {
