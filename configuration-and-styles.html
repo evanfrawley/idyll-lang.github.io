@@ -18,10 +18,10 @@
     <button class="minidocs-menu-toggle">Menu</button>
     <div class="minidocs-menu menu-closed menu-small">
       <div class="minidocs-menu-wrapper">
-        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div>
+        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/syntax" class="content-link ">Syntax</a></div><div>
             <a href="/configuration-and-styles" class="content-link active">Configuration and styles</a>
             <div class="minidocs-menu-toc">
-              <a href="#command-line-options" class="h3 content-link">Command Line Options</a><a href="#themes-and-page-layout" class="h3 content-link">Themes and Page Layout</a>
+              <a href="#command-line-options" class="h3 content-link">Command Line Options</a><a href="#themes-and-page-layout" class="h3 content-link">Themes and Page Layout</a><a href="#using-idyll-as-an-api" class="h3 content-link">Using Idyll as an API</a>
             </div>
           </div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
@@ -45,17 +45,35 @@
 <p>If you are using Idyll via the project generator, open <code>package.json</code> to change these options.</p>
 <h2 id="themes-and-page-layout"><a href="#themes-and-page-layout" class="anchor"></a>Themes and Page Layout</h2><p>Idyll exposes two options to help you style your project, <code>layout</code> and <code>theme</code>. <code>layout</code> deals with CSS styles related to how your content is
 layed out on the page: width, columns, etc. The <code>theme</code> option allows you to choose diffent stylesheets to change the style of the content itself (text color, font, and so on).</p>
-<h3 id="layout"><a href="#layout" class="anchor"></a>Layout</h3><p>Idyll currently ships with two different page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles
+<h3 id="layout"><a href="#layout" class="anchor"></a>Layout</h3><p>Idyll currently ships with several page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles
 for you project.</p>
-<h4 id="blog"><a href="#blog" class="anchor"></a>Blog</h4><p>This is the default layout. The <code>blog</code> layout is fairly traditional article layout with room in the margin to
-put notes and other callouts.</p>
-<p><img src="images/blog.gif" alt="blog"></p>
-<h4 id="scroll"><a href="#scroll" class="anchor"></a>Scroll</h4><p>The scroll layout leaves more space for a fixed element, and adds margins between text sections,
-making it easy to trigger events when a certain section enters the viewport.</p>
-<p><img src="images/scroll.gif" alt="scroll"></p>
-<p>See <a href="https://github.com/idyll-lang/idyll/blob/master/examples/scroll/index.idl">https://github.com/idyll-lang/idyll/blob/master/examples/scroll/index.idl</a> for example usage of the scroll layout.</p>
-<h3 id="themes"><a href="#themes" class="anchor"></a>Themes</h3><p>There currently is only one default theme, expect more soon.</p>
-<p>Continue to the next section to learn about <a href="/components-overview">Idyll components</a>.</p>
+<h4 id="centered"><a href="#centered" class="anchor"></a>Centered</h4><p>This is the default layout. It puts your content in the center of the page and is mobile responsive.</p>
+<h4 id="blog"><a href="#blog" class="anchor"></a>Blog</h4><p>The <code>blog</code> layout is fairly traditional article layout with room in the margin to
+put notes and other callouts. See <a href="https://mathisonian.github.io/trig/etymology/">https://mathisonian.github.io/trig/etymology/</a> for an example of this layout.</p>
+<h4 id="none"><a href="#none" class="anchor"></a>None</h4><p>If you set <code>--layout none</code> Idyll won&#39;t provide any structural CSS, allowing you to customize things to your
+heart&#39;s content.</p>
+<h3 id="themes"><a href="#themes" class="anchor"></a>Themes</h3><h4 id="github"><a href="#github" class="anchor"></a>Github</h4><p>This is the default theme, it uses CSS that resembles the styles in GitHub READMEs.</p>
+<h4 id="idyll"><a href="#idyll" class="anchor"></a>Idyll</h4><p>This theme uses custom styles that go along with Idyll&#39;s look and feel. See <a href="https://mathisonian.github.io/trig/etymology/">https://mathisonian.github.io/trig/etymology/</a> for an example of this style.</p>
+<h2 id="using-idyll-as-an-api"><a href="#using-idyll-as-an-api" class="anchor"></a>Using Idyll as an API</h2><p>You can use Idyll directly from JavaScript as well.</p>
+<h3 id="api"><a href="#api" class="anchor"></a>API:</h3><p><code>idyll(idyllFile, options, callback)</code></p>
+<h3 id="example"><a href="#example" class="anchor"></a>Example</h3><pre><code><span class="hljs-keyword">var</span> idyll = <span class="hljs-built_in">require</span>(<span class="hljs-string">'idyll'</span>);
+
+idyll(<span class="hljs-string">'index.idl'</span>, {
+  <span class="hljs-attr">output</span>: <span class="hljs-string">'build/'</span>,
+  <span class="hljs-attr">htmlTemplate</span>: <span class="hljs-string">'_index.html'</span>,
+  <span class="hljs-attr">componentFolder</span>: <span class="hljs-string">'./components/'</span>,
+  <span class="hljs-attr">defaultComponents</span>: <span class="hljs-string">'./components/default/'</span>,
+  <span class="hljs-attr">dataFolder</span>: <span class="hljs-string">'./data'</span>,
+  <span class="hljs-attr">layout</span>: <span class="hljs-string">'centered'</span>,
+  <span class="hljs-attr">theme</span>: <span class="hljs-string">'github'</span>,
+  <span class="hljs-attr">compilerOptions</span>: {
+    <span class="hljs-attr">spellcheck</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-attr">build</span>: <span class="hljs-literal">true</span>
+}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// calls when Idyll is finished building</span>
+});
+</code></pre><p>Continue to the next section to learn about <a href="/components-overview">Idyll components</a>.</p>
 </div>
   </div>
       </div>

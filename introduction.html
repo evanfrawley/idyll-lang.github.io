@@ -21,9 +21,9 @@
         <div class="h1">Overview</div><div>
             <a href="/introduction" class="content-link active">Introduction</a>
             <div class="minidocs-menu-toc">
-              <a href="#examples" class="h3 content-link">Examples</a><a href="#syntax" class="h3 content-link">Syntax</a>
+              
             </div>
-          </div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+          </div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/syntax" class="content-link ">Syntax</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
     </div>
   </div>
@@ -37,57 +37,81 @@
 for the web. The goal of the project is to provide a friendly
 markup language — and an associated toolchain —
 that can be used to create dynamic, text-driven web pages.</p>
-<p>Idyll lowers the barrier to entry for
-individuals to create documents that use common narrative techniques
+<p>Idyll helps you create documents that use common narrative techniques
 such as embedding interactive charts and graphs,
 responding to scroll events, and <a href="http://explorableexplanations.com/">explorable explanations</a>. Additionally,
 its readable format facilitates
 collaboration between writers, editors, designers,
 and programmers on complex projects.</p>
-<h2 id="examples"><a href="#examples" class="anchor"></a>Examples</h2><p>Check out some articles create with Idyll:</p>
-<ul>
-<li>The Etymology of Trig Functions - <a href="https://mathisonian.github.io/trig/etymology/">https://mathisonian.github.io/trig/etymology/</a></li>
-<li>Seattle PD’s Dashcam Problem - <a href="https://mathisonian.github.io/dashcam/">https://mathisonian.github.io/dashcam/</a></li>
-<li>United Complaints of America - <a href="https://mathisonian.github.io/consumer-complaints/">https://mathisonian.github.io/consumer-complaints/</a></li>
-</ul>
-<p>and examples of common use cases:</p>
-<ul>
-<li>A Scrolling Introduction to Idyll - <a href="https://idyll-lang.github.io/idyll/scroll/" data-router-ignore>https://idyll-lang.github.io/idyll/scroll/<a/></li>
-<li>Using Idyll with <a href="https://d3js.org/">d3</a> - <a href="https://idyll-lang.github.io/idyll-d3-component/" data-router-ignore>https://idyll-lang.github.io/idyll-d3-component/<a/></li>
-<li>Using Idyll with <a href="https://github.com/regl-project/regl">regl</a> - <a href="https://idyll-lang.github.io/idyll-regl-component/" data-router-ignore>https://idyll-lang.github.io/idyll-regl-component/<a/></li>
-</ul>
-<h2 id="syntax"><a href="#syntax" class="anchor"></a>Syntax</h2><pre><code class="lang-md"><span class="hljs-section"># Idyll</span>
+<p>In Idyll the entire document is reactive, built on top of Facebook&#39;s React framework. Changes
+immediately propagate through the entire page, taking the pain out of creating
+data-driven experiences that respond to reader input. You don&#39;t need to know anything about React
+to use Idyll, but if you do, it is easy to extend with your own custom components.</p>
+<h3 id="examples"><a href="#examples" class="anchor"></a>Examples</h3><h5 id="full-articles"><a href="#full-articles" class="anchor"></a>Full Articles</h5><div class="example">
+  <a href="https://mathisonian.github.io/trig/etymology/">
+    <div class="example-image" style="background-image: url(./images/trig.png)"></div>
+     The Etymology of Trig Functions
+  </a>
+</div>
 
-This is <span class="hljs-emphasis">*Idyll*</span> markup. By default, everything is text,
-using some common markdown syntax.
+<div class="example">
+  <a href="https://mathisonian.github.io/dashcam/">
+    <div class="example-image" style="background-image: url(https://mathisonian.github.io/dashcam/images/share.png)"></div>
+    Seattle PD’s Dashcam Problem
+  </a>
+</div>
 
-But you can include custom JavaScript components inline:
+<div class="example">
+  <a href="https://mathisonian.github.io/consumer-complaints/">
+    <div class="example-image" style="background-image: url(./images/complaints-2.gif)"></div>
+    The United Complaints of America
+  </a>
+</div>
 
-[DynamicComponent property:"value" /]
-</code></pre>
-<p>The project is inspired by markdown, and
-supports a subset of commonly used markdown
-syntax, for example using a <code>#</code> pound sign
-to denote headers, using three backticks to
-display code, and using stars to display inline <strong>bold</strong> and <em>italics</em>.</p>
-<p>It is built on top of <a href="https://facebook.github.io/react/">React</a>, a JavaScript library
-made by Facebook, taking advantage of the one-way data
-binding pattern to make it easy to create reactive JavaScript components
-that act as first class elements in the markup. Idyll makes it
-easy to create data-driven articles</p>
-<pre><code>[data <span class="hljs-string">name:</span><span class="hljs-string">"cooldataset"</span>  <span class="hljs-string">src:</span><span class="hljs-string">"cooldata.json"</span> /]
+<h5 id="with-popular-javascript-libraries"><a href="#with-popular-javascript-libraries" class="anchor"></a>With Popular JavaScript Libraries</h5><div class="example">
+  <a href="https://idyll-lang.github.io/idyll-d3-component//">
+    <div class="example-image" style="background-image: url(./images/d3.png)"></div>
+     D3
+  </a>
+</div>
 
-Check out <span class="hljs-keyword">this</span> <span class="hljs-string">chart:</span>
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll-regl-component/">
+    <div class="example-image" style="background-image: url(./images/regl.png)"></div>
+    regl
+  </a>
+</div>
 
-[Chart <span class="hljs-string">data:</span>cooldataset <span class="hljs-string">type:</span><span class="hljs-string">"line"</span> /]
-</code></pre><p><img src="images/chart.png" alt="chart"></p>
-<p>and handles variable binding for you.</p>
-<pre><code>[var <span class="hljs-string">name:</span><span class="hljs-string">"myVar"</span> <span class="hljs-string">value:</span><span class="hljs-number">10</span> /]
+<div class="example">
+  <a href="https://idyll-lang.github.io/examples/csv/">
+    <div class="example-image" style="background-image: url(./images/vl.png)"></div>
+    Vega Lite
+  </a>
+</div>
 
-[Range <span class="hljs-string">value:</span>myVar <span class="hljs-string">min:</span><span class="hljs-number">0</span> <span class="hljs-string">max:</span><span class="hljs-number">100</span> /]
-[DisplayVar <span class="hljs-string">var:</span>myVar /]
-</code></pre><p><img src="images/displayvar.gif" alt="displayvar"></p>
-<p>Continue to the <a href="/getting-started">next section</a> for more details.</p>
+<h5 id="other-examples"><a href="#other-examples" class="anchor"></a>Other Examples</h5><div class="example">
+  <a href="https://idyll-lang.github.io/idyll-d3-component//">
+    <div class="example-image" style="background-image: url(./images/lorenz.png)"></div>
+     Lorenz Attractor
+  </a>
+</div>
+
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll-regl-component/">
+    <div class="example-image" style="background-image: url(./images/nonlinear.png)"></div>
+    Nonlinear Sliders
+  </a>
+</div>
+
+<div class="example">
+  <a href="https://idyll-lang.github.io/idyll/scroll/">
+    <div class="example-image" style="background-image: url(./images/scroll.gif)"></div>
+    Scrolly Idyll
+  </a>
+</div>
+
+
+<p>Continue to the <a href="/getting-started">next section</a> to start using Idyll.</p>
 </div>
   </div>
       </div>

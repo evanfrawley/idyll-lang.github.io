@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>idyll-lang.github</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/"><img src="/logo-text.svg" alt="idyll-lang.github" class="minidocs-logo" /></a></h1>
+    </div>
+    <div class="_689fec56 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div>
+            <a href="/syntax" class="content-link active">Syntax</a>
+            <div class="minidocs-menu-toc">
+              <a href="#text" class="h3 content-link">Text</a><a href="#components" class="h3 content-link">Components</a><a href="#component-properties" class="h3 content-link">Component Properties</a>
+            </div>
+          </div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="syntax"><a href="#syntax" class="anchor"></a>Syntax</h1><h2 id="text"><a href="#text" class="anchor"></a>Text</h2><p>By default everything in Idyll is text. To make common
+formatting tasks easier, Idyll borrows some syntax from markdown.</p>
+<h4 id="bold-italic"><a href="#bold-italic" class="anchor"></a>Bold, Italic</h4><p>Text surrounded by asterisks (<em>) will be bolded,
+e.g. `</em>italic<em>` becomes </em>italic<em>, and <code>**bold**</code> becomes
+<em>*bold</em></em>.</p>
+<h4 id="headers"><a href="#headers" class="anchor"></a>Headers</h4><p>Use a pound sign (#) to denote a header:</p>
+<pre><code># Title h1
+## Title h2
+### Title h3
+#### Title h4
+##### Title h5
+###### Title h6
+</code></pre><h4 id="code"><a href="#code" class="anchor"></a>Code</h4><p>Text placed between backticks (`) will be displayed inline
+as code: <code>`y = x * x` </code> becomes <code>y = x * x</code>.</p>
+<p>Text placed between groups of three backticks will be displayed as
+a code block.</p>
+<pre><code>This is <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">code</span> block
+</code></pre><p>The above code block is created with this code:</p>
+<pre><code>```
+This is a <span class="hljs-keyword">code</span> block
+```
+</code></pre><h2 id="components"><a href="#components" class="anchor"></a>Components</h2><p>Besides text, components are the other basic building block of an Idyll document.
+Components are denoted with brackets, and can be invoked in one of two ways: they can be self
+closing,</p>
+<pre><code>[<span class="hljs-built_in">Range</span> <span class="hljs-built_in">min</span>:<span class="hljs-number">0</span> <span class="hljs-built_in">max</span>:<span class="hljs-number">10</span> <span class="hljs-keyword">value</span>:<span class="hljs-keyword">value</span> /]
+</code></pre><p>or have a closing and opening tag with content in between.</p>
+<pre><code><span class="hljs-string">[Button]</span>
+Click Me
+<span class="hljs-string">[/Button]</span>
+</code></pre><h2 id="component-properties"><a href="#component-properties" class="anchor"></a>Component Properties</h2><p>Properties can be passed into components
+in the following ways:</p>
+<h3 id="number-string"><a href="#number-string" class="anchor"></a>Number, String</h3><p>Numbers or string literals may be used.</p>
+<pre><code>[Component propName:<span class="hljs-number">10</span> /]
+[Component propName:<span class="hljs-string">"propValue"</span> /]
+</code></pre><h3 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or Dataset</h3><p>A variable or dataset can be passed in directly, this will
+automatically create a binding between that variable and property,
+more on this in the next section.</p>
+<pre><code>[Component propName:myVar /]
+</code></pre><h3 id="expression"><a href="#expression" class="anchor"></a>Expression</h3><p>Use backticks to pass an evaluated expression:</p>
+<pre><code>[<span class="hljs-name">Component</span> propName:`<span class="hljs-number">2</span> * <span class="hljs-number">2</span> * <span class="hljs-number">2</span>` /]
+[<span class="hljs-name">Component</span> propName:`{ an: <span class="hljs-string">"object"</span> }` /]
+</code></pre><p>If the property expects a function,
+the expression will automatically be
+converted to a callback. This is convenient
+for updating variables on events, for example.</p>
+<pre><code>[<span class="hljs-name">Component</span> onClick:`myVar++` /]
+</code></pre><p>Idyll uses naming conventions to determine if the expression should be converted to a callback.
+Properties that are named <code>onXxxxx</code> (e.g. <code>onClick</code>) or <code>handleYyyyy</code> (e.g. <code>handleMouseMove</code>) are
+assumed to expect callbacks.</p>
+<p>Continue to the next section to learn about <a href="/configuration-and-styles">customizing Idyll</a>.</p>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>
