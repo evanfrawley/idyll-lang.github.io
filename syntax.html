@@ -21,9 +21,9 @@
         <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div>
             <a href="/syntax" class="content-link active">Syntax</a>
             <div class="minidocs-menu-toc">
-              <a href="#text" class="h3 content-link">Text</a><a href="#components" class="h3 content-link">Components</a>
+              <a href="#text" class="h3 content-link">Text</a><a href="#components" class="h3 content-link">Components</a><a href="#variables" class="h3 content-link">Variables</a><a href="#datasets" class="h3 content-link">Datasets</a>
             </div>
-          </div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-variables-and-datasets" class="content-link ">Variables and datasets</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+          </div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
     </div>
   </div>
@@ -91,6 +91,25 @@ assumed to expect callbacks.</p>
 <h4 id="refs"><a href="#refs" class="anchor"></a>Refs</h4><p>There is a special property called <code>ref</code> that allows you to create a reference to specific
 component on the page. This is primarily used to keep track of elements on the page as
 a reader scrolls. See the section on <a href="/components-refs">refs</a> for more details.</p>
+<h2 id="variables"><a href="#variables" class="anchor"></a>Variables</h2><p>Variables can be declared at any point in an Idyll file. Variables use
+the same syntax as a component, but must defined a <code>name</code> and a <code>value</code>
+property.</p>
+<pre><code>[<span class="hljs-keyword">var</span> name:<span class="hljs-string">"x"</span> <span class="hljs-keyword">value</span>:<span class="hljs-number">10</span> /]
+</code></pre><p>The above code defines a variable <code>x</code>, with the initial value of <code>10</code>.</p>
+<h3 id="derived-variables"><a href="#derived-variables" class="anchor"></a>Derived Variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from
+other variables, and is recomputed whenever values change:</p>
+<pre><code>[<span class="hljs-name">derived</span> name:<span class="hljs-string">"xSquared"</span> value:`x * x` /]
+</code></pre><p>The above code defines a derived variable <code>xSquared</code> that depends
+on the value of <code>x</code>. The value of <code>xSquared</code> is automatically updated
+based on the value of <code>x</code>.</p>
+<h2 id="datasets"><a href="#datasets" class="anchor"></a>Datasets</h2><p>A dataset is similar to a variable, except instead of expecting a
+<code>value</code>, datasets must be provided with a <code>source</code> (the name of the data file).</p>
+<p>Example:</p>
+<pre><code>[data name:<span class="hljs-string">"myData"</span> source:<span class="hljs-string">"myData.csv"</span> /]
+[Table data:myData /]
+</code></pre><p>The above code declares a dataset, and uses it as input to a <code>Table</code> component.
+Datasets can be either <code>.csv</code> or <code>.json</code> files. CSV files will automatically be
+converted to a JSON object.</p>
 <p>Continue to the next section to learn about <a href="/configuration-and-styles">customizing Idyll</a>.</p>
 </div>
   </div>
