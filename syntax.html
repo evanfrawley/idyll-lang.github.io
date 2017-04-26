@@ -71,10 +71,14 @@ in the following ways:</p>
 automatically create a binding between that variable and property,
 more on this in the section on <a href="/components-variables-and-datasets">variables and datasets</a>.</p>
 <pre><code>[Component propName:myVar /]
-</code></pre><h4 id="expression"><a href="#expression" class="anchor"></a>Expression</h4><p>Use backticks to pass an evaluated expression:</p>
+</code></pre><p>If the variable changes that update will immediately be reflected in the
+state of the component.</p>
+<h4 id="expression"><a href="#expression" class="anchor"></a>Expression</h4><p>Use backticks to pass an evaluated expression:</p>
 <pre><code>[<span class="hljs-name">Component</span> propName:`<span class="hljs-number">2</span> * <span class="hljs-number">2</span> * <span class="hljs-number">2</span>` /]
 [<span class="hljs-name">Component</span> propName:`{ an: <span class="hljs-string">"object"</span> }` /]
-</code></pre><p>If the property expects a function,
+</code></pre><p>Note that because Idyll is reactive, if a variable changes any expressions that reference that
+variable will immediately be recomputed.</p>
+<p>If the property expects a function,
 the expression will automatically be
 converted to a callback. This is convenient
 for updating variables on events, for example.</p>
