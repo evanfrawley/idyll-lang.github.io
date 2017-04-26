@@ -77,7 +77,8 @@ state of the component.</p>
 <pre><code>[<span class="hljs-name">Component</span> propName:`<span class="hljs-number">2</span> * <span class="hljs-number">2</span> * <span class="hljs-number">2</span>` /]
 [<span class="hljs-name">Component</span> propName:`{ an: <span class="hljs-string">"object"</span> }` /]
 </code></pre><p>Note that because Idyll is reactive, if a variable changes any expressions that reference that
-variable will immediately be recomputed.</p>
+variable will immediately be recomputed. See this utilized to create reactive vega-lite specifications:
+<a href="https://idyll-lang.github.io/examples/csv/">https://idyll-lang.github.io/examples/csv/</a>.</p>
 <p>If the property expects a function,
 the expression will automatically be
 converted to a callback. This is convenient
