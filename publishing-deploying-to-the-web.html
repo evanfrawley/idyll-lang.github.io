@@ -37,22 +37,6 @@ project with a repo on github, run the command</p>
 <p>this will compile the assets and push it to github
 pages. Note that the <a href="https://idyll-lang.github.io/components-built-in#meta">meta component</a>
 is useful for inserting metadata into the compiled output.</p>
-<p>If you are using the project generator, that&#39;s all you need to know about deploying. Continue reading
-to learn more about the nuts and bolts of the process.</p>
-<p>If you want to use the <code>idyll</code> command line tool directly and build the JavaScript bundle, pass in
-the <code>--build</code> flag.</p>
-<pre><code class="lang-sh">$ idyll my-file.idl --build &gt; bundle.js
-</code></pre>
-<p>This can be combined with other
-useful tools to quickly generate a webpage. For example,
-the <code>indexhtmlify</code> package will create a barebones HTML page,
-properly inserting the</p>
-<pre><code>$ npm install -g indexhtmlify
-$ idyll <span class="hljs-keyword">my</span>-<span class="hljs-built_in">file</span>.idl <span class="hljs-comment">--build | indexhtmlify --style styles.css &gt; idyll.html</span>
-</code></pre><p>The command that the generator uses is</p>
-<pre><code>$ cp -r {images,styles.css} <span class="hljs-keyword">build</span>/; idyll <span class="hljs-keyword">index</span>.idl --<span class="hljs-keyword">build</span> | uglifyjs &gt; <span class="hljs-keyword">build</span>/<span class="hljs-keyword">index</span>.js &amp;&amp; gh-pages -d ./<span class="hljs-keyword">build</span>
-</code></pre><p>which copies default static asset folders to the build directory, compiles and minifies the JavaScript, and
-then uses the <code>gh-pages</code> package to push the resulting folder to your <code>gh-pages</code> branch on Github.</p>
 </div>
   </div>
       </div>
