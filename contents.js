@@ -9,7 +9,6 @@ module.exports = {
     Overview: "components-overview.md",
     "Built-in components": "components-built-in.md",
     "Custom components": "components-custom.md",
-    "Variables and datasets": "components-variables-and-datasets.md",
     "Refs": "components-refs.md"
   },
   Publishing: {

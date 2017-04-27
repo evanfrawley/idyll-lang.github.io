@@ -8,13 +8,13 @@ formatting tasks easier, Idyll borrows some syntax from markdown.
 
 #### Bold, Italic
 
-Text surrounded by asterisks (*) will be bolded,
+Text surrounded by asterisks (`*`) will be bolded,
 e.g. `*italic*` becomes *italic*, and `**bold**` becomes
 **bold**.
 
 #### Headers
 
-Use a pound sign (#) to denote a header:
+Use a pound sign (`#`) to denote a header:
 
 ```
 # Title h1
@@ -44,6 +44,7 @@ This is a code block
 ```
 ````
 
+
 ## Components
 
 Besides text, components are the other basic building block of an Idyll document.
@@ -62,31 +63,35 @@ Click Me
 [/Button]
 ```
 
-## Component Properties
+### Component Properties
 
 Properties can be passed into components
 in the following ways:
 
-### Number, String
+#### Literals: Number, String, Boolean
 
-Numbers or string literals may be used.
+Number, string, or boolean literals may be used.
 
 ```
 [Component propName:10 /]
 [Component propName:"propValue" /]
+[Component propName:false /]
 ```
 
-### Variable or Dataset
+#### Variable or Dataset
 
 A variable or dataset can be passed in directly, this will
 automatically create a binding between that variable and property,
-more on this in the next section.
+more on this in the section on [variables and datasets](/components-variables-and-datasets).
 
 ```
 [Component propName:myVar /]
 ```
 
-### Expression
+If the variable changes that update will immediately be reflected in the
+state of the component.
+
+#### Expression
 
 Use backticks to pass an evaluated expression:
 
@@ -94,6 +99,10 @@ Use backticks to pass an evaluated expression:
 [Component propName:`2 * 2 * 2` /]
 [Component propName:`{ an: "object" }` /]
 ```
+
+Note that because Idyll is reactive, if a variable changes any expressions that reference that
+variable will immediately be recomputed. See this utilized to create reactive vega-lite specifications:
+https://idyll-lang.github.io/examples/csv/.
 
 If the property expects a function,
 the expression will automatically be
@@ -108,5 +117,53 @@ Idyll uses naming conventions to determine if the expression should be converted
 Properties that are named `onXxxxx` (e.g. `onClick`) or `handleYyyyy` (e.g. `handleMouseMove`) are
 assumed to expect callbacks.
 
+
+#### Refs
+
+There is a special property called `ref` that allows you to create a reference to specific
+component on the page. This is primarily used to keep track of elements on the page as
+a reader scrolls. See the section on [refs](/components-refs) for more details.
+
+
+## Variables
+
+Variables can be declared at any point in an Idyll file. Variables use
+the same syntax as a component, but must defined a `name` and a `value`
+property.
+
+```
+[var name:"x" value:10 /]
+```
+
+The above code defines a variable `x`, with the initial value of `10`.
+
+### Derived Variables
+
+A derived variable is similar to a `var`, but its value is derived from
+other variables, and is recomputed whenever values change:
+
+```
+[derived name:"xSquared" value:`x * x` /]
+```
+
+The above code defines a derived variable `xSquared` that depends
+on the value of `x`. The value of `xSquared` is automatically updated
+based on the value of `x`.
+
+## Datasets
+
+A dataset is similar to a variable, except instead of expecting a
+`value`, datasets must be provided with a `source` (the name of the data file).
+
+Example:
+
+```
+[data name:"myData" source:"myData.csv" /]
+[Table data:myData /]
+```
+
+The above code declares a dataset, and uses it as input to a `Table` component.
+Datasets can be either `.csv` or `.json` files. CSV files will automatically be
+converted to a JSON object.
 
 Continue to the next section to learn about [customizing Idyll](/configuration-and-styles).

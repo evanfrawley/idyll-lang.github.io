@@ -17,7 +17,11 @@ $  tree -I node_modules
 .
 ├── _index.html
 ├── components
-│   └── custom-component.js
+│   ├── custom-component.js
+│   └── default
+│       ├── styles
+│       │   └── ... default component stylesheets
+│       └── ... default components in here
 ├── data
 │   └── example-data.json
 ├── images
@@ -25,8 +29,6 @@ $  tree -I node_modules
 ├── index.idl
 ├── package.json
 └── styles.css
-
-3 directories, 7 files
 ```
 
 The files do the following:
@@ -43,21 +45,9 @@ To get started, from a terminal in that directory run `npm start` and Idyll will
 file and open it in your web browser. Every time you save the `index.idl` file, the system will automatically recompile
 everything and update the page in the browser.
 
-If you instead just want to test things out quickly, the simplest way is to
-install it from npm, create a new file and start writing:
+The `components/default/` folder contains the default components that Idyll provides. If you need to directly
+update one of these components or their styles, feel free - Idyll is built to be customized.
 
-```sh
-$ npm install -g idyll
-$ idyll my-file.idl
-```
-
-The `idyll` command will automatically compile everything and load the
-interactive page in your web browser.
-
-To use a custom stylesheet, use the `--css` flag.
-
-```sh
-$ idyll my-file.idl --css styles.css
-```
+If you want to configure the paths or build steps that Idyll uses, open `package.json` and update the `scripts` section. These options are discussed in greater detail later on in the documentation.
 
 Continue to the [next section](/syntax) to learn how to use Idyll's syntax.

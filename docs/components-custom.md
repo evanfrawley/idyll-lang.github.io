@@ -98,16 +98,15 @@ Of course, this trivial example could be accomplished using built-in components:
 
 ## Name Resolution
 
-Components lookup is based on filenames. If your component name 
+Components lookup is based on filenames. If your component name
 is in `CamelCase`, it will automatically be converted to `kebab-case`,
 so for example if you want to create a component named `CustomComponent`,
 it should be stored in a file called `custom-component.js`.
 
 Custom component are meant for times when more complex and custom
-code is needed. By default Idyll will look for your custom components 
-inside of a folder called `components/`. If you wish to change the custom 
-component path, specify it with the `--components` option, e.g. 
+code is needed. By default Idyll will look for your custom components
+inside of a folder called `components/`. If you wish to change the custom
+component path, specify it with the `--components` option, e.g.
 `idyll index.idl --css styles.css --components custom/component/path/`.
 
-
-Continue to learn how to use [variables and datasets](/components-variables-and-datasets).
+Continue to learn how to use [references](/components-refs) to make your page more dynamic.

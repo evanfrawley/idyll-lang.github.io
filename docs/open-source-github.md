@@ -4,9 +4,6 @@
 The main repository for Idyll is here: https://github.com/idyll-lang/idyll. Feel free to
 open issues or create pull requests.
 
-The code for the Idyll compiler is here: https://github.com/idyll-lang/idyll-compiler. If you are
-having problems with the compiler, please submit an issue there.
-
 There is also a [public chatroom on Gitter](https://gitter.im/idyll-lang/Lobby) if you'd like to say "Hi!" or
 ask a quick question.
 

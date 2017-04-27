@@ -10,7 +10,8 @@ The `idyll` command line tool accepts the following options
 * `--datasets` the path to the folder containing your datasets. By default this points to `data/`.
 * `--layout` the name of the layout to use. By default this is `blog`. More on layouts below.
 * `--theme` the name of the theme to use. By default this is `idyll`. More on themes below.
-* `--build` the build flag tells Idyll to output the compiled JavaScript instead of running a server and opening your page in a web browser, `$ idyll index.idl --build > output.js`.
+* `--output` the location to place built files in
+* `--build` the build flag tells Idyll to output the compiled JavaScript instead of running a server and opening your page in a web browser.
 
 If you are using Idyll via the project generator, open `package.json` to change these options.
 
@@ -51,8 +52,6 @@ This theme uses custom styles that go along with Idyll's look and feel. See http
 ## Using Idyll as an API
 
 You can use Idyll directly from JavaScript as well.
-
-### API:
 
 `idyll(idyllFile, options, callback)`
 
