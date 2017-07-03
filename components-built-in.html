@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <title>idyll-lang.github</title>
 <meta charset="utf-8">
@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="/bundle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
 <div id="choo-root" class="minidocs">
@@ -131,9 +130,9 @@ be displayed next to eachother. For example, this code,</p>
 </ul>
 <h3 id="equation"><a href="#equation" class="anchor"></a>Equation</h3><p>This uses <a href="https://github.com/Khan/KaTeX">KaTeX</a> to typeset mathematical equations. Example:</p>
 <p><img src="images/equation.png" alt="equation"></p>
-<pre><code><span class="hljs-string">[Equation]</span>
-  y = \int x^<span class="hljs-number">2</span> dx
-<span class="hljs-string">[/Equation]</span>
+<pre><code>[<span class="hljs-meta">Equation</span>]
+  y = \<span class="hljs-keyword">int</span> x^<span class="hljs-number">2</span> dx
+[<span class="hljs-meta">/Equation</span>]
 </code></pre><h3 id="header"><a href="#header" class="anchor"></a>Header</h3><p>This component makes it easy to add a title, subtitle, and byline to your article:</p>
 <p><img src="images/header.png" alt="header"></p>
 <pre><code>[Header
@@ -178,7 +177,7 @@ but is generally useful for dynamically displaying different content of any type
 </code></pre><h3 id="svg"><a href="#svg" class="anchor"></a>SVG</h3><p>This component will display an SVG file inline using <a href="https://github.com/matthewwithanm/react-inlinesvg">https://github.com/matthewwithanm/react-inlinesvg</a>. This makes it
 easy to style the SVG with css, as opposed to displaying the svg inside of an image tag.</p>
 <p>Usage:</p>
-<pre><code>[SVG src=<span class="hljs-string">"path/to/filg.svg"</span> /]
+<pre><code>[SVG src:<span class="hljs-string">"path/to/filg.svg"</span> /]
 </code></pre><h3 id="table"><a href="#table" class="anchor"></a>Table</h3><p>Display tabular data. Uses <a href="https://github.com/glittershark/reactable">https://github.com/glittershark/reactable</a> under the hood to render the table.</p>
 <p><img src="images/table.png" alt="table"></p>
 <pre><code>[Table data:`[{columnName1: value, columnName2: value}, {columnName1: value, {columnName2: value}}]` /]

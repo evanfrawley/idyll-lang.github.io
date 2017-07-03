@@ -1,312 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-
-  var minidocs = require('minidocs')
-  var app = minidocs({"title":"idyll-lang.github","logo":"logo-text.svg","logoSource":"/Users/mathisonian/projects/idyll/idyll-lang.github.io/images/logo-text.svg","contents":[{"depth":1,"name":"Overview"},{"depth":2,"name":"Introduction","key":"introduction","link":"/introduction","toc":[{"level":1,"slug":"introducing-idyll","title":"Introducing Idyll"},{"level":3,"slug":"examples","title":"Examples"},{"level":5,"slug":"full-articles","title":"Full Articles"},{"level":5,"slug":"with-popular-javascript-libraries","title":"With Popular JavaScript Libraries"},{"level":5,"slug":"other-examples","title":"Other Examples"}]},{"depth":2,"name":"Getting started","key":"getting-started","link":"/getting-started","toc":[{"level":1,"slug":"getting-started","title":"Getting Started"}]},{"depth":2,"name":"Syntax","key":"syntax","link":"/syntax","toc":[{"level":1,"slug":"syntax","title":"Syntax"},{"level":2,"slug":"text","title":"Text"},{"level":4,"slug":"bold-italic","title":"Bold, Italic"},{"level":4,"slug":"headers","title":"Headers"},{"level":4,"slug":"code","title":"Code"},{"level":2,"slug":"components","title":"Components"},{"level":3,"slug":"component-properties","title":"Component Properties"},{"level":4,"slug":"literals-number-string-boolean","title":"Literals: Number, String, Boolean"},{"level":4,"slug":"variable-or-dataset","title":"Variable or Dataset"},{"level":4,"slug":"expression","title":"Expression"},{"level":4,"slug":"refs","title":"Refs"},{"level":2,"slug":"variables","title":"Variables"},{"level":3,"slug":"derived-variables","title":"Derived Variables"},{"level":2,"slug":"datasets","title":"Datasets"}]},{"depth":2,"name":"Configuration and styles","key":"configuration-and-styles","link":"/configuration-and-styles","toc":[{"level":1,"slug":"configuration-and-styles","title":"Configuration and Styles"},{"level":2,"slug":"command-line-options","title":"Command Line Options"},{"level":2,"slug":"themes-and-page-layout","title":"Themes and Page Layout"},{"level":3,"slug":"layout","title":"Layout"},{"level":4,"slug":"centered","title":"Centered"},{"level":4,"slug":"blog","title":"Blog"},{"level":4,"slug":"none","title":"None"},{"level":3,"slug":"themes","title":"Themes"},{"level":4,"slug":"github","title":"Github"},{"level":4,"slug":"idyll","title":"Idyll"},{"level":2,"slug":"using-idyll-as-an-api","title":"Using Idyll as an API"},{"level":3,"slug":"example","title":"Example"}]},{"depth":1,"name":"Components"},{"depth":2,"name":"Overview","key":"components-overview","link":"/components-overview","toc":[{"level":1,"slug":"components","title":"Components"},{"level":3,"slug":"built-in-components","title":"Built-in Components"},{"level":3,"slug":"custom-components","title":"Custom Components"},{"level":2,"slug":"component-resolution","title":"Component Resolution"}]},{"depth":2,"name":"Built-in components","key":"components-built-in","link":"/components-built-in","toc":[{"level":1,"slug":"built-in-components","title":"Built-In Components"},{"level":2,"slug":"layout","title":"Layout"},{"level":3,"slug":"aside","title":"Aside"},{"level":3,"slug":"fixed","title":"Fixed"},{"level":3,"slug":"inline","title":"Inline"},{"level":2,"slug":"presentation","title":"Presentation"},{"level":3,"slug":"button","title":"Button"},{"level":3,"slug":"chart","title":"Chart"},{"level":3,"slug":"displayvar","title":"DisplayVar"},{"level":3,"slug":"dynamic","title":"Dynamic"},{"level":3,"slug":"equation","title":"Equation"},{"level":3,"slug":"header","title":"Header"},{"level":3,"slug":"gist","title":"Gist"},{"level":3,"slug":"link","title":"Link"},{"level":3,"slug":"range","title":"Range"},{"level":3,"slug":"slideshow-slide","title":"Slideshow / Slide"},{"level":3,"slug":"svg","title":"SVG"},{"level":3,"slug":"table","title":"Table"},{"level":3,"slug":"vegalite","title":"VegaLite"},{"level":2,"slug":"helpers","title":"Helpers"},{"level":3,"slug":"analytics","title":"Analytics"},{"level":3,"slug":"meta","title":"Meta"}]},{"depth":2,"name":"Custom components","key":"components-custom","link":"/components-custom","toc":[{"level":1,"slug":"custom-components","title":"Custom Components"},{"level":2,"slug":"overview","title":"Overview"},{"level":2,"slug":"idyll-component","title":"Idyll Component"},{"level":3,"slug":"example","title":"Example"},{"level":2,"slug":"name-resolution","title":"Name Resolution"}]},{"depth":2,"name":"Refs","key":"components-refs","link":"/components-refs","toc":[{"level":1,"slug":"refs","title":"Refs"}]},{"depth":1,"name":"Publishing"},{"depth":2,"name":"Deploying to the web","key":"publishing-deploying-to-the-web","link":"/publishing-deploying-to-the-web","toc":[{"level":1,"slug":"building-your-idyll-project-for-the-web","title":"Building your Idyll project for the web"},{"level":2,"slug":"github-pages","title":"Github Pages"},{"level":2,"slug":"other-hosting","title":"Other Hosting"}]},{"depth":1,"name":"Open Source"},{"depth":2,"name":"GitHub","key":"open-source-github","link":"/open-source-github","toc":[{"level":1,"slug":"github","title":"Github"}]}],"markdown":"/Users/mathisonian/projects/idyll/idyll-lang.github.io/docs","initial":"introduction","basedir":"","dir":"/Users/mathisonian/projects/idyll/idyll-lang.github.io","routes":{"index":"/","introduction":"/introduction/","getting-started":"/getting-started/","syntax":"/syntax/","configuration-and-styles":"/configuration-and-styles/","components-overview":"/components-overview/","components-built-in":"/components-built-in/","components-custom":"/components-custom/","components-refs":"/components-refs/","publishing-deploying-to-the-web":"/publishing-deploying-to-the-web/","open-source-github":"/open-source-github/"},"html":{"introduction":"<h1 id=\"introducing-idyll\"><a href=\"#introducing-idyll\" class=\"anchor\"></a>Introducing Idyll</h1><p>Idyll is a tool that makes it easier to author interactive narratives\nfor the web. The goal of the project is to provide a friendly\nmarkup language — and an associated toolchain —\nthat can be used to create dynamic, text-driven web pages.</p>\n<p>Idyll helps you create documents that use common narrative techniques\nsuch as embedding interactive charts and graphs,\nresponding to scroll events, and <a href=\"http://explorableexplanations.com/\">explorable explanations</a>. Additionally,\nits readable syntax facilitates\ncollaboration between writers, editors, designers,\nand programmers on complex projects.</p>\n<h3 id=\"examples\"><a href=\"#examples\" class=\"anchor\"></a>Examples</h3><h5 id=\"full-articles\"><a href=\"#full-articles\" class=\"anchor\"></a>Full Articles</h5><div class=\"example\">\n  <a href=\"https://mathisonian.github.io/trig/etymology/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/trig.png)\"></div>\n     The Etymology of Trig Functions\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://mathisonian.github.io/dashcam/\">\n    <div class=\"example-image\" style=\"background-image: url(https://mathisonian.github.io/dashcam/images/share.png)\"></div>\n    Seattle PD’s Dashcam Problem\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://mathisonian.github.io/consumer-complaints/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/complaints-2.gif)\"></div>\n    The United Complaints of America\n  </a>\n</div>\n\n<h5 id=\"with-popular-javascript-libraries\"><a href=\"#with-popular-javascript-libraries\" class=\"anchor\"></a>With Popular JavaScript Libraries</h5><div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/idyll-d3-component/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/d3.png)\"></div>\n     D3\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/idyll-regl-component/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/regl.png)\"></div>\n    regl\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/examples/csv/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/vl.png)\"></div>\n    Vega Lite\n  </a>\n</div>\n\n<h5 id=\"other-examples\"><a href=\"#other-examples\" class=\"anchor\"></a>Other Examples</h5><div class=\"example\">\n  <a href=\"https://mathisonian.github.io/lorenz/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/lorenz.png)\"></div>\n     Lorenz Attractor\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://mathisonian.github.io/idyll/nonlinear-sliders/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/nonlinear.png)\"></div>\n    Nonlinear Sliders\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/idyll/scroll/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/scroll.gif)\"></div>\n    Scrolly Idyll\n  </a>\n</div>\n\n\n<p>In Idyll the entire document is reactive, built on top of Facebook&#39;s React framework. Changes\nimmediately propagate through the entire page, taking the pain out of creating\ndata-driven experiences that respond to reader input. You don&#39;t need to know anything about React\nto use Idyll, but if you do, it is easy to extend with your own custom components.</p>\n<p>Continue to the <a href=\"/getting-started\">next section</a> to start using Idyll.</p>\n","getting-started":"<h1 id=\"getting-started\"><a href=\"#getting-started\" class=\"anchor\"></a>Getting Started</h1><p>The easiest way to get started with Idyll is to use the project generator.\nIt will help get you set up using custom components, datasets, and stylesheets.\nTo use the generator:</p>\n<pre><code class=\"lang-sh\">$ npm install -g yo generator-idyll\n$ yo idyll\n</code></pre>\n<p>The generator will produce a structure that looks like this:</p>\n<pre><code class=\"lang-sh\">$  tree -I node_modules\n.\n├── _index.html\n├── components\n│   ├── custom-component.js\n│   └── default\n│       ├── styles\n│       │   └── ... default component stylesheets\n│       └── ... default components <span class=\"hljs-keyword\">in</span> here\n├── data\n│   └── example-data.json\n├── images\n│   └── idyll.png\n├── index.idl\n├── package.json\n└── styles.css\n</code></pre>\n<p>The files do the following:</p>\n<ul>\n<li><code>index.idl</code> - The main Idyll file, write your text in here.</li>\n<li><code>styles.css</code> - By putting CSS in here you can override the default styles.</li>\n<li><code>components/</code> - The folder for custom components. Any component defined in this folder can be invoked in the .idl file.</li>\n<li><code>data/</code> - If you want to include a dataset in your project, put it in here.</li>\n<li><code>images/</code> - A folder for static images.</li>\n<li><code>_index.html</code> - A barebones HTML file that will be used if you publish your project to the web.</li>\n<li><code>package.json</code> - This file contains all the metadata for your project.</li>\n</ul>\n<p>To get started, from a terminal in that directory run <code>npm start</code> and Idyll will compile your\nfile and open it in your web browser. Every time you save the <code>index.idl</code> file, the system will automatically recompile\neverything and update the page in the browser.</p>\n<p>The <code>components/default/</code> folder contains the default components that Idyll provides. If you need to directly\nupdate one of these components or their styles, feel free - Idyll is built to be customized.</p>\n<p>If you want to configure the paths or build steps that Idyll uses, open <code>package.json</code> and update the <code>scripts</code> section. These options are discussed in greater detail later on in the documentation.</p>\n<p>Continue to the <a href=\"/syntax\">next section</a> to learn how to use Idyll&#39;s syntax.</p>\n","syntax":"<h1 id=\"syntax\"><a href=\"#syntax\" class=\"anchor\"></a>Syntax</h1><h2 id=\"text\"><a href=\"#text\" class=\"anchor\"></a>Text</h2><p>By default everything in Idyll is text. To make common\nformatting tasks easier, Idyll borrows some syntax from markdown.</p>\n<h4 id=\"bold-italic\"><a href=\"#bold-italic\" class=\"anchor\"></a>Bold, Italic</h4><p>Text surrounded by asterisks (<code>*</code>) will be bolded,\ne.g. <code>*italic*</code> becomes <em>italic</em>, and <code>**bold**</code> becomes\n<strong>bold</strong>.</p>\n<h4 id=\"headers\"><a href=\"#headers\" class=\"anchor\"></a>Headers</h4><p>Use a pound sign (<code>#</code>) to denote a header:</p>\n<pre><code># Title h1\n## Title h2\n### Title h3\n#### Title h4\n##### Title h5\n###### Title h6\n</code></pre><h4 id=\"code\"><a href=\"#code\" class=\"anchor\"></a>Code</h4><p>Text placed between backticks (`) will be displayed inline\nas code: <code>`y = x * x` </code> becomes <code>y = x * x</code>.</p>\n<p>Text placed between groups of three backticks will be displayed as\na code block.</p>\n<pre><code>This is <span class=\"hljs-selector-tag\">a</span> <span class=\"hljs-selector-tag\">code</span> block\n</code></pre><p>The above code block is created with this code:</p>\n<pre><code>```\nThis is a <span class=\"hljs-keyword\">code</span> block\n```\n</code></pre><h2 id=\"components\"><a href=\"#components\" class=\"anchor\"></a>Components</h2><p>Besides text, components are the other basic building block of an Idyll document.\nComponents are denoted with brackets, and can be invoked in one of two ways: they can be self\nclosing,</p>\n<pre><code>[<span class=\"hljs-built_in\">Range</span> <span class=\"hljs-built_in\">min</span>:<span class=\"hljs-number\">0</span> <span class=\"hljs-built_in\">max</span>:<span class=\"hljs-number\">10</span> <span class=\"hljs-keyword\">value</span>:<span class=\"hljs-keyword\">value</span> /]\n</code></pre><p>or have a closing and opening tag with content in between.</p>\n<pre><code><span class=\"hljs-string\">[Button]</span>\nClick Me\n<span class=\"hljs-string\">[/Button]</span>\n</code></pre><h3 id=\"component-properties\"><a href=\"#component-properties\" class=\"anchor\"></a>Component Properties</h3><p>Properties can be passed into components\nin the following ways:</p>\n<h4 id=\"literals-number-string-boolean\"><a href=\"#literals-number-string-boolean\" class=\"anchor\"></a>Literals: Number, String, Boolean</h4><p>Number, string, or boolean literals may be used.</p>\n<pre><code>[Component propName:<span class=\"hljs-number\">10</span> /]\n[Component propName:<span class=\"hljs-string\">\"propValue\"</span> /]\n[Component propName:<span class=\"hljs-literal\">false</span> /]\n</code></pre><h4 id=\"variable-or-dataset\"><a href=\"#variable-or-dataset\" class=\"anchor\"></a>Variable or Dataset</h4><p>A variable or dataset can be passed in directly, this will\nautomatically create a binding between that variable and property,\nmore on this in the section on <a href=\"/components-variables-and-datasets\">variables and datasets</a>.</p>\n<pre><code>[Component propName:myVar /]\n</code></pre><p>If the variable changes that update will immediately be reflected in the\nstate of the component.</p>\n<h4 id=\"expression\"><a href=\"#expression\" class=\"anchor\"></a>Expression</h4><p>Use backticks to pass an evaluated expression:</p>\n<pre><code>[<span class=\"hljs-name\">Component</span> propName:`<span class=\"hljs-number\">2</span> * <span class=\"hljs-number\">2</span> * <span class=\"hljs-number\">2</span>` /]\n[<span class=\"hljs-name\">Component</span> propName:`{ an: <span class=\"hljs-string\">\"object\"</span> }` /]\n</code></pre><p>Note that because Idyll is reactive, if a variable changes any expressions that reference that\nvariable will immediately be recomputed. See this utilized to create reactive vega-lite specifications:\n<a href=\"https://idyll-lang.github.io/examples/csv/\">https://idyll-lang.github.io/examples/csv/</a>.</p>\n<p>If the property expects a function,\nthe expression will automatically be\nconverted to a callback. This is convenient\nfor updating variables on events, for example.</p>\n<pre><code>[<span class=\"hljs-name\">Component</span> onClick:`myVar++` /]\n</code></pre><p>Idyll uses naming conventions to determine if the expression should be converted to a callback.\nProperties that are named <code>onXxxxx</code> (e.g. <code>onClick</code>) or <code>handleYyyyy</code> (e.g. <code>handleMouseMove</code>) are\nassumed to expect callbacks.</p>\n<h4 id=\"refs\"><a href=\"#refs\" class=\"anchor\"></a>Refs</h4><p>There is a special property called <code>ref</code> that allows you to create a reference to specific\ncomponent on the page. This is primarily used to keep track of elements on the page as\na reader scrolls. See the section on <a href=\"/components-refs\">refs</a> for more details.</p>\n<h2 id=\"variables\"><a href=\"#variables\" class=\"anchor\"></a>Variables</h2><p>Variables can be declared at any point in an Idyll file. Variables use\nthe same syntax as a component, but must defined a <code>name</code> and a <code>value</code>\nproperty.</p>\n<pre><code>[<span class=\"hljs-keyword\">var</span> name:<span class=\"hljs-string\">\"x\"</span> <span class=\"hljs-keyword\">value</span>:<span class=\"hljs-number\">10</span> /]\n</code></pre><p>The above code defines a variable <code>x</code>, with the initial value of <code>10</code>.</p>\n<h3 id=\"derived-variables\"><a href=\"#derived-variables\" class=\"anchor\"></a>Derived Variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from\nother variables, and is recomputed whenever values change:</p>\n<pre><code>[<span class=\"hljs-name\">derived</span> name:<span class=\"hljs-string\">\"xSquared\"</span> value:`x * x` /]\n</code></pre><p>The above code defines a derived variable <code>xSquared</code> that depends\non the value of <code>x</code>. The value of <code>xSquared</code> is automatically updated\nbased on the value of <code>x</code>.</p>\n<h2 id=\"datasets\"><a href=\"#datasets\" class=\"anchor\"></a>Datasets</h2><p>A dataset is similar to a variable, except instead of expecting a\n<code>value</code>, datasets must be provided with a <code>source</code> (the name of the data file).</p>\n<p>Example:</p>\n<pre><code>[data name:<span class=\"hljs-string\">\"myData\"</span> source:<span class=\"hljs-string\">\"myData.csv\"</span> /]\n[Table data:myData /]\n</code></pre><p>The above code declares a dataset, and uses it as input to a <code>Table</code> component.\nDatasets can be either <code>.csv</code> or <code>.json</code> files. CSV files will automatically be\nconverted to a JSON object.</p>\n<p>Continue to the next section to learn about <a href=\"/configuration-and-styles\">customizing Idyll</a>.</p>\n","configuration-and-styles":"<h1 id=\"configuration-and-styles\"><a href=\"#configuration-and-styles\" class=\"anchor\"></a>Configuration and Styles</h1><h2 id=\"command-line-options\"><a href=\"#command-line-options\" class=\"anchor\"></a>Command Line Options</h2><p>The <code>idyll</code> command line tool accepts the following options</p>\n<ul>\n<li><code>--css</code> the path to your CSS file. You can use this to override Idyll&#39;s default styles, e.g. <code>$ idyll index.idl --css my-custom-styles.css</code>.</li>\n<li><code>--components</code> the path to your custom components. By default this points to <code>components/</code>.</li>\n<li><code>--datasets</code> the path to the folder containing your datasets. By default this points to <code>data/</code>.</li>\n<li><code>--layout</code> the name of the layout to use. By default this is <code>blog</code>. More on layouts below.</li>\n<li><code>--theme</code> the name of the theme to use. By default this is <code>idyll</code>. More on themes below.</li>\n<li><code>--output</code> the location to place built files in</li>\n<li><code>--build</code> the build flag tells Idyll to output the compiled JavaScript instead of running a server and opening your page in a web browser.</li>\n</ul>\n<p>If you are using Idyll via the project generator, open <code>package.json</code> to change these options.</p>\n<h2 id=\"themes-and-page-layout\"><a href=\"#themes-and-page-layout\" class=\"anchor\"></a>Themes and Page Layout</h2><p>Idyll exposes two options to help you style your project, <code>layout</code> and <code>theme</code>. <code>layout</code> deals with CSS styles related to how your content is\nlayed out on the page: width, columns, etc. The <code>theme</code> option allows you to choose diffent stylesheets to change the style of the content itself (text color, font, and so on).</p>\n<h3 id=\"layout\"><a href=\"#layout\" class=\"anchor\"></a>Layout</h3><p>Idyll currently ships with several page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles\nfor you project.</p>\n<h4 id=\"centered\"><a href=\"#centered\" class=\"anchor\"></a>Centered</h4><p>This is the default layout. It puts your content in the center of the page and is mobile responsive.</p>\n<h4 id=\"blog\"><a href=\"#blog\" class=\"anchor\"></a>Blog</h4><p>The <code>blog</code> layout is fairly traditional article layout with room in the margin to\nput notes and other callouts. See <a href=\"https://mathisonian.github.io/trig/etymology/\">https://mathisonian.github.io/trig/etymology/</a> for an example of this layout.</p>\n<h4 id=\"none\"><a href=\"#none\" class=\"anchor\"></a>None</h4><p>If you set <code>--layout none</code> Idyll won&#39;t provide any structural CSS, allowing you to customize things to your\nheart&#39;s content.</p>\n<h3 id=\"themes\"><a href=\"#themes\" class=\"anchor\"></a>Themes</h3><h4 id=\"github\"><a href=\"#github\" class=\"anchor\"></a>Github</h4><p>This is the default theme, it uses CSS that resembles the styles in GitHub READMEs.</p>\n<h4 id=\"idyll\"><a href=\"#idyll\" class=\"anchor\"></a>Idyll</h4><p>This theme uses custom styles that go along with Idyll&#39;s look and feel. See <a href=\"https://mathisonian.github.io/trig/etymology/\">https://mathisonian.github.io/trig/etymology/</a> for an example of this style.</p>\n<h2 id=\"using-idyll-as-an-api\"><a href=\"#using-idyll-as-an-api\" class=\"anchor\"></a>Using Idyll as an API</h2><p>You can use Idyll directly from JavaScript as well.</p>\n<p><code>idyll(idyllFile, options, callback)</code></p>\n<h3 id=\"example\"><a href=\"#example\" class=\"anchor\"></a>Example</h3><pre><code><span class=\"hljs-keyword\">var</span> idyll = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'idyll'</span>);\n\nidyll(<span class=\"hljs-string\">'index.idl'</span>, {\n  <span class=\"hljs-attr\">output</span>: <span class=\"hljs-string\">'build/'</span>,\n  <span class=\"hljs-attr\">htmlTemplate</span>: <span class=\"hljs-string\">'_index.html'</span>,\n  <span class=\"hljs-attr\">componentFolder</span>: <span class=\"hljs-string\">'./components/'</span>,\n  <span class=\"hljs-attr\">defaultComponents</span>: <span class=\"hljs-string\">'./components/default/'</span>,\n  <span class=\"hljs-attr\">dataFolder</span>: <span class=\"hljs-string\">'./data'</span>,\n  <span class=\"hljs-attr\">layout</span>: <span class=\"hljs-string\">'centered'</span>,\n  <span class=\"hljs-attr\">theme</span>: <span class=\"hljs-string\">'github'</span>,\n  <span class=\"hljs-attr\">compilerOptions</span>: {\n    <span class=\"hljs-attr\">spellcheck</span>: <span class=\"hljs-literal\">true</span>\n  },\n  <span class=\"hljs-attr\">build</span>: <span class=\"hljs-literal\">true</span>\n}, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) </span>{\n  <span class=\"hljs-comment\">// calls when Idyll is finished building</span>\n});\n</code></pre><p>Continue to the next section to learn about <a href=\"/components-overview\">Idyll components</a>.</p>\n","components-overview":"<h1 id=\"components\"><a href=\"#components\" class=\"anchor\"></a>Components</h1><p>Components are the basic building block for adding interactivity in Idyll.</p>\n<h3 id=\"built-in-components\"><a href=\"#built-in-components\" class=\"anchor\"></a>Built-in Components</h3><p>See <a href=\"/components-built-in\">Idyll&#39;s built-in components</a>.</p>\n<h3 id=\"custom-components\"><a href=\"#custom-components\" class=\"anchor\"></a>Custom Components</h3><p>See <a href=\"/components-custom\">custom Idyll components</a>.</p>\n<h2 id=\"component-resolution\"><a href=\"#component-resolution\" class=\"anchor\"></a>Component Resolution</h2><p>Components are resolved according to following algorithm:</p>\n<ul>\n<li>If there is a custom component with this name, use it.</li>\n<li>If there is a built-in component with this name, use it.</li>\n<li>If there is a valid HTML tag with this name, use it.</li>\n<li>If none of the above, just use a div, but give it the class of the component name</li>\n</ul>\n<p>So, for example, assume we have one custom component, named <code>Custom</code>.</p>\n<pre><code><span class=\"hljs-comment\">// Renders our custom component</span>\n<span class=\"hljs-selector-attr\">[Custom /]</span>\n\n<span class=\"hljs-comment\">// Renders the built-in range component</span>\n<span class=\"hljs-selector-attr\">[Range /]</span>\n\n<span class=\"hljs-comment\">// Renders `&lt;img /&gt;` because it is a valid  HTML tag</span>\n<span class=\"hljs-selector-attr\">[Img /]</span>\n\n<span class=\"hljs-comment\">// Renders `&lt;div class=\"SomethingElse\"&gt;&lt;/div&gt;`</span>\n<span class=\"hljs-selector-attr\">[SomethingElse /]</span>\n</code></pre><p>Continue to read about <a href=\"/components-built-in\">Idyll&#39;s built-in components</a>.</p>\n","components-built-in":"<h1 id=\"built-in-components\"><a href=\"#built-in-components\" class=\"anchor\"></a>Built-In Components</h1><p>Idyll ships with a handful of components that\nhandle common tasks. They are broken into\nthree categories:</p>\n<ul>\n<li><p><a href=\"#layout\">Layout</a> - these components help manage page layout, for example putting text in the <code>Aside</code> component will render it in the article margin instead of inline with the rest of your text.</p>\n<ul>\n<li><a href=\"#aside\">Aside</a></li>\n<li><a href=\"#fixed\">Fixed</a></li>\n<li><a href=\"#inline\">Inline</a></li>\n</ul>\n</li>\n<li><p><a href=\"#presentation\">Presentation</a> - these components render something to the screen, for example the <code>Chart</code>\ncomponent takes data as input and can display several types of charts.</p>\n<ul>\n<li><a href=\"#button\">Button</a></li>\n<li><a href=\"#chart\">Chart</a></li>\n<li><a href=\"#displayvar\">DisplayVar</a></li>\n<li><a href=\"#dynamic\">Dynamic</a></li>\n<li><a href=\"#equation\">Equation</a></li>\n<li><a href=\"#gist\">Gist</a></li>\n<li><a href=\"#header\">Header</a></li>\n<li><a href=\"#link\">Link</a></li>\n<li><a href=\"#range\">Range</a></li>\n<li><a href=\"#slideshow-slide\">Slideshow / Slide</a></li>\n<li><a href=\"#svg\">SVG</a></li>\n<li><a href=\"#table\">Table</a></li>\n<li><a href=\"#vegalite\">VegaLite</a></li>\n</ul>\n</li>\n<li><p><a href=\"#helpers\">Helpers</a> - these components don&#39;t affect the page content, but help with common tasks. The <code>Analytics</code> component makes it\neasy to add Google Analytics to your page.</p>\n<ul>\n<li><a href=\"#analytics\">Analytics</a></li>\n<li><a href=\"#meta\">Meta</a></li>\n</ul>\n</li>\n</ul>\n<p>All built-in compononents expose a property <code>onEnteredView</code> that can be used to trigger events when a reader scrolls the page to\nreveal specific content.</p>\n<h2 id=\"layout\"><a href=\"#layout\" class=\"anchor\"></a>Layout</h2><h3 id=\"aside\"><a href=\"#aside\" class=\"anchor\"></a>Aside</h3><p>Content inside of an aside component will be displayed in the margin of your document. For example, the <a href=\"https://mathisonian.github.io/consumer-complaints/\">consumer complaints</a> article uses the aside component to display a small chart and caption:</p>\n<p><img src=\"images/aside.png\" alt=\"aside\"></p>\n<pre><code>[aside]\n  [<span class=\"hljs-symbol\">Chart</span> type:<span class=\"hljs-string\">\"time\"</span> data:complaintsByDate /]\n  [caption]<span class=\"hljs-symbol\">Complaints</span> sent to the <span class=\"hljs-symbol\">CFPB</span> each month[/caption]\n[/aside]\n</code></pre><h3 id=\"fixed\"><a href=\"#fixed\" class=\"anchor\"></a>Fixed</h3><p>Content inside of a <code>fixed</code> component will be locked in place, even when the rest of the document scrolls. The <a href=\"https://idyll-lang.github.io/idyll/scroll\">scroll</a> example uses the <code>fixed</code> component to keep the dynamic chart in place:</p>\n<p><img src=\"images/fixed.gif\" alt=\"fixed\"></p>\n<pre><code>[fixed]\n[Chart type:<span class=\"hljs-string\">\"scatter\"</span> data:dynamicData /]\n[/fixed]\n</code></pre><h3 id=\"inline\"><a href=\"#inline\" class=\"anchor\"></a>Inline</h3><p>The <code>inline</code> component adds the <code>display: inline-block</code> style property, so that items inside of <code>inline</code> component will\nbe displayed next to eachother. For example, this code,</p>\n<pre><code>[section]\n[<span class=\"hljs-string\">inline</span>][<span class=\"hljs-symbol\">img src:\"...\" /</span>][<span class=\"hljs-string\">/inline</span>]\n[<span class=\"hljs-string\">inline</span>][<span class=\"hljs-symbol\">img src:\"...\" /</span>][<span class=\"hljs-string\">/inline</span>]\n[<span class=\"hljs-string\">inline</span>][<span class=\"hljs-symbol\">img src:\"...\" /</span>][<span class=\"hljs-string\">/inline</span>]\n[/section]\n</code></pre><p>Will display three images side by side.</p>\n<h2 id=\"presentation\"><a href=\"#presentation\" class=\"anchor\"></a>Presentation</h2><h3 id=\"button\"><a href=\"#button\" class=\"anchor\"></a>Button</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>\n<p><img src=\"images/button.gif\" alt=\"button\"></p>\n<pre><code>[<span class=\"hljs-keyword\">button</span> <span class=\"hljs-keyword\">onClick</span>`myVar += <span class=\"hljs-number\">1</span>`]Click Me![/<span class=\"hljs-keyword\">button</span>]\n</code></pre><h3 id=\"chart\"><a href=\"#chart\" class=\"anchor\"></a>Chart</h3><p>This will display a chart. It expects the following properties:</p>\n<ul>\n<li><code>data</code> - A JSON object containing the data for this chart. It uses the <a href=\"https://formidable.com/open-source/victory/docs\">victory</a> library to handle rendering, so see those docs for more information on what types of data can be passed in.</li>\n<li><code>type</code> - The type of the chart to display, can be <code>line</code>, <code>scatter</code>, <code>bar</code>, <code>pie</code>, or <code>time</code>. The time type is a line chart that expects the <code>x</code> values in the data to be in the temporal domain.</li>\n</ul>\n<p><img src=\"images/chart.png\" alt=\"chart\"></p>\n<pre><code>[var <span class=\"hljs-string\">name:</span>`dataToBeCharted` <span class=\"hljs-string\">value:</span>`[\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">0</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">3.5</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">4</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">4.5</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">1</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">5</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">8</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>}\n]` /]\n\n[Chart <span class=\"hljs-string\">type:</span><span class=\"hljs-string\">\"line\"</span> <span class=\"hljs-string\">data:</span>dataToBeCharted /]\n</code></pre><h3 id=\"displayvar\"><a href=\"#displayvar\" class=\"anchor\"></a>DisplayVar</h3><p>This will render the value of a variable to the screen. It is mostly useful for debugging:</p>\n<p><img src=\"images/displayvar.gif\" alt=\"displayvar\"></p>\n<pre><code>[var <span class=\"hljs-string\">name:</span><span class=\"hljs-string\">\"myVar\"</span> <span class=\"hljs-string\">value:</span><span class=\"hljs-number\">10</span> /]\n\n[Range <span class=\"hljs-string\">value:</span>myVar <span class=\"hljs-string\">min:</span><span class=\"hljs-number\">0</span> <span class=\"hljs-string\">max:</span><span class=\"hljs-number\">100</span> /]\n[DisplayVar <span class=\"hljs-string\">var:</span>myVar /]\n</code></pre><h3 id=\"dynamic\"><a href=\"#dynamic\" class=\"anchor\"></a>Dynamic</h3><p>This will render a dynamic variable to the screen.</p>\n<p><img src=\"images/dynamic.gif\" alt=\"dynamic\"></p>\n<pre><code>[var name:<span class=\"hljs-string\">\"myVar\"</span> value:<span class=\"hljs-number\">10</span> /]\n\n[Dynamic value:myVar /]\n</code></pre><p>The properties are:</p>\n<ul>\n<li><code>value</code>: The value to display</li>\n<li><code>max</code>: The maximum value.</li>\n<li><code>min</code>: The minimum value.</li>\n<li><code>interval</code>: The granularity of the changes</li>\n</ul>\n<h3 id=\"equation\"><a href=\"#equation\" class=\"anchor\"></a>Equation</h3><p>This uses <a href=\"https://github.com/Khan/KaTeX\">KaTeX</a> to typeset mathematical equations. Example:</p>\n<p><img src=\"images/equation.png\" alt=\"equation\"></p>\n<pre><code><span class=\"hljs-string\">[Equation]</span>\n  y = \\int x^<span class=\"hljs-number\">2</span> dx\n<span class=\"hljs-string\">[/Equation]</span>\n</code></pre><h3 id=\"header\"><a href=\"#header\" class=\"anchor\"></a>Header</h3><p>This component makes it easy to add a title, subtitle, and byline to your article:</p>\n<p><img src=\"images/header.png\" alt=\"header\"></p>\n<pre><code>[Header\n<span class=\"hljs-symbol\">  title:</span><span class=\"hljs-string\">\"The Title of my Article\"</span>\n<span class=\"hljs-symbol\">  subtitle:</span><span class=\"hljs-string\">\"The subtitle of my article\"</span>\n<span class=\"hljs-symbol\">  author:</span><span class=\"hljs-string\">\"Matthew Conlen\"</span>\n<span class=\"hljs-symbol\">  authorLink:</span><span class=\"hljs-string\">\"https://github.com/mathisonian/\"</span>\n  /]\n</code></pre><h3 id=\"gist\"><a href=\"#gist\" class=\"anchor\"></a>Gist</h3><p>Embed a github gist</p>\n<p><img src=\"images/gist.png\" alt=\"gist\"></p>\n<pre><code>[gist <span class=\"hljs-string\">gist:</span><span class=\"hljs-string\">\"0f83a12e29b268ffca39f471ecf39e91\"</span> <span class=\"hljs-string\">file:</span><span class=\"hljs-string\">\"particles.idl\"</span> /]\n</code></pre><h3 id=\"link\"><a href=\"#link\" class=\"anchor\"></a>Link</h3><p>This component just acts as syntactic sugar for displaying links inline in your text.</p>\n<pre><code>[link <span class=\"hljs-built_in\">text</span>:<span class=\"hljs-string\">\"the text\"</span> url:<span class=\"hljs-string\">\"https://some.url\"</span> /]\n\n<span class=\"hljs-keyword\">is</span> equivalent <span class=\"hljs-keyword\">to</span> [a href:<span class=\"hljs-string\">\"https://some.url\"</span>]<span class=\"hljs-keyword\">the</span> <span class=\"hljs-built_in\">text</span>[/a].\n</code></pre><h3 id=\"range\"><a href=\"#range\" class=\"anchor\"></a>Range</h3><p>This component displays a range slider. The properties are:</p>\n<ul>\n<li><code>value</code>: The value to display; if this is a variable, the variable will automatically be updated when the slider is moved.</li>\n<li><code>max</code>: The maximum value.</li>\n<li><code>min</code>: The minimum value.</li>\n<li><code>step</code>: The granularity of the slider</li>\n</ul>\n<p><img src=\"images/displayvar.gif\" alt=\"displayvar\"></p>\n<pre><code>[var <span class=\"hljs-string\">name:</span><span class=\"hljs-string\">\"myVar\"</span> <span class=\"hljs-string\">value:</span><span class=\"hljs-number\">10</span> /]\n\n[Range <span class=\"hljs-string\">value:</span>myVar <span class=\"hljs-string\">min:</span><span class=\"hljs-number\">0</span> <span class=\"hljs-string\">max:</span><span class=\"hljs-number\">100</span> /]\n[DisplayVar <span class=\"hljs-string\">var:</span>myVar /]\n</code></pre><h3 id=\"slideshow-slide\"><a href=\"#slideshow-slide\" class=\"anchor\"></a>Slideshow / Slide</h3><p>This component is used to dynamically display different content. It can be used to make slideshows,\nbut is generally useful for dynamically displaying different content of any type.</p>\n<p><img src=\"images/slides.gif\" alt=\"slides\"></p>\n<pre><code>[var <span class=\"hljs-keyword\">name</span>:<span class=\"hljs-string\">\"slide\"</span> value:<span class=\"hljs-number\">1</span> /]\n\n[slideshow currentSlide:<span class=\"hljs-built_in\">slide</span>]\n  [<span class=\"hljs-built_in\">slide</span>]This <span class=\"hljs-keyword\">is</span> the content <span class=\"hljs-keyword\">for</span> <span class=\"hljs-built_in\">slide</span> <span class=\"hljs-number\">1</span>[/<span class=\"hljs-built_in\">slide</span>]\n  [<span class=\"hljs-built_in\">slide</span>]This <span class=\"hljs-keyword\">is</span> the content <span class=\"hljs-keyword\">for</span> <span class=\"hljs-built_in\">slide</span> <span class=\"hljs-number\">2</span>[/<span class=\"hljs-built_in\">slide</span>]\n  [<span class=\"hljs-built_in\">slide</span>]This <span class=\"hljs-keyword\">is</span> the content <span class=\"hljs-keyword\">for</span> <span class=\"hljs-built_in\">slide</span> <span class=\"hljs-number\">3</span>[/<span class=\"hljs-built_in\">slide</span>]\n[/slideshow]\n\n[Button onClick:`<span class=\"hljs-built_in\">slide</span> = <span class=\"hljs-number\">1</span>`]Slide <span class=\"hljs-number\">1</span>[/Button]\n[Button onClick:`<span class=\"hljs-built_in\">slide</span> = <span class=\"hljs-number\">2</span>`]Slide <span class=\"hljs-number\">2</span>[/Button]\n[Button onClick:`<span class=\"hljs-built_in\">slide</span> = <span class=\"hljs-number\">3</span>`]Slide <span class=\"hljs-number\">3</span>[/Button]\n</code></pre><h3 id=\"svg\"><a href=\"#svg\" class=\"anchor\"></a>SVG</h3><p>This component will display an SVG file inline using <a href=\"https://github.com/matthewwithanm/react-inlinesvg\">https://github.com/matthewwithanm/react-inlinesvg</a>. This makes it\neasy to style the SVG with css, as opposed to displaying the svg inside of an image tag.</p>\n<p>Usage:</p>\n<pre><code>[SVG src=<span class=\"hljs-string\">\"path/to/filg.svg\"</span> /]\n</code></pre><h3 id=\"table\"><a href=\"#table\" class=\"anchor\"></a>Table</h3><p>Display tabular data. Uses <a href=\"https://github.com/glittershark/reactable\">https://github.com/glittershark/reactable</a> under the hood to render the table.</p>\n<p><img src=\"images/table.png\" alt=\"table\"></p>\n<pre><code>[Table data:`[{columnName1: value, columnName2: value}, {columnName1: value, {columnName2: value}}]` /]\n</code></pre><h3 id=\"vegalite\"><a href=\"#vegalite\" class=\"anchor\"></a>VegaLite</h3><p>Render a <a href=\"https://vega.github.io/vega-lite/\">Vega Lite</a> spec, using <a href=\"https://github.com/kristw/react-vega-lite\">https://github.com/kristw/react-vega-lite</a>.</p>\n<pre><code>[data <span class=\"hljs-string\">name:</span><span class=\"hljs-string\">\"myData\"</span> <span class=\"hljs-string\">src:</span><span class=\"hljs-string\">\"my-dataset.json\"</span> /]\n\n[VegaLite <span class=\"hljs-string\">data:</span>myData <span class=\"hljs-string\">spec:</span>`{\n<span class=\"hljs-symbol\">  mark:</span> <span class=\"hljs-string\">\"bar\"</span>,\n<span class=\"hljs-symbol\">  encoding:</span> {\n<span class=\"hljs-symbol\">    x:</span> {<span class=\"hljs-string\">field:</span> <span class=\"hljs-string\">\"a\"</span>, <span class=\"hljs-string\">type:</span> <span class=\"hljs-string\">\"ordinal\"</span>},\n<span class=\"hljs-symbol\">    y:</span> {<span class=\"hljs-string\">field:</span> <span class=\"hljs-string\">\"b\"</span>, <span class=\"hljs-string\">type:</span> <span class=\"hljs-string\">\"quantitative\"</span>}\n  }\n}`]\n</code></pre><h2 id=\"helpers\"><a href=\"#helpers\" class=\"anchor\"></a>Helpers</h2><h3 id=\"analytics\"><a href=\"#analytics\" class=\"anchor\"></a>Analytics</h3><p>This component makes it easy to insert a Google Analytics code on your page.</p>\n<pre><code>[Analytics google:<span class=\"hljs-string\">\"UA-XXXXXXXXX\"</span> /]\n</code></pre><h3 id=\"meta\"><a href=\"#meta\" class=\"anchor\"></a>Meta</h3><p>The meta component adds context to the page template when building your app for publication. The following variables are available and will be inserted\nas <code>&lt;meta&gt;</code> properties into the head of your HTML page if you define them:</p>\n<ul>\n<li><code>title</code> - the page title</li>\n<li><code>description</code> - a short description of your project</li>\n<li><code>url</code> - the canonical URL from this project</li>\n<li><code>twitterHandle</code> - the author&#39;s twitter handle, it will create a link in the twitter card</li>\n<li><code>shareImageUrl</code> - the URL of an image to be shared on social media (twitter cards, etc.). This must be a fully qualified URL, e.g. <a href=\"https://idyll-lang.github.io/images/logo.png\">https://idyll-lang.github.io/images/logo.png</a>.</li>\n<li><code>shareImageWidth</code> - the width of the share image in pixels</li>\n<li><code>shareImageHeight</code> - the height of the share image in pixels</li>\n</ul>\n<p>Continue to read about making <a href=\"/components-custom\">custom components</a>.</p>\n","components-custom":"<h1 id=\"custom-components\"><a href=\"#custom-components\" class=\"anchor\"></a>Custom Components</h1><h2 id=\"overview\"><a href=\"#overview\" class=\"anchor\"></a>Overview</h2><p>Idyll is designed for people to use their own custom components as well.\nUnder the hood an Idyll component just needs to be anything that will\nfunction as a React component. If you create a custom component in\nJavaScript, point Idyll to the folder where you created it and\neverything will just work, no need to worry about compiling, bundling,\nor module loading.</p>\n<p>For example, this custom component</p>\n<pre><code>const <span class=\"hljs-type\">React</span> = require(<span class=\"hljs-symbol\">'reac</span>t');\nconst <span class=\"hljs-type\">IdyllComponent</span> = require(<span class=\"hljs-symbol\">'idyll</span>-component');\n\n<span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">Custom</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">IdyllComponent</span> </span>{\n  render() {\n    <span class=\"hljs-keyword\">return</span> (\n      &lt;div {...<span class=\"hljs-keyword\">this</span>.props}&gt;\n        <span class=\"hljs-type\">This</span> is a custom component\n      &lt;/div&gt;\n    );\n  }\n}\n\nmodule.exports = <span class=\"hljs-type\">Custom</span>;\n</code></pre><p>could be invoked inside of an Idyll file with the\nfollowing code:</p>\n<pre><code>[Custom /]\n</code></pre><h2 id=\"idyll-component\"><a href=\"#idyll-component\" class=\"anchor\"></a>Idyll Component</h2><p>The <code>IdyllComponent</code> class adds an\n<code>updateProps</code> method that is used to keep\nvariables in sync with the rest of the document, and also\nadds a property <code>onEnteredView</code> that can be used to\ntrigger events in scroll-based narratives.</p>\n<h3 id=\"example\"><a href=\"#example\" class=\"anchor\"></a>Example</h3><p>For example, a component can change the value of a\nproperty that it receives, and Idyll will propegate\nthe change to any bound variables on the page.</p>\n<pre><code>const <span class=\"hljs-type\">React</span> = require(<span class=\"hljs-symbol\">'reac</span>t');\nconst <span class=\"hljs-type\">IdyllComponent</span> = require(<span class=\"hljs-symbol\">'idyll</span>-component');\n\n<span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">Incrementer</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">IdyllComponent</span> </span>{\n\n  increment() {\n    <span class=\"hljs-keyword\">this</span>.updateProps({\n      value: <span class=\"hljs-keyword\">this</span>.props.value + <span class=\"hljs-number\">1</span>\n    })\n  }\n\n  render() {\n    <span class=\"hljs-keyword\">return</span> (\n      &lt;div onClick={<span class=\"hljs-keyword\">this</span>.increment.bind(<span class=\"hljs-keyword\">this</span>)}&gt;\n        <span class=\"hljs-type\">Click</span> me.\n      &lt;/div&gt;\n    );\n  }\n}\n\nmodule.exports = <span class=\"hljs-type\">Incrementer</span>;\n</code></pre><p>The <code>Incrementer</code> component could then be used as follows:</p>\n<pre><code>[var name:<span class=\"hljs-string\">\"clickCount\"</span> value:<span class=\"hljs-number\">0</span> /]\n\n[Incrementer value:clickCount /]\n[DisplayVar var:clickCount /]\n</code></pre><p>Notice that even thought the <code>Incrementer</code> component doesn&#39;t know\nanything about the variable <code>clickCount</code>, it will still correctly\nupdate.</p>\n<p>Of course, this trivial example could be accomplished using built-in components:</p>\n<pre><code>[var name:<span class=\"hljs-string\">\"clickCount\"</span> value:<span class=\"hljs-number\">0</span> /]\n\n[<span class=\"hljs-symbol\">Button</span> onClick:<span class=\"hljs-string\">`clickCount+=1`</span> ]<span class=\"hljs-symbol\">Click</span> <span class=\"hljs-symbol\">Me</span>.[/<span class=\"hljs-symbol\">Button</span>]\n[<span class=\"hljs-symbol\">DisplayVar</span> var:clickCount /]\n</code></pre><h2 id=\"name-resolution\"><a href=\"#name-resolution\" class=\"anchor\"></a>Name Resolution</h2><p>Components lookup is based on filenames. If your component name\nis in <code>CamelCase</code>, it will automatically be converted to <code>kebab-case</code>,\nso for example if you want to create a component named <code>CustomComponent</code>,\nit should be stored in a file called <code>custom-component.js</code>.</p>\n<p>Custom component are meant for times when more complex and custom\ncode is needed. By default Idyll will look for your custom components\ninside of a folder called <code>components/</code>. If you wish to change the custom\ncomponent path, specify it with the <code>--components</code> option, e.g.\n<code>idyll index.idl --css styles.css --components custom/component/path/</code>.</p>\n<p>Continue to learn how to use <a href=\"/components-refs\">references</a> to make your page more dynamic.</p>\n","components-refs":"<h1 id=\"refs\"><a href=\"#refs\" class=\"anchor\"></a>Refs</h1><p>Idyll exposes the <code>ref</code> property to allow you to refer to specific components in\nproperty expressions.</p>\n<pre><code>[<span class=\"hljs-name\">Component</span> ref:<span class=\"hljs-string\">\"thisComponent\"</span> propName:`refs.thisComponent`  /]\n</code></pre><p>The ref property allows you to update the state of one component based on properties of another. Idyll\nprovides some utilities automatically, for example keeping track of the position\nof a component on the page, and how far through a component&#39;s content the reader has\nscrolled.</p>\n<p>Each ref object has the following properties:</p>\n<pre><code class=\"lang-js\">{\n  <span class=\"hljs-attr\">domNode</span>: node,\n  <span class=\"hljs-attr\">scrollProgress</span>: {\n    <span class=\"hljs-attr\">x</span>: number,\n    <span class=\"hljs-attr\">y</span>: number\n  },\n  <span class=\"hljs-attr\">size</span>: {\n    <span class=\"hljs-attr\">x</span>: number,\n    <span class=\"hljs-attr\">y</span>: number\n  },\n  <span class=\"hljs-attr\">position</span>: {\n    <span class=\"hljs-attr\">left</span>: number,\n    <span class=\"hljs-attr\">top</span>: number,\n    <span class=\"hljs-attr\">right</span>: number,\n    <span class=\"hljs-attr\">bottom</span>: number\n  }\n}\n</code></pre>\n<p>For example:</p>\n<pre><code>[section ref:<span class=\"hljs-string\">'section'</span> style:`{ opacity: <span class=\"hljs-number\">1</span> - refs.section.scrollProgress.y }`]\n\nLorem ipsum...\n...\nlots <span class=\"hljs-keyword\">of</span> text here\n...\n\n[/section]\n</code></pre><p>The above code will create a section of text that fades out as the user scrolls to the bottom of it.\n<code>scrollProgress.y</code> in this case is a value from 0 to 1 that Idyll automatically computes,\nproviding the percentage that a user has scrolled through a certain component.</p>\n<p>You&#39;ve leared all about Idyll! All that&#39;s left is <a href=\"/publishing-deploying-to-the-web\">deploying you project to the web</a>.</p>\n","publishing-deploying-to-the-web":"<h1 id=\"building-your-idyll-project-for-the-web\"><a href=\"#building-your-idyll-project-for-the-web\" class=\"anchor\"></a>Building your Idyll project for the web</h1><p>Once you are happy with your project, the <code>idyll</code> command-line tool can also be used to\nbuild a stand alone bundle. If you used the Idyll project generator, npm tasks\nto build and deploy the project to github pages are available.</p>\n<h2 id=\"github-pages\"><a href=\"#github-pages\" class=\"anchor\"></a>Github Pages</h2><p>Once you&#39;ve initialized your\nproject with a repo on github, run the command</p>\n<pre><code class=\"lang-sh\">$ npm run deploy\n</code></pre>\n<p>this will compile the assets and push it to github\npages. Note that the <a href=\"https://idyll-lang.github.io/components-built-in#meta\">meta component</a>\nis useful for inserting metadata into the compiled output.</p>\n<h2 id=\"other-hosting\"><a href=\"#other-hosting\" class=\"anchor\"></a>Other Hosting</h2><p>Idyll&#39;s generated output is compatible with other static hosting services as well.</p>\n<p>To compile the project, run</p>\n<pre><code class=\"lang-sh\">$ npm run build\n</code></pre>\n<p>this will compile files and place them inside of the <code>build/</code> folder.</p>\n","open-source-github":"<h1 id=\"github\"><a href=\"#github\" class=\"anchor\"></a>Github</h1><p>The main repository for Idyll is here: <a href=\"https://github.com/idyll-lang/idyll\">https://github.com/idyll-lang/idyll</a>. Feel free to\nopen issues or create pull requests.</p>\n<p>There is also a <a href=\"https://gitter.im/idyll-lang/Lobby\">public chatroom on Gitter</a> if you&#39;d like to say &quot;Hi!&quot; or\nask a quick question.</p>\n<p>Contributions are welcome! If you want to start working on anything in particular, it&#39;s a good idea to\npost in the chatroom, or a post comment or an issue on GitHub so that multiple people aren&#39;t trying to fix the same thing. Feel\nfree to reach out to me <a href=\"https://twitter.com/mathisonian\">on twitter</a> or via email, idyll at mathisonian dot com.</p>\n"}})
-  app.start('#choo-root')
-  
-},{"minidocs":7}],2:[function(require,module,exports){
-var choo = require('choo')
-
-var main = require('./components/main')
-
-module.exports = function (opts) {
-  opts.basedir = (opts.basedir || '').replace(/\/$/, '')
-  var app = choo()
-
-  app.model({
-    state: {
-      title: opts.title,
-      logo: opts.logo,
-      contents: opts.contents,
-      html: opts.html,
-      routes: opts.routes,
-      current: opts.initial,
-      basedir: opts.basedir
-    },
-    reducers: {},
-    subscriptions: [
-      function catchLinks (send, done) {
-        window.onclick = function (e) {
-          var node = (function traverse (node) {
-            if (!node) return
-            if (node.localName !== 'a') return traverse(node.parentNode)
-            if (node.href === undefined) return traverse(node.parentNode)
-            if (window.location.host !== node.host) return traverse(node.parentNode)
-            return node
-          })(e.target)
-
-          if (!node) return
-          e.preventDefault()
-          var href = node.href
-
-          if (window.location.pathname !== node.pathname || ('routerIgnore' in node.dataset)) {
-            window.location.href = href;
-            // send('location:setLocation', { location: href }, done)
-            // window.history.pushState(null, null, href)
-            // document.body.scrollTop = 0
-          } else {
-            window.location.hash = node.hash
-            var el = document.querySelector(node.hash)
-            window.scrollTo(0, el.offsetTop)
-          }
-        }
-      }
-    ]
-  })
-
-  app.model({
-    namespace: 'menu',
-    state: {
-      open: false,
-      size: 'small'
-    },
-    reducers: {
-      set: function (data, state) {
-        return data
-      },
-      size: function (data, state) {
-        return data
-      }
-    },
-    subscriptions: [
-      checkSize,
-      function (send, done) {
-        window.onresize = function () {
-          checkSize(send, done)
-        }
-      }
-    ]
-  })
-
-  function checkSize (send, done) {
-    var size = window.innerWidth > 600 ? 'large' : 'small'
-    send('menu:size', { size: size }, done)
-  }
-
-  app.router(function (route) {
-    var routes = [
-      route('/', main),
-      route('/:page', main)
-    ]
-
-    if (opts.basedir) {
-      return route(opts.basedir, routes)
-    }
-
-    return routes
-  })
-
-  return app
-}
-
-},{"./components/main":4,"choo":22}],3:[function(require,module,exports){
-var html = require('choo/html')
-var css = 0
-var avatar = require('github-avatar-url')
-
-module.exports = function (state, prev, send) {
-  var currentPage = state.params.page || state.current
-  var page = state.html[currentPage]
-  var pageData = state.contents.filter(function (item) {
-    return item.key === currentPage
-  })[0]
-
-  var prefix = ((null || true) && "_3f4b1fbc")
-
-  var contentWrapper = html`<div></div>`
-  contentWrapper.innerHTML = page
-
-  var link = pageData.source ? html`<a class="markdown-link" href="${pageData.source}">source</a>` : ''
-
-  function contributors (items) {
-    return items.map(function (item) {
-      if (!item) return
-      var user = item.replace('@', '')
-      var img = html`<img class="${prefix} contributor"></img>`
-      img.style.opacity = 0
-      avatar(user, function (err, url) {
-        if (err) {
-          // TODO: handle requests in effects, send error messages to state
-          console.log(err)
-        }
-        img.src = url
-        img.onload = function () {
-          img.style.opacity = 1
-        }
-      })
-      return html`<div class="${prefix} contributor-wrapper">
-        <a href='https://github.com/${user}'>
-          ${img}
-        </a>
-      </div>`
-    })
-  }
-
-  if (pageData.contributors) {
-    var contributorWrapper = html`<div class="${prefix} contributor-container">
-      ${contributors(pageData.contributors)}
-    </div>`
-  }
-
-  return html`<div class="${prefix} minidocs-content">
-    ${link}
-    ${contributorWrapper}
-    ${contentWrapper}
-  </div>`
-}
-
-},{"choo/html":21,"github-avatar-url":34,"insert-css":54}],4:[function(require,module,exports){
-var html = require('choo/html')
-var css = 0
-var sidebar = require('./sidebar')
-var content = require('./content')
-
-module.exports = function (state, prev, send) {
-  var prefix = ((null || true) && "_571b6797")
-
-  return html`<div id="choo-root" class="minidocs">
-    ${sidebar(state, prev, send)}
-    <div class="${prefix} minidocs-main">
-      <div class="markdown-body">
-        ${content(state, prev, send)}
-      </div>
-    </div>
-  </div>`
-}
-
-},{"./content":3,"./sidebar":6,"choo/html":21,"insert-css":54}],5:[function(require,module,exports){
-var url = require('url')
-var css = 0
-var html = require('choo/html')
-
-module.exports = function (state, prev, send) {
-  var contents = state.contents
-  var prefix = ((null || true) && "_689fec56")
-
-  function createMenu (contents) {
-    return contents.map(function (item) {
-      // TODO: figure out a better way to get current page in state based on link click
-      var current
-      var location
-
-      if (state.location && state.location.pathname) {
-        location = url.parse(state.location.pathname)
-        var sliceBy = state.basedir.length + 1
-        current = location.pathname.slice(sliceBy)
-      }
-
-      if (!current || current.length <= 1) {
-        current = state.current
-      }
-
-      function onclick (e) {
-        send('menu:set', { open: false })
-      }
-
-      function createTocItem (tocItem) {
-        if (tocItem.level === 1) return '' // Don't put title
-        var depth = item.depth + (tocItem.level - 1)
-        return html`<a href="#${tocItem.slug}" class="h${depth} content-link">${tocItem.title}</a>`
-      }
-
-      if (isActive(current, item.key) && item.toc.length > 1) {
-        return html`
-          <div>
-            <a href="${item.link}" class="content-link ${isActive(current, item.key)}" onclick=${onclick}>${item.name}</a>
-            <div class="minidocs-menu-toc">
-              ${item.toc.map(function (tocItem) {
-                return (tocItem.level === 2) ? createTocItem(tocItem) : ''
-              })}
-            </div>
-          </div>
-        `
-      }
-
-      if (item.link) {
-        return html`<div><a href="${item.link}" class="content-link ${isActive(current, item.key)}" onclick=${onclick}>${item.name}</a></div>`
-      }
-
-      return html`<div class="h${item.depth}">${item.name}</div>`
-    })
-  }
-
-  function isActive (current, item) {
-    return current === item ? 'active' : ''
-  }
-
-  function isOpen () {
-    if (typeof window !== 'undefined' && window.innerWidth > 600) return 'menu-open'
-    return state.menu.open ? 'menu-open' : 'menu-closed'
-  }
-
-  function onclick (e) {
-    send('menu:set', { open: !state.menu.open })
-  }
-
-  return html`<div class="${prefix} minidocs-contents">
-    <button class="minidocs-menu-toggle" onclick=${onclick}>Menu</button>
-    <div class="minidocs-menu ${isOpen()} menu-${state.menu.size}">
-      <div class="minidocs-menu-wrapper">
-        ${createMenu(contents)}
-      </div>
-    </div>
-  </div>`
-}
-
-},{"choo/html":21,"insert-css":54,"url":115}],6:[function(require,module,exports){
-var css = 0
-var html = require('choo/html')
-
-var menu = require('./menu')
-
-module.exports = function (state, prev, send) {
-  var prefix = ((null || true) && "_2bbb10f8")
-
-  function createHeader () {
-    if (state.logo) {
-      return html`
-        <img class="minidocs-logo" src="${state.basedir + '/' + state.logo}" alt="${state.title}">
-      `
-    }
-    return state.title
-  }
-
-  return html`<div class="${prefix} minidocs-sidebar">
-    <div class="minidocs-header">
-      <h1><a href="${state.basedir}/">${createHeader()}</a></h1>
-    </div>
-    ${menu(state, prev, send)}
-  </div>`
-}
-
-},{"./menu":5,"choo/html":21,"insert-css":54}],7:[function(require,module,exports){
-var css = 0
-
-var minidocs = require('./app')
-
-module.exports = function (opts, callback) {
-  var app = minidocs(opts)
-
-  ;((null || true) && "_08b1ba12")
-  ;((null || true) && "_b8e1f1b6")
-  ;((null || true) && "_3b66eb47")
-  ;((null || true) && "_4337a147")
-
-  return {
-    app: app,
-    start: function (id, opts) {
-      if (typeof id === 'object') {
-        opts = id
-        id = null
-      }
-      if (!opts) opts = {}
-      opts.href = opts.href || false
-      return app.start(id, opts)
-    }
-  }
-}
-
-},{"./app":2,"insert-css":54}],8:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -800,7 +492,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"util/":120}],9:[function(require,module,exports){
+},{"util/":121}],2:[function(require,module,exports){
 module.exports = applyHook
 
 // apply arguments onto an array of functions, useful for hooks
@@ -811,7 +503,7 @@ function applyHook (arr, arg1, arg2, arg3, arg4, arg5) {
   })
 }
 
-},{}],10:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 const mutate = require('xtend/mutable')
 const assert = require('assert')
 const xtend = require('xtend')
@@ -1101,7 +793,7 @@ function wrapHook (value, transforms) {
   return value
 }
 
-},{"./apply-hook":9,"assert":8,"xtend":124,"xtend/mutable":125}],11:[function(require,module,exports){
+},{"./apply-hook":2,"assert":1,"xtend":125,"xtend/mutable":126}],4:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -1137,22 +829,22 @@ function placeHoldersCount (b64) {
 
 function byteLength (b64) {
   // base64 is 4/3 + up to two characters of the original data
-  return b64.length * 3 / 4 - placeHoldersCount(b64)
+  return (b64.length * 3 / 4) - placeHoldersCount(b64)
 }
 
 function toByteArray (b64) {
-  var i, j, l, tmp, placeHolders, arr
+  var i, l, tmp, placeHolders, arr
   var len = b64.length
   placeHolders = placeHoldersCount(b64)
 
-  arr = new Arr(len * 3 / 4 - placeHolders)
+  arr = new Arr((len * 3 / 4) - placeHolders)
 
   // if there are placeholders, only get up to the last complete 4 chars
   l = placeHolders > 0 ? len - 4 : len
 
   var L = 0
 
-  for (i = 0, j = 0; i < l; i += 4, j += 3) {
+  for (i = 0; i < l; i += 4) {
     tmp = (revLookup[b64.charCodeAt(i)] << 18) | (revLookup[b64.charCodeAt(i + 1)] << 12) | (revLookup[b64.charCodeAt(i + 2)] << 6) | revLookup[b64.charCodeAt(i + 3)]
     arr[L++] = (tmp >> 16) & 0xFF
     arr[L++] = (tmp >> 8) & 0xFF
@@ -1217,7 +909,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],12:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 var document = require('global/document')
 var hyperx = require('hyperx')
 var onload = require('on-load')
@@ -1372,9 +1064,9 @@ module.exports = hyperx(belCreateElement, {comments: true})
 module.exports.default = module.exports
 module.exports.createElement = belCreateElement
 
-},{"global/document":41,"hyperx":48,"on-load":67}],13:[function(require,module,exports){
+},{"global/document":34,"hyperx":41,"on-load":65}],6:[function(require,module,exports){
 
-},{}],14:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 (function (process,Buffer){
 var msg = require('pako/lib/zlib/messages');
 var zstream = require('pako/lib/zlib/zstream');
@@ -1614,7 +1306,7 @@ Zlib.prototype._error = function(status) {
 exports.Zlib = Zlib;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":87,"buffer":18,"pako/lib/zlib/constants":70,"pako/lib/zlib/deflate.js":72,"pako/lib/zlib/inflate.js":74,"pako/lib/zlib/messages":76,"pako/lib/zlib/zstream":78}],15:[function(require,module,exports){
+},{"_process":85,"buffer":10,"pako/lib/zlib/constants":68,"pako/lib/zlib/deflate.js":70,"pako/lib/zlib/inflate.js":72,"pako/lib/zlib/messages":74,"pako/lib/zlib/zstream":76}],8:[function(require,module,exports){
 (function (process,Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -2228,121 +1920,9 @@ util.inherits(InflateRaw, Zlib);
 util.inherits(Unzip, Zlib);
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"./binding":14,"_process":87,"_stream_transform":102,"assert":8,"buffer":18,"util":120}],16:[function(require,module,exports){
-arguments[4][13][0].apply(exports,arguments)
-},{"dup":13}],17:[function(require,module,exports){
-(function (global){
-'use strict';
-
-var buffer = require('buffer');
-var Buffer = buffer.Buffer;
-var SlowBuffer = buffer.SlowBuffer;
-var MAX_LEN = buffer.kMaxLength || 2147483647;
-exports.alloc = function alloc(size, fill, encoding) {
-  if (typeof Buffer.alloc === 'function') {
-    return Buffer.alloc(size, fill, encoding);
-  }
-  if (typeof encoding === 'number') {
-    throw new TypeError('encoding must not be number');
-  }
-  if (typeof size !== 'number') {
-    throw new TypeError('size must be a number');
-  }
-  if (size > MAX_LEN) {
-    throw new RangeError('size is too large');
-  }
-  var enc = encoding;
-  var _fill = fill;
-  if (_fill === undefined) {
-    enc = undefined;
-    _fill = 0;
-  }
-  var buf = new Buffer(size);
-  if (typeof _fill === 'string') {
-    var fillBuf = new Buffer(_fill, enc);
-    var flen = fillBuf.length;
-    var i = -1;
-    while (++i < size) {
-      buf[i] = fillBuf[i % flen];
-    }
-  } else {
-    buf.fill(_fill);
-  }
-  return buf;
-}
-exports.allocUnsafe = function allocUnsafe(size) {
-  if (typeof Buffer.allocUnsafe === 'function') {
-    return Buffer.allocUnsafe(size);
-  }
-  if (typeof size !== 'number') {
-    throw new TypeError('size must be a number');
-  }
-  if (size > MAX_LEN) {
-    throw new RangeError('size is too large');
-  }
-  return new Buffer(size);
-}
-exports.from = function from(value, encodingOrOffset, length) {
-  if (typeof Buffer.from === 'function' && (!global.Uint8Array || Uint8Array.from !== Buffer.from)) {
-    return Buffer.from(value, encodingOrOffset, length);
-  }
-  if (typeof value === 'number') {
-    throw new TypeError('"value" argument must not be a number');
-  }
-  if (typeof value === 'string') {
-    return new Buffer(value, encodingOrOffset);
-  }
-  if (typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer) {
-    var offset = encodingOrOffset;
-    if (arguments.length === 1) {
-      return new Buffer(value);
-    }
-    if (typeof offset === 'undefined') {
-      offset = 0;
-    }
-    var len = length;
-    if (typeof len === 'undefined') {
-      len = value.byteLength - offset;
-    }
-    if (offset >= value.byteLength) {
-      throw new RangeError('\'offset\' is out of bounds');
-    }
-    if (len > value.byteLength - offset) {
-      throw new RangeError('\'length\' is out of bounds');
-    }
-    return new Buffer(value.slice(offset, offset + len));
-  }
-  if (Buffer.isBuffer(value)) {
-    var out = new Buffer(value.length);
-    value.copy(out, 0, 0, value.length);
-    return out;
-  }
-  if (value) {
-    if (Array.isArray(value) || (typeof ArrayBuffer !== 'undefined' && value.buffer instanceof ArrayBuffer) || 'length' in value) {
-      return new Buffer(value);
-    }
-    if (value.type === 'Buffer' && Array.isArray(value.data)) {
-      return new Buffer(value.data);
-    }
-  }
-
-  throw new TypeError('First argument must be a string, Buffer, ' + 'ArrayBuffer, Array, or array-like object.');
-}
-exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
-  if (typeof Buffer.allocUnsafeSlow === 'function') {
-    return Buffer.allocUnsafeSlow(size);
-  }
-  if (typeof size !== 'number') {
-    throw new TypeError('size must be a number');
-  }
-  if (size >= MAX_LEN) {
-    throw new RangeError('size is too large');
-  }
-  return new SlowBuffer(size);
-}
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":18}],18:[function(require,module,exports){
+},{"./binding":7,"_process":85,"_stream_transform":102,"assert":1,"buffer":10,"util":121}],9:[function(require,module,exports){
+arguments[4][6][0].apply(exports,arguments)
+},{"dup":6}],10:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -4135,7 +3715,14 @@ function isnan (val) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":11,"ieee754":49,"isarray":60}],19:[function(require,module,exports){
+},{"base64-js":4,"ieee754":42,"isarray":11}],11:[function(require,module,exports){
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};
+
+},{}],12:[function(require,module,exports){
 module.exports = {
   "100": "Continue",
   "101": "Switching Protocols",
@@ -4201,7 +3788,7 @@ module.exports = {
   "511": "Network Authentication Required"
 }
 
-},{}],20:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 module.exports = Error.captureStackTrace || function (error) {
@@ -4221,10 +3808,10 @@ module.exports = Error.captureStackTrace || function (error) {
 	});
 };
 
-},{}],21:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports = require('yo-yo')
 
-},{"yo-yo":126}],22:[function(require,module,exports){
+},{"yo-yo":127}],15:[function(require,module,exports){
 const history = require('sheet-router/history')
 const sheetRouter = require('sheet-router')
 const document = require('global/document')
@@ -4412,7 +3999,7 @@ function appInit (opts) {
   }
 }
 
-},{"assert":8,"barracks":10,"document-ready":25,"global/document":41,"hash-match":45,"nanoraf":63,"sheet-router":106,"sheet-router/hash":103,"sheet-router/history":104,"sheet-router/href":105,"xtend":124,"yo-yo":126}],23:[function(require,module,exports){
+},{"assert":1,"barracks":3,"document-ready":18,"global/document":34,"hash-match":38,"nanoraf":61,"sheet-router":107,"sheet-router/hash":104,"sheet-router/history":105,"sheet-router/href":106,"xtend":125,"yo-yo":127}],16:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -4523,7 +4110,7 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":56}],24:[function(require,module,exports){
+},{"../../is-buffer/index.js":49}],17:[function(require,module,exports){
 'use strict';
 var captureStackTrace = require('capture-stack-trace');
 
@@ -4569,7 +4156,7 @@ module.exports = function createErrorClass(className, setup) {
 	return ErrorClass;
 };
 
-},{"capture-stack-trace":20}],25:[function(require,module,exports){
+},{"capture-stack-trace":13}],18:[function(require,module,exports){
 'use strict'
 
 var document = require('global/document')
@@ -4589,7 +4176,7 @@ function ready (callback) {
 
 function noop () {}
 
-},{"global/document":41}],26:[function(require,module,exports){
+},{"global/document":34}],19:[function(require,module,exports){
 "use strict";
 
 var stream = require("readable-stream");
@@ -4667,7 +4254,7 @@ module.exports = function duplex2(options, writable, readable) {
 
 module.exports.DuplexWrapper = DuplexWrapper;
 
-},{"readable-stream":101}],27:[function(require,module,exports){
+},{"readable-stream":101}],20:[function(require,module,exports){
 (function (process,Buffer){
 var stream = require('readable-stream')
 var eos = require('end-of-stream')
@@ -4899,15 +4486,7 @@ Duplexify.prototype.end = function(data, enc, cb) {
 module.exports = Duplexify
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":87,"buffer":18,"end-of-stream":29,"inherits":53,"readable-stream":101,"stream-shift":111}],28:[function(require,module,exports){
-'use strict';
-module.exports = function (opts) {
-	opts = opts || {};
-	var re = '[^\\.\\s@][^\\s@]*(?!\\.)@[^\\.\\s@]+(?:\\.[^\\.\\s@]+)*';
-	return opts.exact ? new RegExp('^' + re + '$') : new RegExp(re, 'g');
-};
-
-},{}],29:[function(require,module,exports){
+},{"_process":85,"buffer":10,"end-of-stream":21,"inherits":46,"readable-stream":101,"stream-shift":112}],21:[function(require,module,exports){
 var once = require('once');
 
 var noop = function() {};
@@ -4980,7 +4559,7 @@ var eos = function(stream, opts, callback) {
 };
 
 module.exports = eos;
-},{"once":30}],30:[function(require,module,exports){
+},{"once":22}],22:[function(require,module,exports){
 var wrappy = require('wrappy')
 module.exports = wrappy(once)
 
@@ -5003,7 +4582,15 @@ function once (fn) {
   return f
 }
 
-},{"wrappy":123}],31:[function(require,module,exports){
+},{"wrappy":124}],23:[function(require,module,exports){
+'use strict';
+module.exports = function (opts) {
+	opts = opts || {};
+	var re = '[^\\.\\s@][^\\s@]*(?!\\.)@[^\\.\\s@]+(?:\\.[^\\.\\s@]+)*';
+	return opts.exact ? new RegExp('^' + re + '$') : new RegExp(re, 'g');
+};
+
+},{}],24:[function(require,module,exports){
 'use strict';
 
 var util = require('util');
@@ -5138,7 +4725,7 @@ errorEx.line = function (str, def) {
 
 module.exports = errorEx;
 
-},{"is-arrayish":55,"util":120}],32:[function(require,module,exports){
+},{"is-arrayish":48,"util":121}],25:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5442,7 +5029,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],33:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (process){
 'use strict';
 var got = require('got');
@@ -5499,7 +5086,35 @@ function ghGot(path, opts, cb) {
 module.exports = ghGot;
 
 }).call(this,require('_process'))
-},{"_process":87,"got":43,"object-assign":66}],34:[function(require,module,exports){
+},{"_process":85,"got":36,"object-assign":27}],27:[function(require,module,exports){
+'use strict';
+
+function ToObject(val) {
+	if (val == null) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+module.exports = Object.assign || function (target, source) {
+	var from;
+	var keys;
+	var to = ToObject(target);
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = arguments[s];
+		keys = Object.keys(Object(from));
+
+		for (var i = 0; i < keys.length; i++) {
+			to[keys[i]] = from[keys[i]];
+		}
+	}
+
+	return to;
+};
+
+},{}],28:[function(require,module,exports){
 'use strict';
 var emailRegex = require('email-regex');
 var githubUsername= require('github-username');
@@ -5528,7 +5143,7 @@ module.exports = function (str, token, cb) {
 	
 };
 
-},{"email-regex":28,"gh-got":33,"github-username":35}],35:[function(require,module,exports){
+},{"email-regex":23,"gh-got":26,"github-username":29}],29:[function(require,module,exports){
 'use strict';
 var ghGot = require('gh-got');
 
@@ -5562,7 +5177,7 @@ module.exports = function (email, token, cb) {
 	}).catch(cb);
 };
 
-},{"gh-got":36}],36:[function(require,module,exports){
+},{"gh-got":30}],30:[function(require,module,exports){
 (function (process){
 'use strict';
 var got = require('got');
@@ -5631,7 +5246,7 @@ helpers.forEach(function (el) {
 module.exports = ghGot;
 
 }).call(this,require('_process'))
-},{"_process":87,"got":37,"object-assign":39,"pinkie-promise":83}],37:[function(require,module,exports){
+},{"_process":85,"got":31,"object-assign":64,"pinkie-promise":81}],31:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -6036,60 +5651,53 @@ got.MaxRedirectsError = createErrorClass('MaxRedirectsError', function (statusCo
 module.exports = got;
 
 }).call(this,require("buffer").Buffer)
-},{"./package.json":38,"buffer":18,"create-error-class":24,"duplexer2":26,"events":32,"http":107,"https":46,"is-redirect":57,"is-retry-allowed":58,"is-stream":59,"lowercase-keys":61,"node-status-codes":65,"object-assign":39,"parse-json":79,"pinkie-promise":83,"querystring":91,"read-all-stream":92,"readable-stream":101,"timed-out":40,"unzip-response":13,"url":115,"url-parse-lax":114}],38:[function(require,module,exports){
+},{"./package.json":32,"buffer":10,"create-error-class":17,"duplexer2":19,"events":25,"http":108,"https":39,"is-redirect":50,"is-retry-allowed":51,"is-stream":52,"lowercase-keys":53,"node-status-codes":63,"object-assign":64,"parse-json":77,"pinkie-promise":81,"querystring":89,"read-all-stream":90,"readable-stream":101,"timed-out":33,"unzip-response":6,"url":116,"url-parse-lax":115}],32:[function(require,module,exports){
 module.exports={
-  "_args": [
-    [
-      {
-        "raw": "got@^5.2.0",
-        "scope": null,
-        "escapedName": "got",
-        "name": "got",
-        "rawSpec": "^5.2.0",
-        "spec": ">=5.2.0 <6.0.0",
-        "type": "range"
-      },
-      "/Users/mathisonian/projects/minidocs/node_modules/github-username/node_modules/gh-got"
-    ]
+  "name": "got",
+  "version": "5.7.1",
+  "description": "Simplified HTTP/HTTPS requests",
+  "license": "MIT",
+  "repository": "sindresorhus/got",
+  "maintainers": [
+    {
+      "name": "Sindre Sorhus",
+      "email": "sindresorhus@gmail.com",
+      "url": "sindresorhus.com"
+    },
+    {
+      "name": "Vsevolod Strukchinsky",
+      "email": "floatdrop@gmail.com",
+      "url": "github.com/floatdrop"
+    }
   ],
-  "_from": "got@>=5.2.0 <6.0.0",
-  "_id": "got@5.7.1",
-  "_inCache": true,
-  "_location": "/github-username/got",
-  "_nodeVersion": "0.10.48",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/got-5.7.1.tgz_1478113400687_0.6078383799176663"
+  "engines": {
+    "node": ">=0.10.0 <7"
   },
-  "_npmUser": {
-    "name": "floatdrop",
-    "email": "floatdrop@gmail.com"
-  },
-  "_npmVersion": "2.15.1",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "got@^5.2.0",
-    "scope": null,
-    "escapedName": "got",
-    "name": "got",
-    "rawSpec": "^5.2.0",
-    "spec": ">=5.2.0 <6.0.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "/github-username/gh-got"
-  ],
-  "_resolved": "https://registry.npmjs.org/got/-/got-5.7.1.tgz",
-  "_shasum": "5f81635a61e4a6589f180569ea4e381680a51f35",
-  "_shrinkwrap": null,
-  "_spec": "got@^5.2.0",
-  "_where": "/Users/mathisonian/projects/minidocs/node_modules/github-username/node_modules/gh-got",
   "browser": {
     "unzip-response": false
   },
-  "bugs": {
-    "url": "https://github.com/sindresorhus/got/issues"
+  "scripts": {
+    "test": "xo && nyc ava",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "http",
+    "https",
+    "get",
+    "got",
+    "url",
+    "uri",
+    "request",
+    "util",
+    "utility",
+    "simple",
+    "curl",
+    "wget",
+    "fetch"
+  ],
   "dependencies": {
     "create-error-class": "^3.0.1",
     "duplexer2": "^0.1.4",
@@ -6107,7 +5715,6 @@ module.exports={
     "unzip-response": "^1.0.2",
     "url-parse-lax": "^1.0.0"
   },
-  "description": "Simplified HTTP/HTTPS requests",
   "devDependencies": {
     "ava": "^0.16.0",
     "coveralls": "^2.11.4",
@@ -6121,61 +5728,6 @@ module.exports={
     "tempfile": "^1.1.1",
     "xo": "0.16.x"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "5f81635a61e4a6589f180569ea4e381680a51f35",
-    "tarball": "https://registry.npmjs.org/got/-/got-5.7.1.tgz"
-  },
-  "engines": {
-    "node": ">=0.10.0 <7"
-  },
-  "files": [
-    "index.js"
-  ],
-  "gitHead": "856b4caf16b02ce28ef0d92e83cf434a50b71e84",
-  "homepage": "https://github.com/sindresorhus/got#readme",
-  "keywords": [
-    "http",
-    "https",
-    "get",
-    "got",
-    "url",
-    "uri",
-    "request",
-    "util",
-    "utility",
-    "simple",
-    "curl",
-    "wget",
-    "fetch"
-  ],
-  "license": "MIT",
-  "maintainers": [
-    {
-      "name": "sindresorhus",
-      "email": "sindresorhus@gmail.com"
-    },
-    {
-      "name": "floatdrop",
-      "email": "floatdrop@gmail.com"
-    },
-    {
-      "name": "kevva",
-      "email": "kevinmartensson@gmail.com"
-    }
-  ],
-  "name": "got",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sindresorhus/got.git"
-  },
-  "scripts": {
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "test": "xo && nyc ava"
-  },
-  "version": "5.7.1",
   "xo": {
     "ignores": [
       "test/**"
@@ -6183,99 +5735,7 @@ module.exports={
   }
 }
 
-},{}],39:[function(require,module,exports){
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-'use strict';
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-},{}],40:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 'use strict';
 
 module.exports = function (req, time) {
@@ -6332,39 +5792,45 @@ module.exports = function (req, time) {
 	return req.on('error', clear);
 };
 
-},{}],41:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 (function (global){
 var topLevel = typeof global !== 'undefined' ? global :
     typeof window !== 'undefined' ? window : {}
 var minDoc = require('min-document');
 
+var doccy;
+
 if (typeof document !== 'undefined') {
-    module.exports = document;
+    doccy = document;
 } else {
-    var doccy = topLevel['__GLOBAL_DOCUMENT_CACHE@4'];
+    doccy = topLevel['__GLOBAL_DOCUMENT_CACHE@4'];
 
     if (!doccy) {
         doccy = topLevel['__GLOBAL_DOCUMENT_CACHE@4'] = minDoc;
     }
-
-    module.exports = doccy;
 }
 
+module.exports = doccy;
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"min-document":13}],42:[function(require,module,exports){
+},{"min-document":6}],35:[function(require,module,exports){
 (function (global){
+var win;
+
 if (typeof window !== "undefined") {
-    module.exports = window;
+    win = window;
 } else if (typeof global !== "undefined") {
-    module.exports = global;
+    win = global;
 } else if (typeof self !== "undefined"){
-    module.exports = self;
+    win = self;
 } else {
-    module.exports = {};
+    win = {};
 }
 
+module.exports = win;
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],43:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 (function (process,Buffer){
 'use strict';
 var http = require('http');
@@ -6644,7 +6110,7 @@ function got(url, opts, cb) {
 module.exports = got;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":87,"buffer":18,"duplexify":27,"http":107,"https":46,"infinity-agent":52,"is-redirect":57,"is-stream":59,"lowercase-keys":61,"nested-error-stacks":64,"object-assign":44,"prepend-http":85,"querystring":91,"read-all-stream":92,"timed-out":112,"url":115,"util":120,"zlib":15}],44:[function(require,module,exports){
+},{"_process":85,"buffer":10,"duplexify":20,"http":108,"https":39,"infinity-agent":45,"is-redirect":50,"is-stream":52,"lowercase-keys":53,"nested-error-stacks":62,"object-assign":37,"prepend-http":83,"querystring":89,"read-all-stream":90,"timed-out":113,"url":116,"util":121,"zlib":8}],37:[function(require,module,exports){
 'use strict';
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
@@ -6685,7 +6151,7 @@ module.exports = Object.assign || function (target, source) {
 	return to;
 };
 
-},{}],45:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 module.exports = function hashMatch (hash, prefix) {
   var pre = prefix || '/';
   if (hash.length === 0) return pre;
@@ -6696,7 +6162,7 @@ module.exports = function hashMatch (hash, prefix) {
   else return hash.replace(pre, '');
 }
 
-},{}],46:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 var http = require('http');
 
 var https = module.exports;
@@ -6712,7 +6178,7 @@ https.request = function (params, cb) {
     return http.request.call(this, params, cb);
 }
 
-},{"http":107}],47:[function(require,module,exports){
+},{"http":108}],40:[function(require,module,exports){
 module.exports = attributeToProperty
 
 var transform = {
@@ -6733,7 +6199,7 @@ function attributeToProperty (h) {
   }
 }
 
-},{}],48:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 var attrToProp = require('hyperscript-attribute-to-property')
 
 var VAR = 0, TEXT = 1, OPEN = 2, CLOSE = 3, ATTR = 4
@@ -7013,7 +6479,7 @@ var closeRE = RegExp('^(' + [
 ].join('|') + ')(?:[\.#][a-zA-Z0-9\u007F-\uFFFF_:-]+)*$')
 function selfClosing (tag) { return closeRE.test(tag) }
 
-},{"hyperscript-attribute-to-property":47}],49:[function(require,module,exports){
+},{"hyperscript-attribute-to-property":40}],42:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -7099,7 +6565,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],50:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -7378,7 +6844,7 @@ Agent.prototype.destroy = function() {
 exports.globalAgent = new Agent();
 
 }).call(this,require('_process'))
-},{"_process":87,"events":32,"net":16,"util":120}],51:[function(require,module,exports){
+},{"_process":85,"events":25,"net":9,"util":121}],44:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -7464,13 +6930,13 @@ exports.globalAgent = globalAgent;
 exports.Agent = Agent;
 
 }).call(this,require('_process'))
-},{"./http.js":50,"_process":87,"tls":16,"util":120}],52:[function(require,module,exports){
+},{"./http.js":43,"_process":85,"tls":9,"util":121}],45:[function(require,module,exports){
 'use strict';
 
 exports.http = require('./http.js');
 exports.https = require('./https.js');
 
-},{"./http.js":50,"./https.js":51}],53:[function(require,module,exports){
+},{"./http.js":43,"./https.js":44}],46:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -7495,7 +6961,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],54:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 var containers = []; // will store container HTMLElement references
 var styleElements = []; // will store {prepend: HTMLElement, append: HTMLElement}
 
@@ -7549,7 +7015,7 @@ function createStyleElement() {
 module.exports = insertCss;
 module.exports.insertCss = insertCss;
 
-},{}],55:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 'use strict';
 
 module.exports = function isArrayish(obj) {
@@ -7561,7 +7027,7 @@ module.exports = function isArrayish(obj) {
 		(obj.length >= 0 && obj.splice instanceof Function);
 };
 
-},{}],56:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -7584,7 +7050,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],57:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 'use strict';
 module.exports = function (x) {
 	if (typeof x !== 'number') {
@@ -7600,7 +7066,7 @@ module.exports = function (x) {
 		x === 308;
 };
 
-},{}],58:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 'use strict';
 
 var WHITELIST = [
@@ -7662,7 +7128,7 @@ module.exports = function (err) {
 	return true;
 };
 
-},{}],59:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 'use strict';
 
 var isStream = module.exports = function (stream) {
@@ -7685,14 +7151,7 @@ isStream.transform = function (stream) {
 	return isStream.duplex(stream) && typeof stream._transform === 'function' && typeof stream._transformState === 'object';
 };
 
-},{}],60:[function(require,module,exports){
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
-
-},{}],61:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 'use strict';
 module.exports = function (obj) {
 	var ret = {};
@@ -7705,7 +7164,309 @@ module.exports = function (obj) {
 	return ret;
 };
 
-},{}],62:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
+var choo = require('choo')
+
+var main = require('./components/main')
+
+module.exports = function (opts) {
+  opts.basedir = (opts.basedir || '').replace(/\/$/, '')
+  var app = choo()
+
+  app.model({
+    state: {
+      title: opts.title,
+      logo: opts.logo,
+      contents: opts.contents,
+      html: opts.html,
+      routes: opts.routes,
+      current: opts.initial,
+      basedir: opts.basedir
+    },
+    reducers: {},
+    subscriptions: [
+      function catchLinks (send, done) {
+        window.onclick = function (e) {
+          var node = (function traverse (node) {
+            if (!node) return
+            if (node.localName !== 'a') return traverse(node.parentNode)
+            if (node.href === undefined) return traverse(node.parentNode)
+            if (window.location.host !== node.host) return traverse(node.parentNode)
+            return node
+          })(e.target)
+
+          if (!node) return
+          e.preventDefault()
+          var href = node.href
+
+          if (window.location.pathname !== node.pathname || ('routerIgnore' in node.dataset)) {
+            window.location.href = href;
+            // send('location:setLocation', { location: href }, done)
+            // window.history.pushState(null, null, href)
+            // document.body.scrollTop = 0
+          } else {
+            window.location.hash = node.hash
+            var el = document.querySelector(node.hash)
+            window.scrollTo(0, el.offsetTop)
+          }
+        }
+      }
+    ]
+  })
+
+  app.model({
+    namespace: 'menu',
+    state: {
+      open: false,
+      size: 'small'
+    },
+    reducers: {
+      set: function (data, state) {
+        return data
+      },
+      size: function (data, state) {
+        return data
+      }
+    },
+    subscriptions: [
+      checkSize,
+      function (send, done) {
+        window.onresize = function () {
+          checkSize(send, done)
+        }
+      }
+    ]
+  })
+
+  function checkSize (send, done) {
+    var size = window.innerWidth > 600 ? 'large' : 'small'
+    send('menu:size', { size: size }, done)
+  }
+
+  app.router(function (route) {
+    var routes = [
+      route('/', main),
+      route('/:page', main)
+    ]
+
+    if (opts.basedir) {
+      return route(opts.basedir, routes)
+    }
+
+    return routes
+  })
+
+  return app
+}
+
+},{"./components/main":56,"choo":15}],55:[function(require,module,exports){
+var html = require('choo/html')
+var css = 0
+var avatar = require('github-avatar-url')
+
+module.exports = function (state, prev, send) {
+  var currentPage = state.params.page || state.current
+  var page = state.html[currentPage]
+  var pageData = state.contents.filter(function (item) {
+    return item.key === currentPage
+  })[0]
+
+  var prefix = ((null || true) && "_3f4b1fbc")
+
+  var contentWrapper = html`<div></div>`
+  contentWrapper.innerHTML = page
+
+  var link = pageData.source ? html`<a class="markdown-link" href="${pageData.source}">source</a>` : ''
+
+  function contributors (items) {
+    return items.map(function (item) {
+      if (!item) return
+      var user = item.replace('@', '')
+      var img = html`<img class="${prefix} contributor"></img>`
+      img.style.opacity = 0
+      avatar(user, function (err, url) {
+        if (err) {
+          // TODO: handle requests in effects, send error messages to state
+          console.log(err)
+        }
+        img.src = url
+        img.onload = function () {
+          img.style.opacity = 1
+        }
+      })
+      return html`<div class="${prefix} contributor-wrapper">
+        <a href='https://github.com/${user}'>
+          ${img}
+        </a>
+      </div>`
+    })
+  }
+
+  if (pageData.contributors) {
+    var contributorWrapper = html`<div class="${prefix} contributor-container">
+      ${contributors(pageData.contributors)}
+    </div>`
+  }
+
+  return html`<div class="${prefix} minidocs-content">
+    ${link}
+    ${contributorWrapper}
+    ${contentWrapper}
+  </div>`
+}
+
+},{"choo/html":14,"github-avatar-url":28,"insert-css":47}],56:[function(require,module,exports){
+var html = require('choo/html')
+var css = 0
+var sidebar = require('./sidebar')
+var content = require('./content')
+
+module.exports = function (state, prev, send) {
+  var prefix = ((null || true) && "_571b6797")
+
+  return html`<div id="choo-root" class="minidocs">
+    ${sidebar(state, prev, send)}
+    <div class="${prefix} minidocs-main">
+      <div class="markdown-body">
+        ${content(state, prev, send)}
+      </div>
+    </div>
+  </div>`
+}
+
+},{"./content":55,"./sidebar":58,"choo/html":14,"insert-css":47}],57:[function(require,module,exports){
+var url = require('url')
+var css = 0
+var html = require('choo/html')
+
+module.exports = function (state, prev, send) {
+  var contents = state.contents
+  var prefix = ((null || true) && "_689fec56")
+
+  function createMenu (contents) {
+    return contents.map(function (item) {
+      // TODO: figure out a better way to get current page in state based on link click
+      var current
+      var location
+
+      if (state.location && state.location.pathname) {
+        location = url.parse(state.location.pathname)
+        var sliceBy = state.basedir.length + 1
+        current = location.pathname.slice(sliceBy)
+      }
+
+      if (!current || current.length <= 1) {
+        current = state.current
+      }
+
+      function onclick (e) {
+        send('menu:set', { open: false })
+      }
+
+      function createTocItem (tocItem) {
+        if (tocItem.level === 1) return '' // Don't put title
+        var depth = item.depth + (tocItem.level - 1)
+        return html`<a href="#${tocItem.slug}" class="h${depth} content-link">${tocItem.title}</a>`
+      }
+
+      if (isActive(current, item.key) && item.toc.length > 1) {
+        return html`
+          <div>
+            <a href="${item.link}" class="content-link ${isActive(current, item.key)}" onclick=${onclick}>${item.name}</a>
+            <div class="minidocs-menu-toc">
+              ${item.toc.map(function (tocItem) {
+                return (tocItem.level === 2) ? createTocItem(tocItem) : ''
+              })}
+            </div>
+          </div>
+        `
+      }
+
+      if (item.link) {
+        return html`<div><a href="${item.link}" class="content-link ${isActive(current, item.key)}" onclick=${onclick}>${item.name}</a></div>`
+      }
+
+      return html`<div class="h${item.depth}">${item.name}</div>`
+    })
+  }
+
+  function isActive (current, item) {
+    return current === item ? 'active' : ''
+  }
+
+  function isOpen () {
+    if (typeof window !== 'undefined' && window.innerWidth > 600) return 'menu-open'
+    return state.menu.open ? 'menu-open' : 'menu-closed'
+  }
+
+  function onclick (e) {
+    send('menu:set', { open: !state.menu.open })
+  }
+
+  return html`<div class="${prefix} minidocs-contents">
+    <button class="minidocs-menu-toggle" onclick=${onclick}>Menu</button>
+    <div class="minidocs-menu ${isOpen()} menu-${state.menu.size}">
+      <div class="minidocs-menu-wrapper">
+        ${createMenu(contents)}
+      </div>
+    </div>
+  </div>`
+}
+
+},{"choo/html":14,"insert-css":47,"url":116}],58:[function(require,module,exports){
+var css = 0
+var html = require('choo/html')
+
+var menu = require('./menu')
+
+module.exports = function (state, prev, send) {
+  var prefix = ((null || true) && "_2bbb10f8")
+
+  function createHeader () {
+    if (state.logo) {
+      return html`
+        <img class="minidocs-logo" src="${state.basedir + '/' + state.logo}" alt="${state.title}">
+      `
+    }
+    return state.title
+  }
+
+  return html`<div class="${prefix} minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="${state.basedir}/">${createHeader()}</a></h1>
+    </div>
+    ${menu(state, prev, send)}
+  </div>`
+}
+
+},{"./menu":57,"choo/html":14,"insert-css":47}],59:[function(require,module,exports){
+var css = 0
+
+var minidocs = require('./app')
+
+module.exports = function (opts, callback) {
+  var app = minidocs(opts)
+
+  ;((null || true) && "_08b1ba12")
+  ;((null || true) && "_b8e1f1b6")
+  ;((null || true) && "_3b66eb47")
+  ;((null || true) && "_4337a147")
+
+  return {
+    app: app,
+    start: function (id, opts) {
+      if (typeof id === 'object') {
+        opts = id
+        id = null
+      }
+      if (!opts) opts = {}
+      opts.href = opts.href || false
+      return app.start(id, opts)
+    }
+  }
+}
+
+},{"./app":54,"insert-css":47}],60:[function(require,module,exports){
 'use strict';
 
 var range; // Create a range object for efficently rendering strings to elements.
@@ -8233,7 +7994,10 @@ function morphdomFactory(morphAttrs) {
                                 isCompatible = true;
                                 // Simply update nodeValue on the original node to
                                 // change the text value
-                                curFromNodeChild.nodeValue = curToNodeChild.nodeValue;
+                                if (curFromNodeChild.nodeValue !== curToNodeChild.nodeValue) {
+                                    curFromNodeChild.nodeValue = curToNodeChild.nodeValue;
+                                }
+
                             }
                         }
 
@@ -8332,7 +8096,10 @@ function morphdomFactory(morphAttrs) {
                 }
             } else if (morphedNodeType === TEXT_NODE || morphedNodeType === COMMENT_NODE) { // Text or comment node
                 if (toNodeType === morphedNodeType) {
-                    morphedNode.nodeValue = toNode.nodeValue;
+                    if (morphedNode.nodeValue !== toNode.nodeValue) {
+                        morphedNode.nodeValue = toNode.nodeValue;
+                    }
+
                     return morphedNode;
                 } else {
                     // Text node to something else
@@ -8383,7 +8150,7 @@ var morphdom = morphdomFactory(morphAttrs);
 
 module.exports = morphdom;
 
-},{}],63:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 var window = require('global/window')
 var assert = require('assert')
 
@@ -8429,7 +8196,7 @@ function nanoraf (render, raf) {
   }
 }
 
-},{"assert":8,"global/window":42}],64:[function(require,module,exports){
+},{"assert":1,"global/window":35}],62:[function(require,module,exports){
 var inherits = require('inherits');
 
 var NestedError = function (message, nested) {
@@ -8468,7 +8235,7 @@ NestedError.prototype.name = 'NestedError';
 
 module.exports = NestedError;
 
-},{"inherits":53}],65:[function(require,module,exports){
+},{"inherits":46}],63:[function(require,module,exports){
 'use strict';
 
 // https://github.com/nodejs/io.js/commit/8be6060020
@@ -8532,35 +8299,99 @@ module.exports = {
 	511: 'Network Authentication Required'
 };
 
-},{}],66:[function(require,module,exports){
-'use strict';
+},{}],64:[function(require,module,exports){
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
 
-function ToObject(val) {
-	if (val == null) {
+'use strict';
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
 		throw new TypeError('Object.assign cannot be called with null or undefined');
 	}
 
 	return Object(val);
 }
 
-module.exports = Object.assign || function (target, source) {
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	var from;
-	var keys;
-	var to = ToObject(target);
+	var to = toObject(target);
+	var symbols;
 
 	for (var s = 1; s < arguments.length; s++) {
-		from = arguments[s];
-		keys = Object.keys(Object(from));
+		from = Object(arguments[s]);
 
-		for (var i = 0; i < keys.length; i++) {
-			to[keys[i]] = from[keys[i]];
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
 		}
 	}
 
 	return to;
 };
 
-},{}],67:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 /* global MutationObserver */
 var document = require('global/document')
 var window = require('global/window')
@@ -8649,7 +8480,7 @@ function eachMutation (nodes, fn) {
   }
 }
 
-},{"global/document":41,"global/window":42}],68:[function(require,module,exports){
+},{"global/document":34,"global/window":35}],66:[function(require,module,exports){
 'use strict';
 
 
@@ -8753,7 +8584,7 @@ exports.setTyped = function (on) {
 
 exports.setTyped(TYPED_OK);
 
-},{}],69:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 'use strict';
 
 // Note: adler32 takes 12% for level 0 and 2% for level 6.
@@ -8787,7 +8618,7 @@ function adler32(adler, buf, len, pos) {
 
 module.exports = adler32;
 
-},{}],70:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 'use strict';
 
 
@@ -8839,7 +8670,7 @@ module.exports = {
   //Z_NULL:                 null // Use -1 or null inline, depending on var type
 };
 
-},{}],71:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 'use strict';
 
 // Note: we can't get significant speed boost here.
@@ -8882,7 +8713,7 @@ function crc32(crc, buf, len, pos) {
 
 module.exports = crc32;
 
-},{}],72:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 'use strict';
 
 var utils   = require('../utils/common');
@@ -10739,7 +10570,7 @@ exports.deflatePrime = deflatePrime;
 exports.deflateTune = deflateTune;
 */
 
-},{"../utils/common":68,"./adler32":69,"./crc32":71,"./messages":76,"./trees":77}],73:[function(require,module,exports){
+},{"../utils/common":66,"./adler32":67,"./crc32":69,"./messages":74,"./trees":75}],71:[function(require,module,exports){
 'use strict';
 
 // See state defs from inflate.js
@@ -11067,7 +10898,7 @@ module.exports = function inflate_fast(strm, start) {
   return;
 };
 
-},{}],74:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 'use strict';
 
 
@@ -12607,7 +12438,7 @@ exports.inflateSyncPoint = inflateSyncPoint;
 exports.inflateUndermine = inflateUndermine;
 */
 
-},{"../utils/common":68,"./adler32":69,"./crc32":71,"./inffast":73,"./inftrees":75}],75:[function(require,module,exports){
+},{"../utils/common":66,"./adler32":67,"./crc32":69,"./inffast":71,"./inftrees":73}],73:[function(require,module,exports){
 'use strict';
 
 
@@ -12936,7 +12767,7 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
   return 0;
 };
 
-},{"../utils/common":68}],76:[function(require,module,exports){
+},{"../utils/common":66}],74:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -12951,7 +12782,7 @@ module.exports = {
   '-6':   'incompatible version' /* Z_VERSION_ERROR (-6) */
 };
 
-},{}],77:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 'use strict';
 
 
@@ -14155,7 +13986,7 @@ exports._tr_flush_block  = _tr_flush_block;
 exports._tr_tally = _tr_tally;
 exports._tr_align = _tr_align;
 
-},{"../utils/common":68}],78:[function(require,module,exports){
+},{"../utils/common":66}],76:[function(require,module,exports){
 'use strict';
 
 
@@ -14186,7 +14017,7 @@ function ZStream() {
 
 module.exports = ZStream;
 
-},{}],79:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 'use strict';
 var errorEx = require('error-ex');
 var fallback = require('./vendor/parse');
@@ -14223,7 +14054,7 @@ module.exports = function (x, reviver, filename) {
 	}
 };
 
-},{"./vendor/parse":80,"error-ex":31}],80:[function(require,module,exports){
+},{"./vendor/parse":78,"error-ex":24}],78:[function(require,module,exports){
 /*
  * Author: Alex Kocharin <alex@kocharin.ru>
  * GIT: https://github.com/rlidwka/jju
@@ -14977,7 +14808,7 @@ module.exports.tokenize = function tokenizeJSON(input, options) {
 }
 
 
-},{"./unicode":81}],81:[function(require,module,exports){
+},{"./unicode":79}],79:[function(require,module,exports){
 
 // This is autogenerated with esprima tools, see:
 // https://github.com/ariya/esprima/blob/master/esprima.js
@@ -15050,7 +14881,7 @@ module.exports.NonAsciiIdentifierStart = /[\xAA\xB5\xBA\xC0-\xD6\xD8-\xF6\xF8-\u
 
 module.exports.NonAsciiIdentifierPart = /[\xAA\xB5\xBA\xC0-\xD6\xD8-\xF6\xF8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0300-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u0483-\u0487\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u05D0-\u05EA\u05F0-\u05F2\u0610-\u061A\u0620-\u0669\u066E-\u06D3\u06D5-\u06DC\u06DF-\u06E8\u06EA-\u06FC\u06FF\u0710-\u074A\u074D-\u07B1\u07C0-\u07F5\u07FA\u0800-\u082D\u0840-\u085B\u08A0\u08A2-\u08AC\u08E4-\u08FE\u0900-\u0963\u0966-\u096F\u0971-\u0977\u0979-\u097F\u0981-\u0983\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BC-\u09C4\u09C7\u09C8\u09CB-\u09CE\u09D7\u09DC\u09DD\u09DF-\u09E3\u09E6-\u09F1\u0A01-\u0A03\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A3C\u0A3E-\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A59-\u0A5C\u0A5E\u0A66-\u0A75\u0A81-\u0A83\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABC-\u0AC5\u0AC7-\u0AC9\u0ACB-\u0ACD\u0AD0\u0AE0-\u0AE3\u0AE6-\u0AEF\u0B01-\u0B03\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3C-\u0B44\u0B47\u0B48\u0B4B-\u0B4D\u0B56\u0B57\u0B5C\u0B5D\u0B5F-\u0B63\u0B66-\u0B6F\u0B71\u0B82\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BBE-\u0BC2\u0BC6-\u0BC8\u0BCA-\u0BCD\u0BD0\u0BD7\u0BE6-\u0BEF\u0C01-\u0C03\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D-\u0C44\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C58\u0C59\u0C60-\u0C63\u0C66-\u0C6F\u0C82\u0C83\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBC-\u0CC4\u0CC6-\u0CC8\u0CCA-\u0CCD\u0CD5\u0CD6\u0CDE\u0CE0-\u0CE3\u0CE6-\u0CEF\u0CF1\u0CF2\u0D02\u0D03\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D-\u0D44\u0D46-\u0D48\u0D4A-\u0D4E\u0D57\u0D60-\u0D63\u0D66-\u0D6F\u0D7A-\u0D7F\u0D82\u0D83\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0DCA\u0DCF-\u0DD4\u0DD6\u0DD8-\u0DDF\u0DF2\u0DF3\u0E01-\u0E3A\u0E40-\u0E4E\u0E50-\u0E59\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB9\u0EBB-\u0EBD\u0EC0-\u0EC4\u0EC6\u0EC8-\u0ECD\u0ED0-\u0ED9\u0EDC-\u0EDF\u0F00\u0F18\u0F19\u0F20-\u0F29\u0F35\u0F37\u0F39\u0F3E-\u0F47\u0F49-\u0F6C\u0F71-\u0F84\u0F86-\u0F97\u0F99-\u0FBC\u0FC6\u1000-\u1049\u1050-\u109D\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u135D-\u135F\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u16EE-\u16F0\u1700-\u170C\u170E-\u1714\u1720-\u1734\u1740-\u1753\u1760-\u176C\u176E-\u1770\u1772\u1773\u1780-\u17D3\u17D7\u17DC\u17DD\u17E0-\u17E9\u180B-\u180D\u1810-\u1819\u1820-\u1877\u1880-\u18AA\u18B0-\u18F5\u1900-\u191C\u1920-\u192B\u1930-\u193B\u1946-\u196D\u1970-\u1974\u1980-\u19AB\u19B0-\u19C9\u19D0-\u19D9\u1A00-\u1A1B\u1A20-\u1A5E\u1A60-\u1A7C\u1A7F-\u1A89\u1A90-\u1A99\u1AA7\u1B00-\u1B4B\u1B50-\u1B59\u1B6B-\u1B73\u1B80-\u1BF3\u1C00-\u1C37\u1C40-\u1C49\u1C4D-\u1C7D\u1CD0-\u1CD2\u1CD4-\u1CF6\u1D00-\u1DE6\u1DFC-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u200C\u200D\u203F\u2040\u2054\u2071\u207F\u2090-\u209C\u20D0-\u20DC\u20E1\u20E5-\u20F0\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2160-\u2188\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D7F-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2DE0-\u2DFF\u2E2F\u3005-\u3007\u3021-\u302F\u3031-\u3035\u3038-\u303C\u3041-\u3096\u3099\u309A\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA62B\uA640-\uA66F\uA674-\uA67D\uA67F-\uA697\uA69F-\uA6F1\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA827\uA840-\uA873\uA880-\uA8C4\uA8D0-\uA8D9\uA8E0-\uA8F7\uA8FB\uA900-\uA92D\uA930-\uA953\uA960-\uA97C\uA980-\uA9C0\uA9CF-\uA9D9\uAA00-\uAA36\uAA40-\uAA4D\uAA50-\uAA59\uAA60-\uAA76\uAA7A\uAA7B\uAA80-\uAAC2\uAADB-\uAADD\uAAE0-\uAAEF\uAAF2-\uAAF6\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABEA\uABEC\uABED\uABF0-\uABF9\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE00-\uFE0F\uFE20-\uFE26\uFE33\uFE34\uFE4D-\uFE4F\uFE70-\uFE74\uFE76-\uFEFC\uFF10-\uFF19\uFF21-\uFF3A\uFF3F\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC]/
 
-},{}],82:[function(require,module,exports){
+},{}],80:[function(require,module,exports){
 const assert = require('assert')
 
 module.exports = match
@@ -15070,12 +14901,12 @@ function match (route) {
     .replace(/\/$/, '')
 }
 
-},{"assert":8}],83:[function(require,module,exports){
+},{"assert":1}],81:[function(require,module,exports){
 'use strict';
 
 module.exports = typeof Promise === 'function' ? Promise : require('pinkie');
 
-},{"pinkie":84}],84:[function(require,module,exports){
+},{"pinkie":82}],82:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -15371,7 +15202,7 @@ Promise.reject = function (reason) {
 module.exports = Promise;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],85:[function(require,module,exports){
+},{}],83:[function(require,module,exports){
 'use strict';
 module.exports = function (url) {
 	if (typeof url !== 'string') {
@@ -15387,7 +15218,7 @@ module.exports = function (url) {
 	return url.replace(/^(?!(?:\w+:)?\/\/)/, 'http://');
 };
 
-},{}],86:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -15434,7 +15265,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":87}],87:[function(require,module,exports){
+},{"_process":85}],85:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -15605,6 +15436,10 @@ process.off = noop;
 process.removeListener = noop;
 process.removeAllListeners = noop;
 process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
 
 process.binding = function (name) {
     throw new Error('process.binding is not supported');
@@ -15616,7 +15451,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],88:[function(require,module,exports){
+},{}],86:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root) {
@@ -16153,7 +15988,7 @@ process.umask = function() { return 0; };
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],89:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16239,7 +16074,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],90:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -16326,13 +16161,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],91:[function(require,module,exports){
+},{}],89:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":89,"./encode":90}],92:[function(require,module,exports){
+},{"./decode":87,"./encode":88}],90:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -16408,7 +16243,28 @@ module.exports = function read(stream, options, cb) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":18,"pinkie-promise":83,"readable-stream":101,"util":120}],93:[function(require,module,exports){
+},{"buffer":10,"pinkie-promise":81,"readable-stream":101,"util":121}],91:[function(require,module,exports){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -16418,6 +16274,10 @@ module.exports = function read(stream, options, cb) {
 
 /*<replacement>*/
 
+var processNextTick = require('process-nextick-args');
+/*</replacement>*/
+
+/*<replacement>*/
 var objectKeys = Object.keys || function (obj) {
   var keys = [];
   for (var key in obj) {
@@ -16427,10 +16287,6 @@ var objectKeys = Object.keys || function (obj) {
 /*</replacement>*/
 
 module.exports = Duplex;
-
-/*<replacement>*/
-var processNextTick = require('process-nextick-args');
-/*</replacement>*/
 
 /*<replacement>*/
 var util = require('core-util-is');
@@ -16479,12 +16335,61 @@ function onEndNT(self) {
   self.end();
 }
 
+Object.defineProperty(Duplex.prototype, 'destroyed', {
+  get: function () {
+    if (this._readableState === undefined || this._writableState === undefined) {
+      return false;
+    }
+    return this._readableState.destroyed && this._writableState.destroyed;
+  },
+  set: function (value) {
+    // we ignore the value if the stream
+    // has not been initialized yet
+    if (this._readableState === undefined || this._writableState === undefined) {
+      return;
+    }
+
+    // backward compatibility, the user is explicitly
+    // managing destroyed
+    this._readableState.destroyed = value;
+    this._writableState.destroyed = value;
+  }
+});
+
+Duplex.prototype._destroy = function (err, cb) {
+  this.push(null);
+  this.end();
+
+  processNextTick(cb, err);
+};
+
 function forEach(xs, f) {
   for (var i = 0, l = xs.length; i < l; i++) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":95,"./_stream_writable":97,"core-util-is":23,"inherits":53,"process-nextick-args":86}],94:[function(require,module,exports){
+},{"./_stream_readable":93,"./_stream_writable":95,"core-util-is":16,"inherits":46,"process-nextick-args":84}],92:[function(require,module,exports){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -16511,15 +16416,37 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":96,"core-util-is":23,"inherits":53}],95:[function(require,module,exports){
-(function (process){
+},{"./_stream_transform":94,"core-util-is":16,"inherits":46}],93:[function(require,module,exports){
+(function (process,global){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 'use strict';
 
-module.exports = Readable;
-
 /*<replacement>*/
+
 var processNextTick = require('process-nextick-args');
 /*</replacement>*/
+
+module.exports = Readable;
 
 /*<replacement>*/
 var isArray = require('isarray');
@@ -16543,9 +16470,17 @@ var EElistenerCount = function (emitter, type) {
 var Stream = require('./internal/streams/stream');
 /*</replacement>*/
 
-var Buffer = require('buffer').Buffer;
+// TODO(bmeurer): Change this back to const once hole checks are
+// properly optimized away early in Ignition+TurboFan.
 /*<replacement>*/
-var bufferShim = require('buffer-shims');
+var Buffer = require('safe-buffer').Buffer;
+var OurUint8Array = global.Uint8Array || function () {};
+function _uint8ArrayToBuffer(chunk) {
+  return Buffer.from(chunk);
+}
+function _isUint8Array(obj) {
+  return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
+}
 /*</replacement>*/
 
 /*<replacement>*/
@@ -16564,6 +16499,7 @@ if (debugUtil && debugUtil.debuglog) {
 /*</replacement>*/
 
 var BufferList = require('./internal/streams/BufferList');
+var destroyImpl = require('./internal/streams/destroy');
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -16602,7 +16538,7 @@ function ReadableState(options, stream) {
   this.highWaterMark = hwm || hwm === 0 ? hwm : defaultHwm;
 
   // cast to ints.
-  this.highWaterMark = ~~this.highWaterMark;
+  this.highWaterMark = Math.floor(this.highWaterMark);
 
   // A linked list is used to store data chunks instead of an array because the
   // linked list can remove elements from the beginning faster than
@@ -16616,10 +16552,10 @@ function ReadableState(options, stream) {
   this.endEmitted = false;
   this.reading = false;
 
-  // a flag to be able to tell if the onwrite cb is called immediately,
-  // or on a later tick.  We set this to true at first, because any
-  // actions that shouldn't happen until "later" should generally also
-  // not happen before the first write call.
+  // a flag to be able to tell if the event 'readable'/'data' is emitted
+  // immediately, or on a later tick.  We set this to true at first, because
+  // any actions that shouldn't happen until "later" should generally also
+  // not happen before the first read call.
   this.sync = true;
 
   // whenever we return null, then we set a flag to say
@@ -16629,14 +16565,13 @@ function ReadableState(options, stream) {
   this.readableListening = false;
   this.resumeScheduled = false;
 
+  // has it been destroyed
+  this.destroyed = false;
+
   // Crypto is kind of old and crusty.  Historically, its default string
   // encoding is 'binary' so we have to make this configurable.
   // Everything else in the universe uses 'utf8', though.
   this.defaultEncoding = options.defaultEncoding || 'utf8';
-
-  // when piping, we only care about 'readable' events that happen
-  // after read()ing all the bytes and not getting any pushback.
-  this.ranOut = false;
 
   // the number of writers that are awaiting a drain event in .pipe()s
   this.awaitDrain = 0;
@@ -16663,10 +16598,41 @@ function Readable(options) {
   // legacy
   this.readable = true;
 
-  if (options && typeof options.read === 'function') this._read = options.read;
+  if (options) {
+    if (typeof options.read === 'function') this._read = options.read;
+
+    if (typeof options.destroy === 'function') this._destroy = options.destroy;
+  }
 
   Stream.call(this);
 }
+
+Object.defineProperty(Readable.prototype, 'destroyed', {
+  get: function () {
+    if (this._readableState === undefined) {
+      return false;
+    }
+    return this._readableState.destroyed;
+  },
+  set: function (value) {
+    // we ignore the value if the stream
+    // has not been initialized yet
+    if (!this._readableState) {
+      return;
+    }
+
+    // backward compatibility, the user is explicitly
+    // managing destroyed
+    this._readableState.destroyed = value;
+  }
+});
+
+Readable.prototype.destroy = destroyImpl.destroy;
+Readable.prototype._undestroy = destroyImpl.undestroy;
+Readable.prototype._destroy = function (err, cb) {
+  this.push(null);
+  cb(err);
+};
 
 // Manually shove something into the read() buffer.
 // This returns true if the highWaterMark has not been hit yet,
@@ -16674,74 +16640,85 @@ function Readable(options) {
 // write() some more.
 Readable.prototype.push = function (chunk, encoding) {
   var state = this._readableState;
+  var skipChunkCheck;
 
-  if (!state.objectMode && typeof chunk === 'string') {
-    encoding = encoding || state.defaultEncoding;
-    if (encoding !== state.encoding) {
-      chunk = bufferShim.from(chunk, encoding);
-      encoding = '';
+  if (!state.objectMode) {
+    if (typeof chunk === 'string') {
+      encoding = encoding || state.defaultEncoding;
+      if (encoding !== state.encoding) {
+        chunk = Buffer.from(chunk, encoding);
+        encoding = '';
+      }
+      skipChunkCheck = true;
     }
+  } else {
+    skipChunkCheck = true;
   }
 
-  return readableAddChunk(this, state, chunk, encoding, false);
+  return readableAddChunk(this, chunk, encoding, false, skipChunkCheck);
 };
 
 // Unshift should *always* be something directly out of read()
 Readable.prototype.unshift = function (chunk) {
-  var state = this._readableState;
-  return readableAddChunk(this, state, chunk, '', true);
+  return readableAddChunk(this, chunk, null, true, false);
 };
 
-Readable.prototype.isPaused = function () {
-  return this._readableState.flowing === false;
-};
-
-function readableAddChunk(stream, state, chunk, encoding, addToFront) {
-  var er = chunkInvalid(state, chunk);
-  if (er) {
-    stream.emit('error', er);
-  } else if (chunk === null) {
+function readableAddChunk(stream, chunk, encoding, addToFront, skipChunkCheck) {
+  var state = stream._readableState;
+  if (chunk === null) {
     state.reading = false;
     onEofChunk(stream, state);
-  } else if (state.objectMode || chunk && chunk.length > 0) {
-    if (state.ended && !addToFront) {
-      var e = new Error('stream.push() after EOF');
-      stream.emit('error', e);
-    } else if (state.endEmitted && addToFront) {
-      var _e = new Error('stream.unshift() after end event');
-      stream.emit('error', _e);
-    } else {
-      var skipAdd;
-      if (state.decoder && !addToFront && !encoding) {
-        chunk = state.decoder.write(chunk);
-        skipAdd = !state.objectMode && chunk.length === 0;
+  } else {
+    var er;
+    if (!skipChunkCheck) er = chunkInvalid(state, chunk);
+    if (er) {
+      stream.emit('error', er);
+    } else if (state.objectMode || chunk && chunk.length > 0) {
+      if (typeof chunk !== 'string' && !state.objectMode && Object.getPrototypeOf(chunk) !== Buffer.prototype) {
+        chunk = _uint8ArrayToBuffer(chunk);
       }
 
-      if (!addToFront) state.reading = false;
-
-      // Don't add to the buffer if we've decoded to an empty string chunk and
-      // we're not in object mode
-      if (!skipAdd) {
-        // if we want the data now, just emit it.
-        if (state.flowing && state.length === 0 && !state.sync) {
-          stream.emit('data', chunk);
-          stream.read(0);
+      if (addToFront) {
+        if (state.endEmitted) stream.emit('error', new Error('stream.unshift() after end event'));else addChunk(stream, state, chunk, true);
+      } else if (state.ended) {
+        stream.emit('error', new Error('stream.push() after EOF'));
+      } else {
+        state.reading = false;
+        if (state.decoder && !encoding) {
+          chunk = state.decoder.write(chunk);
+          if (state.objectMode || chunk.length !== 0) addChunk(stream, state, chunk, false);else maybeReadMore(stream, state);
         } else {
-          // update the buffer info.
-          state.length += state.objectMode ? 1 : chunk.length;
-          if (addToFront) state.buffer.unshift(chunk);else state.buffer.push(chunk);
-
-          if (state.needReadable) emitReadable(stream);
+          addChunk(stream, state, chunk, false);
         }
       }
-
-      maybeReadMore(stream, state);
+    } else if (!addToFront) {
+      state.reading = false;
     }
-  } else if (!addToFront) {
-    state.reading = false;
   }
 
   return needMoreData(state);
+}
+
+function addChunk(stream, state, chunk, addToFront) {
+  if (state.flowing && state.length === 0 && !state.sync) {
+    stream.emit('data', chunk);
+    stream.read(0);
+  } else {
+    // update the buffer info.
+    state.length += state.objectMode ? 1 : chunk.length;
+    if (addToFront) state.buffer.unshift(chunk);else state.buffer.push(chunk);
+
+    if (state.needReadable) emitReadable(stream);
+  }
+  maybeReadMore(stream, state);
+}
+
+function chunkInvalid(state, chunk) {
+  var er;
+  if (!_isUint8Array(chunk) && typeof chunk !== 'string' && chunk !== undefined && !state.objectMode) {
+    er = new TypeError('Invalid non-string/buffer chunk');
+  }
+  return er;
 }
 
 // if it's past the high water mark, we can push in some more.
@@ -16754,6 +16731,10 @@ function readableAddChunk(stream, state, chunk, encoding, addToFront) {
 function needMoreData(state) {
   return !state.ended && (state.needReadable || state.length < state.highWaterMark || state.length === 0);
 }
+
+Readable.prototype.isPaused = function () {
+  return this._readableState.flowing === false;
+};
 
 // backwards compatibility.
 Readable.prototype.setEncoding = function (enc) {
@@ -16903,14 +16884,6 @@ Readable.prototype.read = function (n) {
   return ret;
 };
 
-function chunkInvalid(state, chunk) {
-  var er = null;
-  if (!Buffer.isBuffer(chunk) && typeof chunk !== 'string' && chunk !== null && chunk !== undefined && !state.objectMode) {
-    er = new TypeError('Invalid non-string/buffer chunk');
-  }
-  return er;
-}
-
 function onEofChunk(stream, state) {
   if (state.ended) return;
   if (state.decoder) {
@@ -16998,14 +16971,17 @@ Readable.prototype.pipe = function (dest, pipeOpts) {
 
   var doEnd = (!pipeOpts || pipeOpts.end !== false) && dest !== process.stdout && dest !== process.stderr;
 
-  var endFn = doEnd ? onend : cleanup;
+  var endFn = doEnd ? onend : unpipe;
   if (state.endEmitted) processNextTick(endFn);else src.once('end', endFn);
 
   dest.on('unpipe', onunpipe);
-  function onunpipe(readable) {
+  function onunpipe(readable, unpipeInfo) {
     debug('onunpipe');
     if (readable === src) {
-      cleanup();
+      if (unpipeInfo && unpipeInfo.hasUnpiped === false) {
+        unpipeInfo.hasUnpiped = true;
+        cleanup();
+      }
     }
   }
 
@@ -17031,7 +17007,7 @@ Readable.prototype.pipe = function (dest, pipeOpts) {
     dest.removeListener('error', onerror);
     dest.removeListener('unpipe', onunpipe);
     src.removeListener('end', onend);
-    src.removeListener('end', cleanup);
+    src.removeListener('end', unpipe);
     src.removeListener('data', ondata);
 
     cleanedUp = true;
@@ -17124,6 +17100,7 @@ function pipeOnDrain(src) {
 
 Readable.prototype.unpipe = function (dest) {
   var state = this._readableState;
+  var unpipeInfo = { hasUnpiped: false };
 
   // if we're not piping anywhere, then do nothing.
   if (state.pipesCount === 0) return this;
@@ -17139,7 +17116,7 @@ Readable.prototype.unpipe = function (dest) {
     state.pipes = null;
     state.pipesCount = 0;
     state.flowing = false;
-    if (dest) dest.emit('unpipe', this);
+    if (dest) dest.emit('unpipe', this, unpipeInfo);
     return this;
   }
 
@@ -17154,7 +17131,7 @@ Readable.prototype.unpipe = function (dest) {
     state.flowing = false;
 
     for (var i = 0; i < len; i++) {
-      dests[i].emit('unpipe', this);
+      dests[i].emit('unpipe', this, unpipeInfo);
     }return this;
   }
 
@@ -17166,7 +17143,7 @@ Readable.prototype.unpipe = function (dest) {
   state.pipesCount -= 1;
   if (state.pipesCount === 1) state.pipes = state.pipes[0];
 
-  dest.emit('unpipe', this);
+  dest.emit('unpipe', this, unpipeInfo);
 
   return this;
 };
@@ -17187,7 +17164,7 @@ Readable.prototype.on = function (ev, fn) {
       if (!state.reading) {
         processNextTick(nReadingNextTick, this);
       } else if (state.length) {
-        emitReadable(this, state);
+        emitReadable(this);
       }
     }
   }
@@ -17388,7 +17365,7 @@ function copyFromBufferString(n, list) {
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
 function copyFromBuffer(n, list) {
-  var ret = bufferShim.allocUnsafe(n);
+  var ret = Buffer.allocUnsafe(n);
   var p = list.head;
   var c = 1;
   p.data.copy(ret);
@@ -17448,8 +17425,29 @@ function indexOf(xs, x) {
   }
   return -1;
 }
-}).call(this,require('_process'))
-},{"./_stream_duplex":93,"./internal/streams/BufferList":98,"./internal/streams/stream":99,"_process":87,"buffer":18,"buffer-shims":17,"core-util-is":23,"events":32,"inherits":53,"isarray":60,"process-nextick-args":86,"string_decoder/":100,"util":13}],96:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./_stream_duplex":91,"./internal/streams/BufferList":96,"./internal/streams/destroy":97,"./internal/streams/stream":98,"_process":85,"core-util-is":16,"events":25,"inherits":46,"isarray":99,"process-nextick-args":84,"safe-buffer":103,"string_decoder/":100,"util":6}],94:[function(require,module,exports){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -17523,7 +17521,9 @@ function afterTransform(stream, er, data) {
 
   var cb = ts.writecb;
 
-  if (!cb) return stream.emit('error', new Error('no writecb in Transform class'));
+  if (!cb) {
+    return stream.emit('error', new Error('write callback called multiple times'));
+  }
 
   ts.writechunk = null;
   ts.writecb = null;
@@ -17616,6 +17616,15 @@ Transform.prototype._read = function (n) {
   }
 };
 
+Transform.prototype._destroy = function (err, cb) {
+  var _this = this;
+
+  Duplex.prototype._destroy.call(this, err, function (err2) {
+    cb(err2);
+    _this.emit('close');
+  });
+};
+
 function done(stream, er, data) {
   if (er) return stream.emit('error', er);
 
@@ -17632,19 +17641,62 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":93,"core-util-is":23,"inherits":53}],97:[function(require,module,exports){
-(function (process){
+},{"./_stream_duplex":91,"core-util-is":16,"inherits":46}],95:[function(require,module,exports){
+(function (process,global){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
 // the drain event emission and buffering.
 
 'use strict';
 
-module.exports = Writable;
-
 /*<replacement>*/
+
 var processNextTick = require('process-nextick-args');
 /*</replacement>*/
+
+module.exports = Writable;
+
+/* <replacement> */
+function WriteReq(chunk, encoding, cb) {
+  this.chunk = chunk;
+  this.encoding = encoding;
+  this.callback = cb;
+  this.next = null;
+}
+
+// It seems a linked list but it is not
+// there will be only 2 of these for each stream
+function CorkedRequest(state) {
+  var _this = this;
+
+  this.next = null;
+  this.entry = null;
+  this.finish = function () {
+    onCorkedFinish(_this, state);
+  };
+}
+/* </replacement> */
 
 /*<replacement>*/
 var asyncWrite = !process.browser && ['v0.10', 'v0.9.'].indexOf(process.version.slice(0, 5)) > -1 ? setImmediate : processNextTick;
@@ -17671,21 +17723,22 @@ var internalUtil = {
 var Stream = require('./internal/streams/stream');
 /*</replacement>*/
 
-var Buffer = require('buffer').Buffer;
 /*<replacement>*/
-var bufferShim = require('buffer-shims');
+var Buffer = require('safe-buffer').Buffer;
+var OurUint8Array = global.Uint8Array || function () {};
+function _uint8ArrayToBuffer(chunk) {
+  return Buffer.from(chunk);
+}
+function _isUint8Array(obj) {
+  return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
+}
 /*</replacement>*/
+
+var destroyImpl = require('./internal/streams/destroy');
 
 util.inherits(Writable, Stream);
 
 function nop() {}
-
-function WriteReq(chunk, encoding, cb) {
-  this.chunk = chunk;
-  this.encoding = encoding;
-  this.callback = cb;
-  this.next = null;
-}
 
 function WritableState(options, stream) {
   Duplex = Duplex || require('./_stream_duplex');
@@ -17706,7 +17759,10 @@ function WritableState(options, stream) {
   this.highWaterMark = hwm || hwm === 0 ? hwm : defaultHwm;
 
   // cast to ints.
-  this.highWaterMark = ~~this.highWaterMark;
+  this.highWaterMark = Math.floor(this.highWaterMark);
+
+  // if _final has been called
+  this.finalCalled = false;
 
   // drain event flag.
   this.needDrain = false;
@@ -17716,6 +17772,9 @@ function WritableState(options, stream) {
   this.ended = false;
   // when 'finish' is emitted
   this.finished = false;
+
+  // has it been destroyed
+  this.destroyed = false;
 
   // should we decode strings into buffers before passing to _write?
   // this is here so that some node-core streams can optimize string
@@ -17798,7 +17857,7 @@ WritableState.prototype.getBuffer = function getBuffer() {
     Object.defineProperty(WritableState.prototype, 'buffer', {
       get: internalUtil.deprecate(function () {
         return this.getBuffer();
-      }, '_writableState.buffer is deprecated. Use _writableState.getBuffer ' + 'instead.')
+      }, '_writableState.buffer is deprecated. Use _writableState.getBuffer ' + 'instead.', 'DEP0003')
     });
   } catch (_) {}
 })();
@@ -17844,6 +17903,10 @@ function Writable(options) {
     if (typeof options.write === 'function') this._write = options.write;
 
     if (typeof options.writev === 'function') this._writev = options.writev;
+
+    if (typeof options.destroy === 'function') this._destroy = options.destroy;
+
+    if (typeof options.final === 'function') this._final = options.final;
   }
 
   Stream.call(this);
@@ -17884,7 +17947,11 @@ function validChunk(stream, state, chunk, cb) {
 Writable.prototype.write = function (chunk, encoding, cb) {
   var state = this._writableState;
   var ret = false;
-  var isBuf = Buffer.isBuffer(chunk);
+  var isBuf = _isUint8Array(chunk) && !state.objectMode;
+
+  if (isBuf && !Buffer.isBuffer(chunk)) {
+    chunk = _uint8ArrayToBuffer(chunk);
+  }
 
   if (typeof encoding === 'function') {
     cb = encoding;
@@ -17929,7 +17996,7 @@ Writable.prototype.setDefaultEncoding = function setDefaultEncoding(encoding) {
 
 function decodeChunk(state, chunk, encoding) {
   if (!state.objectMode && state.decodeStrings !== false && typeof chunk === 'string') {
-    chunk = bufferShim.from(chunk, encoding);
+    chunk = Buffer.from(chunk, encoding);
   }
   return chunk;
 }
@@ -17939,8 +18006,12 @@ function decodeChunk(state, chunk, encoding) {
 // If we return false, then we need a drain event, so set that flag.
 function writeOrBuffer(stream, state, isBuf, chunk, encoding, cb) {
   if (!isBuf) {
-    chunk = decodeChunk(state, chunk, encoding);
-    if (Buffer.isBuffer(chunk)) encoding = 'buffer';
+    var newChunk = decodeChunk(state, chunk, encoding);
+    if (chunk !== newChunk) {
+      isBuf = true;
+      encoding = 'buffer';
+      chunk = newChunk;
+    }
   }
   var len = state.objectMode ? 1 : chunk.length;
 
@@ -17952,7 +18023,13 @@ function writeOrBuffer(stream, state, isBuf, chunk, encoding, cb) {
 
   if (state.writing || state.corked) {
     var last = state.lastBufferedRequest;
-    state.lastBufferedRequest = new WriteReq(chunk, encoding, cb);
+    state.lastBufferedRequest = {
+      chunk: chunk,
+      encoding: encoding,
+      isBuf: isBuf,
+      callback: cb,
+      next: null
+    };
     if (last) {
       last.next = state.lastBufferedRequest;
     } else {
@@ -17977,10 +18054,26 @@ function doWrite(stream, state, writev, len, chunk, encoding, cb) {
 
 function onwriteError(stream, state, sync, er, cb) {
   --state.pendingcb;
-  if (sync) processNextTick(cb, er);else cb(er);
 
-  stream._writableState.errorEmitted = true;
-  stream.emit('error', er);
+  if (sync) {
+    // defer the callback if we are being called synchronously
+    // to avoid piling up things on the stack
+    processNextTick(cb, er);
+    // this can emit finish, and it will always happen
+    // after error
+    processNextTick(finishMaybe, stream, state);
+    stream._writableState.errorEmitted = true;
+    stream.emit('error', er);
+  } else {
+    // the caller expect this to happen before if
+    // it is async
+    cb(er);
+    stream._writableState.errorEmitted = true;
+    stream.emit('error', er);
+    // this can emit finish, but finish must
+    // always follow error
+    finishMaybe(stream, state);
+  }
 }
 
 function onwriteStateUpdate(state) {
@@ -18045,11 +18138,14 @@ function clearBuffer(stream, state) {
     holder.entry = entry;
 
     var count = 0;
+    var allBuffers = true;
     while (entry) {
       buffer[count] = entry;
+      if (!entry.isBuf) allBuffers = false;
       entry = entry.next;
       count += 1;
     }
+    buffer.allBuffers = allBuffers;
 
     doWrite(stream, state, true, state.length, buffer, '', holder.finish);
 
@@ -18123,23 +18219,37 @@ Writable.prototype.end = function (chunk, encoding, cb) {
 function needFinish(state) {
   return state.ending && state.length === 0 && state.bufferedRequest === null && !state.finished && !state.writing;
 }
-
-function prefinish(stream, state) {
-  if (!state.prefinished) {
+function callFinal(stream, state) {
+  stream._final(function (err) {
+    state.pendingcb--;
+    if (err) {
+      stream.emit('error', err);
+    }
     state.prefinished = true;
     stream.emit('prefinish');
+    finishMaybe(stream, state);
+  });
+}
+function prefinish(stream, state) {
+  if (!state.prefinished && !state.finalCalled) {
+    if (typeof stream._final === 'function') {
+      state.pendingcb++;
+      state.finalCalled = true;
+      processNextTick(callFinal, stream, state);
+    } else {
+      state.prefinished = true;
+      stream.emit('prefinish');
+    }
   }
 }
 
 function finishMaybe(stream, state) {
   var need = needFinish(state);
   if (need) {
+    prefinish(stream, state);
     if (state.pendingcb === 0) {
-      prefinish(stream, state);
       state.finished = true;
       stream.emit('finish');
-    } else {
-      prefinish(stream, state);
     }
   }
   return need;
@@ -18155,103 +18265,206 @@ function endWritable(stream, state, cb) {
   stream.writable = false;
 }
 
-// It seems a linked list but it is not
-// there will be only 2 of these for each stream
-function CorkedRequest(state) {
-  var _this = this;
-
-  this.next = null;
-  this.entry = null;
-  this.finish = function (err) {
-    var entry = _this.entry;
-    _this.entry = null;
-    while (entry) {
-      var cb = entry.callback;
-      state.pendingcb--;
-      cb(err);
-      entry = entry.next;
-    }
-    if (state.corkedRequestsFree) {
-      state.corkedRequestsFree.next = _this;
-    } else {
-      state.corkedRequestsFree = _this;
-    }
-  };
+function onCorkedFinish(corkReq, state, err) {
+  var entry = corkReq.entry;
+  corkReq.entry = null;
+  while (entry) {
+    var cb = entry.callback;
+    state.pendingcb--;
+    cb(err);
+    entry = entry.next;
+  }
+  if (state.corkedRequestsFree) {
+    state.corkedRequestsFree.next = corkReq;
+  } else {
+    state.corkedRequestsFree = corkReq;
+  }
 }
-}).call(this,require('_process'))
-},{"./_stream_duplex":93,"./internal/streams/stream":99,"_process":87,"buffer":18,"buffer-shims":17,"core-util-is":23,"inherits":53,"process-nextick-args":86,"util-deprecate":117}],98:[function(require,module,exports){
+
+Object.defineProperty(Writable.prototype, 'destroyed', {
+  get: function () {
+    if (this._writableState === undefined) {
+      return false;
+    }
+    return this._writableState.destroyed;
+  },
+  set: function (value) {
+    // we ignore the value if the stream
+    // has not been initialized yet
+    if (!this._writableState) {
+      return;
+    }
+
+    // backward compatibility, the user is explicitly
+    // managing destroyed
+    this._writableState.destroyed = value;
+  }
+});
+
+Writable.prototype.destroy = destroyImpl.destroy;
+Writable.prototype._undestroy = destroyImpl.undestroy;
+Writable.prototype._destroy = function (err, cb) {
+  this.end();
+  cb(err);
+};
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./_stream_duplex":91,"./internal/streams/destroy":97,"./internal/streams/stream":98,"_process":85,"core-util-is":16,"inherits":46,"process-nextick-args":84,"safe-buffer":103,"util-deprecate":118}],96:[function(require,module,exports){
 'use strict';
 
-var Buffer = require('buffer').Buffer;
 /*<replacement>*/
-var bufferShim = require('buffer-shims');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Buffer = require('safe-buffer').Buffer;
 /*</replacement>*/
 
-module.exports = BufferList;
-
-function BufferList() {
-  this.head = null;
-  this.tail = null;
-  this.length = 0;
+function copyBuffer(src, target, offset) {
+  src.copy(target, offset);
 }
 
-BufferList.prototype.push = function (v) {
-  var entry = { data: v, next: null };
-  if (this.length > 0) this.tail.next = entry;else this.head = entry;
-  this.tail = entry;
-  ++this.length;
-};
+module.exports = function () {
+  function BufferList() {
+    _classCallCheck(this, BufferList);
 
-BufferList.prototype.unshift = function (v) {
-  var entry = { data: v, next: this.head };
-  if (this.length === 0) this.tail = entry;
-  this.head = entry;
-  ++this.length;
-};
-
-BufferList.prototype.shift = function () {
-  if (this.length === 0) return;
-  var ret = this.head.data;
-  if (this.length === 1) this.head = this.tail = null;else this.head = this.head.next;
-  --this.length;
-  return ret;
-};
-
-BufferList.prototype.clear = function () {
-  this.head = this.tail = null;
-  this.length = 0;
-};
-
-BufferList.prototype.join = function (s) {
-  if (this.length === 0) return '';
-  var p = this.head;
-  var ret = '' + p.data;
-  while (p = p.next) {
-    ret += s + p.data;
-  }return ret;
-};
-
-BufferList.prototype.concat = function (n) {
-  if (this.length === 0) return bufferShim.alloc(0);
-  if (this.length === 1) return this.head.data;
-  var ret = bufferShim.allocUnsafe(n >>> 0);
-  var p = this.head;
-  var i = 0;
-  while (p) {
-    p.data.copy(ret, i);
-    i += p.data.length;
-    p = p.next;
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
-  return ret;
-};
-},{"buffer":18,"buffer-shims":17}],99:[function(require,module,exports){
-module.exports = require('events').EventEmitter;
 
-},{"events":32}],100:[function(require,module,exports){
+  BufferList.prototype.push = function push(v) {
+    var entry = { data: v, next: null };
+    if (this.length > 0) this.tail.next = entry;else this.head = entry;
+    this.tail = entry;
+    ++this.length;
+  };
+
+  BufferList.prototype.unshift = function unshift(v) {
+    var entry = { data: v, next: this.head };
+    if (this.length === 0) this.tail = entry;
+    this.head = entry;
+    ++this.length;
+  };
+
+  BufferList.prototype.shift = function shift() {
+    if (this.length === 0) return;
+    var ret = this.head.data;
+    if (this.length === 1) this.head = this.tail = null;else this.head = this.head.next;
+    --this.length;
+    return ret;
+  };
+
+  BufferList.prototype.clear = function clear() {
+    this.head = this.tail = null;
+    this.length = 0;
+  };
+
+  BufferList.prototype.join = function join(s) {
+    if (this.length === 0) return '';
+    var p = this.head;
+    var ret = '' + p.data;
+    while (p = p.next) {
+      ret += s + p.data;
+    }return ret;
+  };
+
+  BufferList.prototype.concat = function concat(n) {
+    if (this.length === 0) return Buffer.alloc(0);
+    if (this.length === 1) return this.head.data;
+    var ret = Buffer.allocUnsafe(n >>> 0);
+    var p = this.head;
+    var i = 0;
+    while (p) {
+      copyBuffer(p.data, ret, i);
+      i += p.data.length;
+      p = p.next;
+    }
+    return ret;
+  };
+
+  return BufferList;
+}();
+},{"safe-buffer":103}],97:[function(require,module,exports){
 'use strict';
 
-var Buffer = require('buffer').Buffer;
-var bufferShim = require('buffer-shims');
+/*<replacement>*/
+
+var processNextTick = require('process-nextick-args');
+/*</replacement>*/
+
+// undocumented cb() API, needed for core, not for public API
+function destroy(err, cb) {
+  var _this = this;
+
+  var readableDestroyed = this._readableState && this._readableState.destroyed;
+  var writableDestroyed = this._writableState && this._writableState.destroyed;
+
+  if (readableDestroyed || writableDestroyed) {
+    if (cb) {
+      cb(err);
+    } else if (err && (!this._writableState || !this._writableState.errorEmitted)) {
+      processNextTick(emitErrorNT, this, err);
+    }
+    return;
+  }
+
+  // we set destroyed to true before firing error callbacks in order
+  // to make it re-entrance safe in case destroy() is called within callbacks
+
+  if (this._readableState) {
+    this._readableState.destroyed = true;
+  }
+
+  // if this is a duplex stream mark the writable part as destroyed as well
+  if (this._writableState) {
+    this._writableState.destroyed = true;
+  }
+
+  this._destroy(err || null, function (err) {
+    if (!cb && err) {
+      processNextTick(emitErrorNT, _this, err);
+      if (_this._writableState) {
+        _this._writableState.errorEmitted = true;
+      }
+    } else if (cb) {
+      cb(err);
+    }
+  });
+}
+
+function undestroy() {
+  if (this._readableState) {
+    this._readableState.destroyed = false;
+    this._readableState.reading = false;
+    this._readableState.ended = false;
+    this._readableState.endEmitted = false;
+  }
+
+  if (this._writableState) {
+    this._writableState.destroyed = false;
+    this._writableState.ended = false;
+    this._writableState.ending = false;
+    this._writableState.finished = false;
+    this._writableState.errorEmitted = false;
+  }
+}
+
+function emitErrorNT(self, err) {
+  self.emit('error', err);
+}
+
+module.exports = {
+  destroy: destroy,
+  undestroy: undestroy
+};
+},{"process-nextick-args":84}],98:[function(require,module,exports){
+module.exports = require('events').EventEmitter;
+
+},{"events":25}],99:[function(require,module,exports){
+arguments[4][11][0].apply(exports,arguments)
+},{"dup":11}],100:[function(require,module,exports){
+'use strict';
+
+var Buffer = require('safe-buffer').Buffer;
 
 var isEncoding = Buffer.isEncoding || function (encoding) {
   encoding = '' + encoding;
@@ -18328,7 +18541,7 @@ function StringDecoder(encoding) {
   }
   this.lastNeed = 0;
   this.lastTotal = 0;
-  this.lastChar = bufferShim.allocUnsafe(nb);
+  this.lastChar = Buffer.allocUnsafe(nb);
 }
 
 StringDecoder.prototype.write = function (buf) {
@@ -18521,7 +18734,7 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
-},{"buffer":18,"buffer-shims":17}],101:[function(require,module,exports){
+},{"safe-buffer":103}],101:[function(require,module,exports){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = exports;
 exports.Readable = exports;
@@ -18530,10 +18743,74 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":93,"./lib/_stream_passthrough.js":94,"./lib/_stream_readable.js":95,"./lib/_stream_transform.js":96,"./lib/_stream_writable.js":97}],102:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":91,"./lib/_stream_passthrough.js":92,"./lib/_stream_readable.js":93,"./lib/_stream_transform.js":94,"./lib/_stream_writable.js":95}],102:[function(require,module,exports){
 module.exports = require('./readable').Transform
 
 },{"./readable":101}],103:[function(require,module,exports){
+/* eslint-disable node/no-deprecated-api */
+var buffer = require('buffer')
+var Buffer = buffer.Buffer
+
+// alternative to using Object.keys for old browsers
+function copyProps (src, dst) {
+  for (var key in src) {
+    dst[key] = src[key]
+  }
+}
+if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow) {
+  module.exports = buffer
+} else {
+  // Copy properties from require('buffer')
+  copyProps(buffer, exports)
+  exports.Buffer = SafeBuffer
+}
+
+function SafeBuffer (arg, encodingOrOffset, length) {
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+// Copy static methods from Buffer
+copyProps(Buffer, SafeBuffer)
+
+SafeBuffer.from = function (arg, encodingOrOffset, length) {
+  if (typeof arg === 'number') {
+    throw new TypeError('Argument must not be a number')
+  }
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+SafeBuffer.alloc = function (size, fill, encoding) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  var buf = Buffer(size)
+  if (fill !== undefined) {
+    if (typeof encoding === 'string') {
+      buf.fill(fill, encoding)
+    } else {
+      buf.fill(fill)
+    }
+  } else {
+    buf.fill(0)
+  }
+  return buf
+}
+
+SafeBuffer.allocUnsafe = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return Buffer(size)
+}
+
+SafeBuffer.allocUnsafeSlow = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return buffer.SlowBuffer(size)
+}
+
+},{"buffer":10}],104:[function(require,module,exports){
 const window = require('global/window')
 const assert = require('assert')
 
@@ -18549,7 +18826,7 @@ function hash (cb) {
   }
 }
 
-},{"assert":8,"global/window":42}],104:[function(require,module,exports){
+},{"assert":1,"global/window":35}],105:[function(require,module,exports){
 const document = require('global/document')
 const window = require('global/window')
 const assert = require('assert')
@@ -18566,7 +18843,7 @@ function history (cb) {
   }
 }
 
-},{"assert":8,"global/document":41,"global/window":42}],105:[function(require,module,exports){
+},{"assert":1,"global/document":34,"global/window":35}],106:[function(require,module,exports){
 const window = require('global/window')
 const assert = require('assert')
 
@@ -18597,7 +18874,7 @@ function href (cb) {
   }
 }
 
-},{"assert":8,"global/window":42}],106:[function(require,module,exports){
+},{"assert":1,"global/window":35}],107:[function(require,module,exports){
 const pathname = require('pathname-match')
 const wayfarer = require('wayfarer')
 const assert = require('assert')
@@ -18668,7 +18945,7 @@ function _createRoute (route, inline, child) {
   return [ route, inline, child ]
 }
 
-},{"assert":8,"pathname-match":82,"wayfarer":121}],107:[function(require,module,exports){
+},{"assert":1,"pathname-match":80,"wayfarer":122}],108:[function(require,module,exports){
 (function (global){
 var ClientRequest = require('./lib/request')
 var extend = require('xtend')
@@ -18750,7 +19027,7 @@ http.METHODS = [
 	'UNSUBSCRIBE'
 ]
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./lib/request":109,"builtin-status-codes":19,"url":115,"xtend":124}],108:[function(require,module,exports){
+},{"./lib/request":110,"builtin-status-codes":12,"url":116,"xtend":125}],109:[function(require,module,exports){
 (function (global){
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
 
@@ -18823,7 +19100,7 @@ function isFunction (value) {
 xhr = null // Help gc
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],109:[function(require,module,exports){
+},{}],110:[function(require,module,exports){
 (function (process,global,Buffer){
 var capability = require('./capability')
 var inherits = require('inherits')
@@ -18908,8 +19185,10 @@ ClientRequest.prototype.setHeader = function (name, value) {
 }
 
 ClientRequest.prototype.getHeader = function (name) {
-	var self = this
-	return self._headers[name.toLowerCase()].value
+	var header = this._headers[name.toLowerCase()]
+	if (header)
+		return header.value
+	return null
 }
 
 ClientRequest.prototype.removeHeader = function (name) {
@@ -19131,7 +19410,7 @@ var unsafeHeaders = [
 ]
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./capability":108,"./response":110,"_process":87,"buffer":18,"inherits":53,"readable-stream":101,"to-arraybuffer":113}],110:[function(require,module,exports){
+},{"./capability":109,"./response":111,"_process":85,"buffer":10,"inherits":46,"readable-stream":101,"to-arraybuffer":114}],111:[function(require,module,exports){
 (function (process,global,Buffer){
 var capability = require('./capability')
 var inherits = require('inherits')
@@ -19317,7 +19596,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./capability":108,"_process":87,"buffer":18,"inherits":53,"readable-stream":101}],111:[function(require,module,exports){
+},{"./capability":109,"_process":85,"buffer":10,"inherits":46,"readable-stream":101}],112:[function(require,module,exports){
 module.exports = shift
 
 function shift (stream) {
@@ -19339,7 +19618,7 @@ function getStateLength (state) {
   return state.length
 }
 
-},{}],112:[function(require,module,exports){
+},{}],113:[function(require,module,exports){
 'use strict';
 
 module.exports = function (req, time) {
@@ -19375,7 +19654,7 @@ module.exports = function (req, time) {
 		.on('error', clear);
 };
 
-},{}],113:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 var Buffer = require('buffer').Buffer
 
 module.exports = function (buf) {
@@ -19404,7 +19683,7 @@ module.exports = function (buf) {
 	}
 }
 
-},{"buffer":18}],114:[function(require,module,exports){
+},{"buffer":10}],115:[function(require,module,exports){
 'use strict';
 var url = require('url');
 var prependHttp = require('prepend-http');
@@ -19420,7 +19699,7 @@ module.exports = function (x) {
 	return parsed;
 };
 
-},{"prepend-http":85,"url":115}],115:[function(require,module,exports){
+},{"prepend-http":83,"url":116}],116:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -20154,7 +20433,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"./util":116,"punycode":88,"querystring":91}],116:[function(require,module,exports){
+},{"./util":117,"punycode":86,"querystring":89}],117:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -20172,7 +20451,7 @@ module.exports = {
   }
 };
 
-},{}],117:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 (function (global){
 
 /**
@@ -20243,16 +20522,16 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],118:[function(require,module,exports){
-arguments[4][53][0].apply(exports,arguments)
-},{"dup":53}],119:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
+arguments[4][46][0].apply(exports,arguments)
+},{"dup":46}],120:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],120:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -20842,7 +21121,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":119,"_process":87,"inherits":118}],121:[function(require,module,exports){
+},{"./support/isBuffer":120,"_process":85,"inherits":119}],122:[function(require,module,exports){
 var assert = require('assert')
 var trie = require('./trie')
 
@@ -20870,6 +21149,7 @@ function Wayfarer (dft) {
     assert.equal(typeof cb, 'function')
 
     route = route || '/'
+    cb.route = route
 
     if (cb && cb._wayfarer && cb._trie) {
       _trie.mount(route, cb._trie.trie)
@@ -20893,20 +21173,22 @@ function Wayfarer (dft) {
     var node = _trie.match(route)
     if (node && node.cb) {
       args[0] = node.params
-      return node.cb.apply(null, args)
+      var cb = node.cb
+      return cb.apply(cb, args)
     }
 
     var dft = _trie.match(_default)
     if (dft && dft.cb) {
       args[0] = dft.params
-      return dft.cb.apply(null, args)
+      var dftcb = dft.cb
+      return dftcb.apply(dftcb, args)
     }
 
     throw new Error("route '" + route + "' did not match")
   }
 }
 
-},{"./trie":122,"assert":8}],122:[function(require,module,exports){
+},{"./trie":123,"assert":1}],123:[function(require,module,exports){
 var mutate = require('xtend/mutable')
 var assert = require('assert')
 var xtend = require('xtend')
@@ -20927,15 +21209,15 @@ Trie.prototype.create = function (route) {
   assert.equal(typeof route, 'string', 'route should be a string')
   // strip leading '/' and split routes
   var routes = route.replace(/^\//, '').split('/')
-  return (function createNode (index, trie) {
-    var thisRoute = routes[index]
 
-    if (thisRoute === undefined) return trie
+  function createNode (index, trie) {
+    var thisRoute = (routes.hasOwnProperty(index) && routes[index])
+    if (thisRoute === false) return trie
 
     var node = null
     if (/^:|^\*/.test(thisRoute)) {
       // if node is a name match, set name and append to ':' node
-      if (!trie.nodes['$$']) {
+      if (!trie.nodes.hasOwnProperty('$$')) {
         node = { nodes: {} }
         trie.nodes['$$'] = node
       } else {
@@ -20947,7 +21229,7 @@ Trie.prototype.create = function (route) {
       }
 
       trie.name = thisRoute.replace(/^:|^\*/, '')
-    } else if (!trie.nodes[thisRoute]) {
+    } else if (!trie.nodes.hasOwnProperty(thisRoute)) {
       node = { nodes: {} }
       trie.nodes[thisRoute] = node
     } else {
@@ -20956,7 +21238,9 @@ Trie.prototype.create = function (route) {
 
     // we must recurse deeper
     return createNode(index + 1, node)
-  })(0, this.trie)
+  }
+
+  return createNode(0, this.trie)
 }
 
 // match a route on the trie
@@ -20968,29 +21252,39 @@ Trie.prototype.match = function (route) {
   var routes = route.replace(/^\//, '').split('/')
   var params = {}
 
-  var node = (function search (index, trie) {
+  function search (index, trie) {
     // either there's no match, or we're done searching
     if (trie === undefined) return undefined
     var thisRoute = routes[index]
     if (thisRoute === undefined) return trie
 
-    if (trie.nodes[thisRoute]) {
+    if (trie.nodes.hasOwnProperty(thisRoute)) {
       // match regular routes first
       return search(index + 1, trie.nodes[thisRoute])
     } else if (trie.wildcard) {
       // match wildcards
-      params['wildcard'] = decodeURIComponent(routes.slice(index).join('/'))
+      try {
+        params['wildcard'] = decodeURIComponent(routes.slice(index).join('/'))
+      } catch (e) {
+        return search(index, undefined)
+      }
       // return early, or else search may keep recursing through the wildcard
       return trie.nodes['$$']
     } else if (trie.name) {
       // match named routes
-      params[trie.name] = decodeURIComponent(thisRoute)
+      try {
+        params[trie.name] = decodeURIComponent(thisRoute)
+      } catch (e) {
+        return search(index, undefined)
+      }
       return search(index + 1, trie.nodes['$$'])
     } else {
       // no matches found
       return search(index + 1)
     }
-  })(0, this.trie)
+  }
+
+  var node = search(0, this.trie)
 
   if (!node) return undefined
   node = xtend(node)
@@ -21033,7 +21327,7 @@ Trie.prototype.mount = function (route, trie) {
   }
 }
 
-},{"assert":8,"xtend":124,"xtend/mutable":125}],123:[function(require,module,exports){
+},{"assert":1,"xtend":125,"xtend/mutable":126}],124:[function(require,module,exports){
 // Returns a wrapper function that returns a wrapped callback
 // The wrapper function should do some stuff, and return a
 // presumably different callback function.
@@ -21068,7 +21362,7 @@ function wrappy (fn, cb) {
   }
 }
 
-},{}],124:[function(require,module,exports){
+},{}],125:[function(require,module,exports){
 module.exports = extend
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -21089,7 +21383,7 @@ function extend() {
     return target
 }
 
-},{}],125:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
 module.exports = extend
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -21108,7 +21402,7 @@ function extend(target) {
     return target
 }
 
-},{}],126:[function(require,module,exports){
+},{}],127:[function(require,module,exports){
 var bel = require('bel') // turns template tag into DOM elements
 var morphdom = require('morphdom') // efficiently diffs + morphs two DOM elements
 var defaultEvents = require('./update-events.js') // default events to be copied when dom elements update
@@ -21141,7 +21435,7 @@ module.exports.update = function (fromNode, toNode, opts) {
     var newValue = t.value
     // copy values for form elements
     if ((f.nodeName === 'INPUT' && f.type !== 'file') || f.nodeName === 'SELECT') {
-      if (!newValue) {
+      if (!newValue && !t.hasAttribute('value')) {
         t.value = f.value
       } else if (newValue !== oldValue) {
         f.value = newValue
@@ -21152,7 +21446,7 @@ module.exports.update = function (fromNode, toNode, opts) {
   }
 }
 
-},{"./update-events.js":127,"bel":12,"morphdom":62}],127:[function(require,module,exports){
+},{"./update-events.js":128,"bel":5,"morphdom":60}],128:[function(require,module,exports){
 module.exports = [
   // attribute events (can be set with attributes)
   'onclick',
@@ -21190,4 +21484,10 @@ module.exports = [
   'onfocusout'
 ]
 
-},{}]},{},[1]);
+},{}],129:[function(require,module,exports){
+
+  var minidocs = require('minidocs')
+  var app = minidocs({"title":"idyll-lang.github","logo":"logo-text.svg","logoSource":"/Users/bclinkinbeard/Code/idyll-lang/idyll-lang.github.io/images/logo-text.svg","contents":[{"depth":1,"name":"Overview"},{"depth":2,"name":"Introduction","key":"introduction","link":"/introduction","toc":[{"level":1,"slug":"introducing-idyll","title":"Introducing Idyll"},{"level":3,"slug":"examples","title":"Examples"},{"level":5,"slug":"full-articles","title":"Full Articles"},{"level":5,"slug":"with-popular-javascript-libraries","title":"With Popular JavaScript Libraries"},{"level":5,"slug":"other-examples","title":"Other Examples"}]},{"depth":2,"name":"Getting started","key":"getting-started","link":"/getting-started","toc":[{"level":1,"slug":"getting-started","title":"Getting Started"}]},{"depth":2,"name":"Syntax","key":"syntax","link":"/syntax","toc":[{"level":1,"slug":"syntax","title":"Syntax"},{"level":2,"slug":"text","title":"Text"},{"level":4,"slug":"bold-italic","title":"Bold, Italic"},{"level":4,"slug":"headers","title":"Headers"},{"level":4,"slug":"code","title":"Code"},{"level":2,"slug":"components","title":"Components"},{"level":3,"slug":"component-properties","title":"Component Properties"},{"level":4,"slug":"literals-number-string-boolean","title":"Literals: Number, String, Boolean"},{"level":4,"slug":"variable-or-dataset","title":"Variable or Dataset"},{"level":4,"slug":"expression","title":"Expression"},{"level":4,"slug":"refs","title":"Refs"},{"level":2,"slug":"variables","title":"Variables"},{"level":3,"slug":"derived-variables","title":"Derived Variables"},{"level":2,"slug":"datasets","title":"Datasets"}]},{"depth":2,"name":"Configuration and styles","key":"configuration-and-styles","link":"/configuration-and-styles","toc":[{"level":1,"slug":"configuration-and-styles","title":"Configuration and Styles"},{"level":2,"slug":"command-line-options","title":"Command Line Options"},{"level":2,"slug":"themes-and-page-layout","title":"Themes and Page Layout"},{"level":3,"slug":"layout","title":"Layout"},{"level":4,"slug":"centered","title":"Centered"},{"level":4,"slug":"blog","title":"Blog"},{"level":4,"slug":"none","title":"None"},{"level":3,"slug":"themes","title":"Themes"},{"level":4,"slug":"github","title":"Github"},{"level":4,"slug":"idyll","title":"Idyll"},{"level":2,"slug":"using-idyll-as-an-api","title":"Using Idyll as an API"},{"level":3,"slug":"example","title":"Example"}]},{"depth":1,"name":"Components"},{"depth":2,"name":"Overview","key":"components-overview","link":"/components-overview","toc":[{"level":1,"slug":"components","title":"Components"},{"level":3,"slug":"built-in-components","title":"Built-in Components"},{"level":3,"slug":"custom-components","title":"Custom Components"},{"level":2,"slug":"component-resolution","title":"Component Resolution"}]},{"depth":2,"name":"Built-in components","key":"components-built-in","link":"/components-built-in","toc":[{"level":1,"slug":"built-in-components","title":"Built-In Components"},{"level":2,"slug":"layout","title":"Layout"},{"level":3,"slug":"aside","title":"Aside"},{"level":3,"slug":"fixed","title":"Fixed"},{"level":3,"slug":"inline","title":"Inline"},{"level":2,"slug":"presentation","title":"Presentation"},{"level":3,"slug":"button","title":"Button"},{"level":3,"slug":"chart","title":"Chart"},{"level":3,"slug":"displayvar","title":"DisplayVar"},{"level":3,"slug":"dynamic","title":"Dynamic"},{"level":3,"slug":"equation","title":"Equation"},{"level":3,"slug":"header","title":"Header"},{"level":3,"slug":"gist","title":"Gist"},{"level":3,"slug":"link","title":"Link"},{"level":3,"slug":"range","title":"Range"},{"level":3,"slug":"slideshow-slide","title":"Slideshow / Slide"},{"level":3,"slug":"svg","title":"SVG"},{"level":3,"slug":"table","title":"Table"},{"level":3,"slug":"vegalite","title":"VegaLite"},{"level":2,"slug":"helpers","title":"Helpers"},{"level":3,"slug":"analytics","title":"Analytics"},{"level":3,"slug":"meta","title":"Meta"}]},{"depth":2,"name":"Custom components","key":"components-custom","link":"/components-custom","toc":[{"level":1,"slug":"custom-components","title":"Custom Components"},{"level":2,"slug":"overview","title":"Overview"},{"level":2,"slug":"idyll-component","title":"Idyll Component"},{"level":3,"slug":"example","title":"Example"},{"level":2,"slug":"name-resolution","title":"Name Resolution"}]},{"depth":2,"name":"Refs","key":"components-refs","link":"/components-refs","toc":[{"level":1,"slug":"refs","title":"Refs"}]},{"depth":1,"name":"Publishing"},{"depth":2,"name":"Deploying to the web","key":"publishing-deploying-to-the-web","link":"/publishing-deploying-to-the-web","toc":[{"level":1,"slug":"building-your-idyll-project-for-the-web","title":"Building your Idyll project for the web"},{"level":2,"slug":"github-pages","title":"Github Pages"},{"level":2,"slug":"other-hosting","title":"Other Hosting"}]},{"depth":1,"name":"Open Source"},{"depth":2,"name":"GitHub","key":"open-source-github","link":"/open-source-github","toc":[{"level":1,"slug":"github","title":"Github"}]}],"markdown":"/Users/bclinkinbeard/Code/idyll-lang/idyll-lang.github.io/docs","initial":"introduction","basedir":"","dir":"/Users/bclinkinbeard/Code/idyll-lang/idyll-lang.github.io","routes":{"index":"/","introduction":"/introduction/","getting-started":"/getting-started/","syntax":"/syntax/","configuration-and-styles":"/configuration-and-styles/","components-overview":"/components-overview/","components-built-in":"/components-built-in/","components-custom":"/components-custom/","components-refs":"/components-refs/","publishing-deploying-to-the-web":"/publishing-deploying-to-the-web/","open-source-github":"/open-source-github/"},"html":{"introduction":"<h1 id=\"introducing-idyll\"><a href=\"#introducing-idyll\" class=\"anchor\"></a>Introducing Idyll</h1><p>Idyll is a tool that makes it easier to author interactive narratives\nfor the web. The goal of the project is to provide a friendly\nmarkup language — and an associated toolchain —\nthat can be used to create dynamic, text-driven web pages.</p>\n<p>Idyll helps you create documents that use common narrative techniques\nsuch as embedding interactive charts and graphs,\nresponding to scroll events, and <a href=\"http://explorableexplanations.com/\">explorable explanations</a>. Additionally,\nits readable syntax facilitates\ncollaboration between writers, editors, designers,\nand programmers on complex projects.</p>\n<h3 id=\"examples\"><a href=\"#examples\" class=\"anchor\"></a>Examples</h3><h5 id=\"full-articles\"><a href=\"#full-articles\" class=\"anchor\"></a>Full Articles</h5><div class=\"example\">\n  <a href=\"https://mathisonian.github.io/trig/etymology/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/trig.png)\"></div>\n     The Etymology of Trig Functions\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://mathisonian.github.io/dashcam/\">\n    <div class=\"example-image\" style=\"background-image: url(https://mathisonian.github.io/dashcam/images/share.png)\"></div>\n    Seattle PD’s Dashcam Problem\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://mathisonian.github.io/consumer-complaints/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/complaints-2.gif)\"></div>\n    The United Complaints of America\n  </a>\n</div>\n\n<h5 id=\"with-popular-javascript-libraries\"><a href=\"#with-popular-javascript-libraries\" class=\"anchor\"></a>With Popular JavaScript Libraries</h5><div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/idyll-d3-component/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/d3.png)\"></div>\n     D3\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/idyll-regl-component/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/regl.png)\"></div>\n    regl\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/examples/csv/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/vl.png)\"></div>\n    Vega Lite\n  </a>\n</div>\n\n<h5 id=\"other-examples\"><a href=\"#other-examples\" class=\"anchor\"></a>Other Examples</h5><div class=\"example\">\n  <a href=\"https://mathisonian.github.io/lorenz/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/lorenz.png)\"></div>\n     Lorenz Attractor\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://mathisonian.github.io/idyll/nonlinear-sliders/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/nonlinear.png)\"></div>\n    Nonlinear Sliders\n  </a>\n</div>\n\n<div class=\"example\">\n  <a href=\"https://idyll-lang.github.io/idyll/scroll/\">\n    <div class=\"example-image\" style=\"background-image: url(./images/scroll.gif)\"></div>\n    Scrolly Idyll\n  </a>\n</div>\n\n\n<p>In Idyll the entire document is reactive, built on top of Facebook&#39;s React framework. Changes\nimmediately propagate through the entire page, taking the pain out of creating\ndata-driven experiences that respond to reader input. You don&#39;t need to know anything about React\nto use Idyll, but if you do, it is easy to extend with your own custom components.</p>\n<p>Continue to the <a href=\"/getting-started\">next section</a> to start using Idyll.</p>\n","getting-started":"<h1 id=\"getting-started\"><a href=\"#getting-started\" class=\"anchor\"></a>Getting Started</h1><p>The easiest way to get started with Idyll is to use the project generator.\nIt will help get you set up using custom components, datasets, and stylesheets.\nTo use the generator:</p>\n<pre><code class=\"lang-sh\">$ npm install -g yo generator-idyll\n$ yo idyll\n</code></pre>\n<p>The generator will produce a structure that looks like this:</p>\n<pre><code class=\"lang-sh\">$  tree -I node_modules\n.\n├── _index.html\n├── components\n│   ├── custom-component.js\n│   └── default\n│       ├── styles\n│       │   └── ... default component stylesheets\n│       └── ... default components <span class=\"hljs-keyword\">in</span> here\n├── data\n│   └── example-data.json\n├── images\n│   └── idyll.png\n├── index.idl\n├── package.json\n└── styles.css\n</code></pre>\n<p>The files do the following:</p>\n<ul>\n<li><code>index.idl</code> - The main Idyll file, write your text in here.</li>\n<li><code>styles.css</code> - By putting CSS in here you can override the default styles.</li>\n<li><code>components/</code> - The folder for custom components. Any component defined in this folder can be invoked in the .idl file.</li>\n<li><code>data/</code> - If you want to include a dataset in your project, put it in here.</li>\n<li><code>images/</code> - A folder for static images.</li>\n<li><code>_index.html</code> - A barebones HTML file that will be used if you publish your project to the web.</li>\n<li><code>package.json</code> - This file contains all the metadata for your project.</li>\n</ul>\n<p>To get started, from a terminal in that directory run <code>npm start</code> and Idyll will compile your\nfile and open it in your web browser. Every time you save the <code>index.idl</code> file, the system will automatically recompile\neverything and update the page in the browser.</p>\n<p>The <code>components/default/</code> folder contains the default components that Idyll provides. If you need to directly\nupdate one of these components or their styles, feel free - Idyll is built to be customized.</p>\n<p>If you want to configure the paths or build steps that Idyll uses, open <code>package.json</code> and update the <code>scripts</code> section. These options are discussed in greater detail later on in the documentation.</p>\n<p>Continue to the <a href=\"/syntax\">next section</a> to learn how to use Idyll&#39;s syntax.</p>\n","syntax":"<h1 id=\"syntax\"><a href=\"#syntax\" class=\"anchor\"></a>Syntax</h1><h2 id=\"text\"><a href=\"#text\" class=\"anchor\"></a>Text</h2><p>By default everything in Idyll is text. To make common\nformatting tasks easier, Idyll borrows some syntax from markdown.</p>\n<h4 id=\"bold-italic\"><a href=\"#bold-italic\" class=\"anchor\"></a>Bold, Italic</h4><p>Text surrounded by asterisks (<code>*</code>) will be bolded,\ne.g. <code>*italic*</code> becomes <em>italic</em>, and <code>**bold**</code> becomes\n<strong>bold</strong>.</p>\n<h4 id=\"headers\"><a href=\"#headers\" class=\"anchor\"></a>Headers</h4><p>Use a pound sign (<code>#</code>) to denote a header:</p>\n<pre><code># Title h1\n## Title h2\n### Title h3\n#### Title h4\n##### Title h5\n###### Title h6\n</code></pre><h4 id=\"code\"><a href=\"#code\" class=\"anchor\"></a>Code</h4><p>Text placed between backticks (`) will be displayed inline\nas code: <code>`y = x * x` </code> becomes <code>y = x * x</code>.</p>\n<p>Text placed between groups of three backticks will be displayed as\na code block.</p>\n<pre><code>This is <span class=\"hljs-selector-tag\">a</span> <span class=\"hljs-selector-tag\">code</span> block\n</code></pre><p>The above code block is created with this code:</p>\n<pre><code>```\nThis is a <span class=\"hljs-keyword\">code</span> block\n```\n</code></pre><h2 id=\"components\"><a href=\"#components\" class=\"anchor\"></a>Components</h2><p>Besides text, components are the other basic building block of an Idyll document.\nComponents are denoted with brackets, and can be invoked in one of two ways: they can be self\nclosing,</p>\n<pre><code>[<span class=\"hljs-built_in\">Range</span> <span class=\"hljs-built_in\">min</span>:<span class=\"hljs-number\">0</span> <span class=\"hljs-built_in\">max</span>:<span class=\"hljs-number\">10</span> <span class=\"hljs-keyword\">value</span>:<span class=\"hljs-keyword\">value</span> /]\n</code></pre><p>or have a closing and opening tag with content in between.</p>\n<pre><code><span class=\"hljs-string\">[Button]</span>\nClick Me\n<span class=\"hljs-string\">[/Button]</span>\n</code></pre><h3 id=\"component-properties\"><a href=\"#component-properties\" class=\"anchor\"></a>Component Properties</h3><p>Properties can be passed into components\nin the following ways:</p>\n<h4 id=\"literals-number-string-boolean\"><a href=\"#literals-number-string-boolean\" class=\"anchor\"></a>Literals: Number, String, Boolean</h4><p>Number, string, or boolean literals may be used.</p>\n<pre><code>[Component propName:<span class=\"hljs-number\">10</span> /]\n[Component propName:<span class=\"hljs-string\">\"propValue\"</span> /]\n[Component propName:<span class=\"hljs-literal\">false</span> /]\n</code></pre><h4 id=\"variable-or-dataset\"><a href=\"#variable-or-dataset\" class=\"anchor\"></a>Variable or Dataset</h4><p>A variable or dataset can be passed in directly, this will\nautomatically create a binding between that variable and property,\nmore on this in the section on <a href=\"/components-variables-and-datasets\">variables and datasets</a>.</p>\n<pre><code>[Component propName:myVar /]\n</code></pre><p>If the variable changes that update will immediately be reflected in the\nstate of the component.</p>\n<h4 id=\"expression\"><a href=\"#expression\" class=\"anchor\"></a>Expression</h4><p>Use backticks to pass an evaluated expression:</p>\n<pre><code>[<span class=\"hljs-name\">Component</span> propName:`<span class=\"hljs-number\">2</span> * <span class=\"hljs-number\">2</span> * <span class=\"hljs-number\">2</span>` /]\n[<span class=\"hljs-name\">Component</span> propName:`{ an: <span class=\"hljs-string\">\"object\"</span> }` /]\n</code></pre><p>Note that because Idyll is reactive, if a variable changes any expressions that reference that\nvariable will immediately be recomputed. See this utilized to create reactive vega-lite specifications:\n<a href=\"https://idyll-lang.github.io/examples/csv/\">https://idyll-lang.github.io/examples/csv/</a>.</p>\n<p>If the property expects a function,\nthe expression will automatically be\nconverted to a callback. This is convenient\nfor updating variables on events, for example.</p>\n<pre><code>[<span class=\"hljs-name\">Component</span> onClick:`myVar++` /]\n</code></pre><p>Idyll uses naming conventions to determine if the expression should be converted to a callback.\nProperties that are named <code>onXxxxx</code> (e.g. <code>onClick</code>) or <code>handleYyyyy</code> (e.g. <code>handleMouseMove</code>) are\nassumed to expect callbacks.</p>\n<h4 id=\"refs\"><a href=\"#refs\" class=\"anchor\"></a>Refs</h4><p>There is a special property called <code>ref</code> that allows you to create a reference to specific\ncomponent on the page. This is primarily used to keep track of elements on the page as\na reader scrolls. See the section on <a href=\"/components-refs\">refs</a> for more details.</p>\n<h2 id=\"variables\"><a href=\"#variables\" class=\"anchor\"></a>Variables</h2><p>Variables can be declared at any point in an Idyll file. Variables use\nthe same syntax as a component, but must defined a <code>name</code> and a <code>value</code>\nproperty.</p>\n<pre><code>[<span class=\"hljs-built_in\">var</span> <span class=\"hljs-built_in\">na</span><span class=\"hljs-symbol\">me:</span><span class=\"hljs-string\">\"x\"</span> val<span class=\"hljs-symbol\">ue:10</span> /]\n</code></pre><p>The above code defines a variable <code>x</code>, with the initial value of <code>10</code>.</p>\n<h3 id=\"derived-variables\"><a href=\"#derived-variables\" class=\"anchor\"></a>Derived Variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from\nother variables, and is recomputed whenever values change:</p>\n<pre><code>[<span class=\"hljs-name\">derived</span> name:<span class=\"hljs-string\">\"xSquared\"</span> value:`x * x` /]\n</code></pre><p>The above code defines a derived variable <code>xSquared</code> that depends\non the value of <code>x</code>. The value of <code>xSquared</code> is automatically updated\nbased on the value of <code>x</code>.</p>\n<h2 id=\"datasets\"><a href=\"#datasets\" class=\"anchor\"></a>Datasets</h2><p>A dataset is similar to a variable, except instead of expecting a\n<code>value</code>, datasets must be provided with a <code>source</code> (the name of the data file).</p>\n<p>Example:</p>\n<pre><code>[data name:<span class=\"hljs-string\">\"myData\"</span> source:<span class=\"hljs-string\">\"myData.csv\"</span> /]\n[Table data:myData /]\n</code></pre><p>The above code declares a dataset, and uses it as input to a <code>Table</code> component.\nDatasets can be either <code>.csv</code> or <code>.json</code> files. CSV files will automatically be\nconverted to a JSON object.</p>\n<p>Continue to the next section to learn about <a href=\"/configuration-and-styles\">customizing Idyll</a>.</p>\n","configuration-and-styles":"<h1 id=\"configuration-and-styles\"><a href=\"#configuration-and-styles\" class=\"anchor\"></a>Configuration and Styles</h1><h2 id=\"command-line-options\"><a href=\"#command-line-options\" class=\"anchor\"></a>Command Line Options</h2><p>The <code>idyll</code> command line tool accepts the following options</p>\n<ul>\n<li><code>--css</code> the path to your CSS file. You can use this to override Idyll&#39;s default styles, e.g. <code>$ idyll index.idl --css my-custom-styles.css</code>.</li>\n<li><code>--components</code> the path to your custom components. By default this points to <code>components/</code>.</li>\n<li><code>--datasets</code> the path to the folder containing your datasets. By default this points to <code>data/</code>.</li>\n<li><code>--layout</code> the name of the layout to use. By default this is <code>blog</code>. More on layouts below.</li>\n<li><code>--theme</code> the name of the theme to use. By default this is <code>idyll</code>. More on themes below.</li>\n<li><code>--output</code> the location to place built files in</li>\n<li><code>--build</code> the build flag tells Idyll to output the compiled JavaScript instead of running a server and opening your page in a web browser.</li>\n</ul>\n<p>If you are using Idyll via the project generator, open <code>package.json</code> to change these options.</p>\n<h2 id=\"themes-and-page-layout\"><a href=\"#themes-and-page-layout\" class=\"anchor\"></a>Themes and Page Layout</h2><p>Idyll exposes two options to help you style your project, <code>layout</code> and <code>theme</code>. <code>layout</code> deals with CSS styles related to how your content is\nlayed out on the page: width, columns, etc. The <code>theme</code> option allows you to choose diffent stylesheets to change the style of the content itself (text color, font, and so on).</p>\n<h3 id=\"layout\"><a href=\"#layout\" class=\"anchor\"></a>Layout</h3><p>Idyll currently ships with several page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles\nfor you project.</p>\n<h4 id=\"centered\"><a href=\"#centered\" class=\"anchor\"></a>Centered</h4><p>This is the default layout. It puts your content in the center of the page and is mobile responsive.</p>\n<h4 id=\"blog\"><a href=\"#blog\" class=\"anchor\"></a>Blog</h4><p>The <code>blog</code> layout is fairly traditional article layout with room in the margin to\nput notes and other callouts. See <a href=\"https://mathisonian.github.io/trig/etymology/\">https://mathisonian.github.io/trig/etymology/</a> for an example of this layout.</p>\n<h4 id=\"none\"><a href=\"#none\" class=\"anchor\"></a>None</h4><p>If you set <code>--layout none</code> Idyll won&#39;t provide any structural CSS, allowing you to customize things to your\nheart&#39;s content.</p>\n<h3 id=\"themes\"><a href=\"#themes\" class=\"anchor\"></a>Themes</h3><h4 id=\"github\"><a href=\"#github\" class=\"anchor\"></a>Github</h4><p>This is the default theme, it uses CSS that resembles the styles in GitHub READMEs.</p>\n<h4 id=\"idyll\"><a href=\"#idyll\" class=\"anchor\"></a>Idyll</h4><p>This theme uses custom styles that go along with Idyll&#39;s look and feel. See <a href=\"https://mathisonian.github.io/trig/etymology/\">https://mathisonian.github.io/trig/etymology/</a> for an example of this style.</p>\n<h2 id=\"using-idyll-as-an-api\"><a href=\"#using-idyll-as-an-api\" class=\"anchor\"></a>Using Idyll as an API</h2><p>You can use Idyll directly from JavaScript as well.</p>\n<p><code>idyll(idyllFile, options, callback)</code></p>\n<h3 id=\"example\"><a href=\"#example\" class=\"anchor\"></a>Example</h3><pre><code><span class=\"hljs-keyword\">var</span> idyll = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'idyll'</span>);\n\nidyll(<span class=\"hljs-string\">'index.idl'</span>, {\n  <span class=\"hljs-attr\">output</span>: <span class=\"hljs-string\">'build/'</span>,\n  <span class=\"hljs-attr\">htmlTemplate</span>: <span class=\"hljs-string\">'_index.html'</span>,\n  <span class=\"hljs-attr\">componentFolder</span>: <span class=\"hljs-string\">'./components/'</span>,\n  <span class=\"hljs-attr\">defaultComponents</span>: <span class=\"hljs-string\">'./components/default/'</span>,\n  <span class=\"hljs-attr\">dataFolder</span>: <span class=\"hljs-string\">'./data'</span>,\n  <span class=\"hljs-attr\">layout</span>: <span class=\"hljs-string\">'centered'</span>,\n  <span class=\"hljs-attr\">theme</span>: <span class=\"hljs-string\">'github'</span>,\n  <span class=\"hljs-attr\">compilerOptions</span>: {\n    <span class=\"hljs-attr\">spellcheck</span>: <span class=\"hljs-literal\">true</span>\n  },\n  <span class=\"hljs-attr\">build</span>: <span class=\"hljs-literal\">true</span>\n}, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) </span>{\n  <span class=\"hljs-comment\">// calls when Idyll is finished building</span>\n});\n</code></pre><p>Continue to the next section to learn about <a href=\"/components-overview\">Idyll components</a>.</p>\n","components-overview":"<h1 id=\"components\"><a href=\"#components\" class=\"anchor\"></a>Components</h1><p>Components are the basic building block for adding interactivity in Idyll.</p>\n<h3 id=\"built-in-components\"><a href=\"#built-in-components\" class=\"anchor\"></a>Built-in Components</h3><p>See <a href=\"/components-built-in\">Idyll&#39;s built-in components</a>.</p>\n<h3 id=\"custom-components\"><a href=\"#custom-components\" class=\"anchor\"></a>Custom Components</h3><p>See <a href=\"/components-custom\">custom Idyll components</a>.</p>\n<h2 id=\"component-resolution\"><a href=\"#component-resolution\" class=\"anchor\"></a>Component Resolution</h2><p>Components are resolved according to following algorithm:</p>\n<ul>\n<li>If there is a custom component with this name, use it.</li>\n<li>If there is a built-in component with this name, use it.</li>\n<li>If there is a valid HTML tag with this name, use it.</li>\n<li>If none of the above, just use a div, but give it the class of the component name</li>\n</ul>\n<p>So, for example, assume we have one custom component, named <code>Custom</code>.</p>\n<pre><code><span class=\"hljs-comment\">// Renders our custom component</span>\n[<span class=\"hljs-meta\">Custom /</span>]\n\n<span class=\"hljs-comment\">// Renders the built-in range component</span>\n[<span class=\"hljs-meta\">Range /</span>]\n\n<span class=\"hljs-comment\">// Renders `&lt;img /&gt;` because it is a valid  HTML tag</span>\n[<span class=\"hljs-meta\">Img /</span>]\n\n<span class=\"hljs-comment\">// Renders `&lt;div class=\"SomethingElse\"&gt;&lt;/div&gt;`</span>\n[<span class=\"hljs-meta\">SomethingElse /</span>]\n</code></pre><p>Continue to read about <a href=\"/components-built-in\">Idyll&#39;s built-in components</a>.</p>\n","components-built-in":"<h1 id=\"built-in-components\"><a href=\"#built-in-components\" class=\"anchor\"></a>Built-In Components</h1><p>Idyll ships with a handful of components that\nhandle common tasks. They are broken into\nthree categories:</p>\n<ul>\n<li><p><a href=\"#layout\">Layout</a> - these components help manage page layout, for example putting text in the <code>Aside</code> component will render it in the article margin instead of inline with the rest of your text.</p>\n<ul>\n<li><a href=\"#aside\">Aside</a></li>\n<li><a href=\"#fixed\">Fixed</a></li>\n<li><a href=\"#inline\">Inline</a></li>\n</ul>\n</li>\n<li><p><a href=\"#presentation\">Presentation</a> - these components render something to the screen, for example the <code>Chart</code>\ncomponent takes data as input and can display several types of charts.</p>\n<ul>\n<li><a href=\"#button\">Button</a></li>\n<li><a href=\"#chart\">Chart</a></li>\n<li><a href=\"#displayvar\">DisplayVar</a></li>\n<li><a href=\"#dynamic\">Dynamic</a></li>\n<li><a href=\"#equation\">Equation</a></li>\n<li><a href=\"#gist\">Gist</a></li>\n<li><a href=\"#header\">Header</a></li>\n<li><a href=\"#link\">Link</a></li>\n<li><a href=\"#range\">Range</a></li>\n<li><a href=\"#slideshow-slide\">Slideshow / Slide</a></li>\n<li><a href=\"#svg\">SVG</a></li>\n<li><a href=\"#table\">Table</a></li>\n<li><a href=\"#vegalite\">VegaLite</a></li>\n</ul>\n</li>\n<li><p><a href=\"#helpers\">Helpers</a> - these components don&#39;t affect the page content, but help with common tasks. The <code>Analytics</code> component makes it\neasy to add Google Analytics to your page.</p>\n<ul>\n<li><a href=\"#analytics\">Analytics</a></li>\n<li><a href=\"#meta\">Meta</a></li>\n</ul>\n</li>\n</ul>\n<p>All built-in compononents expose a property <code>onEnteredView</code> that can be used to trigger events when a reader scrolls the page to\nreveal specific content.</p>\n<h2 id=\"layout\"><a href=\"#layout\" class=\"anchor\"></a>Layout</h2><h3 id=\"aside\"><a href=\"#aside\" class=\"anchor\"></a>Aside</h3><p>Content inside of an aside component will be displayed in the margin of your document. For example, the <a href=\"https://mathisonian.github.io/consumer-complaints/\">consumer complaints</a> article uses the aside component to display a small chart and caption:</p>\n<p><img src=\"images/aside.png\" alt=\"aside\"></p>\n<pre><code>[aside]\n  [<span class=\"hljs-symbol\">Chart</span> type:<span class=\"hljs-string\">\"time\"</span> data:complaintsByDate /]\n  [caption]<span class=\"hljs-symbol\">Complaints</span> sent to the <span class=\"hljs-symbol\">CFPB</span> each month[/caption]\n[/aside]\n</code></pre><h3 id=\"fixed\"><a href=\"#fixed\" class=\"anchor\"></a>Fixed</h3><p>Content inside of a <code>fixed</code> component will be locked in place, even when the rest of the document scrolls. The <a href=\"https://idyll-lang.github.io/idyll/scroll\">scroll</a> example uses the <code>fixed</code> component to keep the dynamic chart in place:</p>\n<p><img src=\"images/fixed.gif\" alt=\"fixed\"></p>\n<pre><code>[fixed]\n[Chart type:<span class=\"hljs-string\">\"scatter\"</span> data:dynamicData /]\n[/fixed]\n</code></pre><h3 id=\"inline\"><a href=\"#inline\" class=\"anchor\"></a>Inline</h3><p>The <code>inline</code> component adds the <code>display: inline-block</code> style property, so that items inside of <code>inline</code> component will\nbe displayed next to eachother. For example, this code,</p>\n<pre><code>[section]\n[<span class=\"hljs-string\">inline</span>][<span class=\"hljs-symbol\">img src:\"...\" /</span>][<span class=\"hljs-string\">/inline</span>]\n[<span class=\"hljs-string\">inline</span>][<span class=\"hljs-symbol\">img src:\"...\" /</span>][<span class=\"hljs-string\">/inline</span>]\n[<span class=\"hljs-string\">inline</span>][<span class=\"hljs-symbol\">img src:\"...\" /</span>][<span class=\"hljs-string\">/inline</span>]\n[/section]\n</code></pre><p>Will display three images side by side.</p>\n<h2 id=\"presentation\"><a href=\"#presentation\" class=\"anchor\"></a>Presentation</h2><h3 id=\"button\"><a href=\"#button\" class=\"anchor\"></a>Button</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>\n<p><img src=\"images/button.gif\" alt=\"button\"></p>\n<pre><code>[<span class=\"hljs-keyword\">button</span> <span class=\"hljs-keyword\">onClick</span>`myVar += <span class=\"hljs-number\">1</span>`]Click Me![/<span class=\"hljs-keyword\">button</span>]\n</code></pre><h3 id=\"chart\"><a href=\"#chart\" class=\"anchor\"></a>Chart</h3><p>This will display a chart. It expects the following properties:</p>\n<ul>\n<li><code>data</code> - A JSON object containing the data for this chart. It uses the <a href=\"https://formidable.com/open-source/victory/docs\">victory</a> library to handle rendering, so see those docs for more information on what types of data can be passed in.</li>\n<li><code>type</code> - The type of the chart to display, can be <code>line</code>, <code>scatter</code>, <code>bar</code>, <code>pie</code>, or <code>time</code>. The time type is a line chart that expects the <code>x</code> values in the data to be in the temporal domain.</li>\n</ul>\n<p><img src=\"images/chart.png\" alt=\"chart\"></p>\n<pre><code>[var <span class=\"hljs-string\">name:</span>`dataToBeCharted` <span class=\"hljs-string\">value:</span>`[\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">0</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">3.5</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">4</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">4.5</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">1</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">5</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>},\n  {<span class=\"hljs-string\">x:</span> <span class=\"hljs-number\">8</span>, <span class=\"hljs-string\">y:</span> <span class=\"hljs-number\">0.5</span>}\n]` /]\n\n[Chart <span class=\"hljs-string\">type:</span><span class=\"hljs-string\">\"line\"</span> <span class=\"hljs-string\">data:</span>dataToBeCharted /]\n</code></pre><h3 id=\"displayvar\"><a href=\"#displayvar\" class=\"anchor\"></a>DisplayVar</h3><p>This will render the value of a variable to the screen. It is mostly useful for debugging:</p>\n<p><img src=\"images/displayvar.gif\" alt=\"displayvar\"></p>\n<pre><code>[var <span class=\"hljs-string\">name:</span><span class=\"hljs-string\">\"myVar\"</span> <span class=\"hljs-string\">value:</span><span class=\"hljs-number\">10</span> /]\n\n[Range <span class=\"hljs-string\">value:</span>myVar <span class=\"hljs-string\">min:</span><span class=\"hljs-number\">0</span> <span class=\"hljs-string\">max:</span><span class=\"hljs-number\">100</span> /]\n[DisplayVar <span class=\"hljs-string\">var:</span>myVar /]\n</code></pre><h3 id=\"dynamic\"><a href=\"#dynamic\" class=\"anchor\"></a>Dynamic</h3><p>This will render a dynamic variable to the screen.</p>\n<p><img src=\"images/dynamic.gif\" alt=\"dynamic\"></p>\n<pre><code>[var name:<span class=\"hljs-string\">\"myVar\"</span> value:<span class=\"hljs-number\">10</span> /]\n\n[Dynamic value:myVar /]\n</code></pre><p>The properties are:</p>\n<ul>\n<li><code>value</code>: The value to display</li>\n<li><code>max</code>: The maximum value.</li>\n<li><code>min</code>: The minimum value.</li>\n<li><code>interval</code>: The granularity of the changes</li>\n</ul>\n<h3 id=\"equation\"><a href=\"#equation\" class=\"anchor\"></a>Equation</h3><p>This uses <a href=\"https://github.com/Khan/KaTeX\">KaTeX</a> to typeset mathematical equations. Example:</p>\n<p><img src=\"images/equation.png\" alt=\"equation\"></p>\n<pre><code>[<span class=\"hljs-meta\">Equation</span>]\n  y = \\<span class=\"hljs-keyword\">int</span> x^<span class=\"hljs-number\">2</span> dx\n[<span class=\"hljs-meta\">/Equation</span>]\n</code></pre><h3 id=\"header\"><a href=\"#header\" class=\"anchor\"></a>Header</h3><p>This component makes it easy to add a title, subtitle, and byline to your article:</p>\n<p><img src=\"images/header.png\" alt=\"header\"></p>\n<pre><code>[Header\n<span class=\"hljs-symbol\">  title:</span><span class=\"hljs-string\">\"The Title of my Article\"</span>\n<span class=\"hljs-symbol\">  subtitle:</span><span class=\"hljs-string\">\"The subtitle of my article\"</span>\n<span class=\"hljs-symbol\">  author:</span><span class=\"hljs-string\">\"Matthew Conlen\"</span>\n<span class=\"hljs-symbol\">  authorLink:</span><span class=\"hljs-string\">\"https://github.com/mathisonian/\"</span>\n  /]\n</code></pre><h3 id=\"gist\"><a href=\"#gist\" class=\"anchor\"></a>Gist</h3><p>Embed a github gist</p>\n<p><img src=\"images/gist.png\" alt=\"gist\"></p>\n<pre><code>[gist <span class=\"hljs-string\">gist:</span><span class=\"hljs-string\">\"0f83a12e29b268ffca39f471ecf39e91\"</span> <span class=\"hljs-string\">file:</span><span class=\"hljs-string\">\"particles.idl\"</span> /]\n</code></pre><h3 id=\"link\"><a href=\"#link\" class=\"anchor\"></a>Link</h3><p>This component just acts as syntactic sugar for displaying links inline in your text.</p>\n<pre><code>[link <span class=\"hljs-built_in\">text</span>:<span class=\"hljs-string\">\"the text\"</span> url:<span class=\"hljs-string\">\"https://some.url\"</span> /]\n\n<span class=\"hljs-keyword\">is</span> equivalent <span class=\"hljs-keyword\">to</span> [a href:<span class=\"hljs-string\">\"https://some.url\"</span>]<span class=\"hljs-keyword\">the</span> <span class=\"hljs-built_in\">text</span>[/a].\n</code></pre><h3 id=\"range\"><a href=\"#range\" class=\"anchor\"></a>Range</h3><p>This component displays a range slider. The properties are:</p>\n<ul>\n<li><code>value</code>: The value to display; if this is a variable, the variable will automatically be updated when the slider is moved.</li>\n<li><code>max</code>: The maximum value.</li>\n<li><code>min</code>: The minimum value.</li>\n<li><code>step</code>: The granularity of the slider</li>\n</ul>\n<p><img src=\"images/displayvar.gif\" alt=\"displayvar\"></p>\n<pre><code>[var <span class=\"hljs-string\">name:</span><span class=\"hljs-string\">\"myVar\"</span> <span class=\"hljs-string\">value:</span><span class=\"hljs-number\">10</span> /]\n\n[Range <span class=\"hljs-string\">value:</span>myVar <span class=\"hljs-string\">min:</span><span class=\"hljs-number\">0</span> <span class=\"hljs-string\">max:</span><span class=\"hljs-number\">100</span> /]\n[DisplayVar <span class=\"hljs-string\">var:</span>myVar /]\n</code></pre><h3 id=\"slideshow-slide\"><a href=\"#slideshow-slide\" class=\"anchor\"></a>Slideshow / Slide</h3><p>This component is used to dynamically display different content. It can be used to make slideshows,\nbut is generally useful for dynamically displaying different content of any type.</p>\n<p><img src=\"images/slides.gif\" alt=\"slides\"></p>\n<pre><code>[var <span class=\"hljs-keyword\">name</span>:<span class=\"hljs-string\">\"slide\"</span> value:<span class=\"hljs-number\">1</span> /]\n\n[slideshow currentSlide:<span class=\"hljs-built_in\">slide</span>]\n  [<span class=\"hljs-built_in\">slide</span>]This <span class=\"hljs-keyword\">is</span> the content <span class=\"hljs-keyword\">for</span> <span class=\"hljs-built_in\">slide</span> <span class=\"hljs-number\">1</span>[/<span class=\"hljs-built_in\">slide</span>]\n  [<span class=\"hljs-built_in\">slide</span>]This <span class=\"hljs-keyword\">is</span> the content <span class=\"hljs-keyword\">for</span> <span class=\"hljs-built_in\">slide</span> <span class=\"hljs-number\">2</span>[/<span class=\"hljs-built_in\">slide</span>]\n  [<span class=\"hljs-built_in\">slide</span>]This <span class=\"hljs-keyword\">is</span> the content <span class=\"hljs-keyword\">for</span> <span class=\"hljs-built_in\">slide</span> <span class=\"hljs-number\">3</span>[/<span class=\"hljs-built_in\">slide</span>]\n[/slideshow]\n\n[Button onClick:`<span class=\"hljs-built_in\">slide</span> = <span class=\"hljs-number\">1</span>`]Slide <span class=\"hljs-number\">1</span>[/Button]\n[Button onClick:`<span class=\"hljs-built_in\">slide</span> = <span class=\"hljs-number\">2</span>`]Slide <span class=\"hljs-number\">2</span>[/Button]\n[Button onClick:`<span class=\"hljs-built_in\">slide</span> = <span class=\"hljs-number\">3</span>`]Slide <span class=\"hljs-number\">3</span>[/Button]\n</code></pre><h3 id=\"svg\"><a href=\"#svg\" class=\"anchor\"></a>SVG</h3><p>This component will display an SVG file inline using <a href=\"https://github.com/matthewwithanm/react-inlinesvg\">https://github.com/matthewwithanm/react-inlinesvg</a>. This makes it\neasy to style the SVG with css, as opposed to displaying the svg inside of an image tag.</p>\n<p>Usage:</p>\n<pre><code>[SVG src:<span class=\"hljs-string\">\"path/to/filg.svg\"</span> /]\n</code></pre><h3 id=\"table\"><a href=\"#table\" class=\"anchor\"></a>Table</h3><p>Display tabular data. Uses <a href=\"https://github.com/glittershark/reactable\">https://github.com/glittershark/reactable</a> under the hood to render the table.</p>\n<p><img src=\"images/table.png\" alt=\"table\"></p>\n<pre><code>[Table data:`[{columnName1: value, columnName2: value}, {columnName1: value, {columnName2: value}}]` /]\n</code></pre><h3 id=\"vegalite\"><a href=\"#vegalite\" class=\"anchor\"></a>VegaLite</h3><p>Render a <a href=\"https://vega.github.io/vega-lite/\">Vega Lite</a> spec, using <a href=\"https://github.com/kristw/react-vega-lite\">https://github.com/kristw/react-vega-lite</a>.</p>\n<pre><code>[data <span class=\"hljs-string\">name:</span><span class=\"hljs-string\">\"myData\"</span> <span class=\"hljs-string\">src:</span><span class=\"hljs-string\">\"my-dataset.json\"</span> /]\n\n[VegaLite <span class=\"hljs-string\">data:</span>myData <span class=\"hljs-string\">spec:</span>`{\n<span class=\"hljs-symbol\">  mark:</span> <span class=\"hljs-string\">\"bar\"</span>,\n<span class=\"hljs-symbol\">  encoding:</span> {\n<span class=\"hljs-symbol\">    x:</span> {<span class=\"hljs-string\">field:</span> <span class=\"hljs-string\">\"a\"</span>, <span class=\"hljs-string\">type:</span> <span class=\"hljs-string\">\"ordinal\"</span>},\n<span class=\"hljs-symbol\">    y:</span> {<span class=\"hljs-string\">field:</span> <span class=\"hljs-string\">\"b\"</span>, <span class=\"hljs-string\">type:</span> <span class=\"hljs-string\">\"quantitative\"</span>}\n  }\n}`]\n</code></pre><h2 id=\"helpers\"><a href=\"#helpers\" class=\"anchor\"></a>Helpers</h2><h3 id=\"analytics\"><a href=\"#analytics\" class=\"anchor\"></a>Analytics</h3><p>This component makes it easy to insert a Google Analytics code on your page.</p>\n<pre><code>[Analytics google:<span class=\"hljs-string\">\"UA-XXXXXXXXX\"</span> /]\n</code></pre><h3 id=\"meta\"><a href=\"#meta\" class=\"anchor\"></a>Meta</h3><p>The meta component adds context to the page template when building your app for publication. The following variables are available and will be inserted\nas <code>&lt;meta&gt;</code> properties into the head of your HTML page if you define them:</p>\n<ul>\n<li><code>title</code> - the page title</li>\n<li><code>description</code> - a short description of your project</li>\n<li><code>url</code> - the canonical URL from this project</li>\n<li><code>twitterHandle</code> - the author&#39;s twitter handle, it will create a link in the twitter card</li>\n<li><code>shareImageUrl</code> - the URL of an image to be shared on social media (twitter cards, etc.). This must be a fully qualified URL, e.g. <a href=\"https://idyll-lang.github.io/images/logo.png\">https://idyll-lang.github.io/images/logo.png</a>.</li>\n<li><code>shareImageWidth</code> - the width of the share image in pixels</li>\n<li><code>shareImageHeight</code> - the height of the share image in pixels</li>\n</ul>\n<p>Continue to read about making <a href=\"/components-custom\">custom components</a>.</p>\n","components-custom":"<h1 id=\"custom-components\"><a href=\"#custom-components\" class=\"anchor\"></a>Custom Components</h1><h2 id=\"overview\"><a href=\"#overview\" class=\"anchor\"></a>Overview</h2><p>Idyll is designed for people to use their own custom components as well.\nUnder the hood an Idyll component just needs to be anything that will\nfunction as a React component. If you create a custom component in\nJavaScript, point Idyll to the folder where you created it and\neverything will just work, no need to worry about compiling, bundling,\nor module loading.</p>\n<p>For example, this custom component</p>\n<pre><code>const <span class=\"hljs-type\">React</span> = require(<span class=\"hljs-symbol\">'reac</span>t');\nconst <span class=\"hljs-type\">IdyllComponent</span> = require(<span class=\"hljs-symbol\">'idyll</span>-component');\n\n<span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">Custom</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">IdyllComponent</span> </span>{\n  render() {\n    <span class=\"hljs-keyword\">return</span> (\n      &lt;div {...<span class=\"hljs-keyword\">this</span>.props}&gt;\n        <span class=\"hljs-type\">This</span> is a custom component\n      &lt;/div&gt;\n    );\n  }\n}\n\nmodule.exports = <span class=\"hljs-type\">Custom</span>;\n</code></pre><p>could be invoked inside of an Idyll file with the\nfollowing code:</p>\n<pre><code>[Custom /]\n</code></pre><h2 id=\"idyll-component\"><a href=\"#idyll-component\" class=\"anchor\"></a>Idyll Component</h2><p>The <code>IdyllComponent</code> class adds an\n<code>updateProps</code> method that is used to keep\nvariables in sync with the rest of the document, and also\nadds a property <code>onEnteredView</code> that can be used to\ntrigger events in scroll-based narratives.</p>\n<h3 id=\"example\"><a href=\"#example\" class=\"anchor\"></a>Example</h3><p>For example, a component can change the value of a\nproperty that it receives, and Idyll will propegate\nthe change to any bound variables on the page.</p>\n<pre><code>const <span class=\"hljs-type\">React</span> = require(<span class=\"hljs-symbol\">'reac</span>t');\nconst <span class=\"hljs-type\">IdyllComponent</span> = require(<span class=\"hljs-symbol\">'idyll</span>-component');\n\n<span class=\"hljs-class\"><span class=\"hljs-keyword\">class</span> <span class=\"hljs-title\">Incrementer</span> <span class=\"hljs-keyword\">extends</span> <span class=\"hljs-title\">IdyllComponent</span> </span>{\n\n  increment() {\n    <span class=\"hljs-keyword\">this</span>.updateProps({\n      value: <span class=\"hljs-keyword\">this</span>.props.value + <span class=\"hljs-number\">1</span>\n    })\n  }\n\n  render() {\n    <span class=\"hljs-keyword\">return</span> (\n      &lt;div onClick={<span class=\"hljs-keyword\">this</span>.increment.bind(<span class=\"hljs-keyword\">this</span>)}&gt;\n        <span class=\"hljs-type\">Click</span> me.\n      &lt;/div&gt;\n    );\n  }\n}\n\nmodule.exports = <span class=\"hljs-type\">Incrementer</span>;\n</code></pre><p>The <code>Incrementer</code> component could then be used as follows:</p>\n<pre><code>[var name:<span class=\"hljs-string\">\"clickCount\"</span> value:<span class=\"hljs-number\">0</span> /]\n\n[Incrementer value:clickCount /]\n[DisplayVar var:clickCount /]\n</code></pre><p>Notice that even thought the <code>Incrementer</code> component doesn&#39;t know\nanything about the variable <code>clickCount</code>, it will still correctly\nupdate.</p>\n<p>Of course, this trivial example could be accomplished using built-in components:</p>\n<pre><code>[var name:<span class=\"hljs-string\">\"clickCount\"</span> value:<span class=\"hljs-number\">0</span> /]\n\n[<span class=\"hljs-symbol\">Button</span> onClick:<span class=\"hljs-string\">`clickCount+=1`</span> ]<span class=\"hljs-symbol\">Click</span> <span class=\"hljs-symbol\">Me</span>.[/<span class=\"hljs-symbol\">Button</span>]\n[<span class=\"hljs-symbol\">DisplayVar</span> var:clickCount /]\n</code></pre><h2 id=\"name-resolution\"><a href=\"#name-resolution\" class=\"anchor\"></a>Name Resolution</h2><p>Components lookup is based on filenames. If your component name\nis in <code>CamelCase</code>, it will automatically be converted to <code>kebab-case</code>,\nso for example if you want to create a component named <code>CustomComponent</code>,\nit should be stored in a file called <code>custom-component.js</code>.</p>\n<p>Custom component are meant for times when more complex and custom\ncode is needed. By default Idyll will look for your custom components\ninside of a folder called <code>components/</code>. If you wish to change the custom\ncomponent path, specify it with the <code>--components</code> option, e.g.\n<code>idyll index.idl --css styles.css --components custom/component/path/</code>.</p>\n<p>Continue to learn how to use <a href=\"/components-refs\">references</a> to make your page more dynamic.</p>\n","components-refs":"<h1 id=\"refs\"><a href=\"#refs\" class=\"anchor\"></a>Refs</h1><p>Idyll exposes the <code>ref</code> property to allow you to refer to specific components in\nproperty expressions.</p>\n<pre><code>[<span class=\"hljs-name\">Component</span> ref:<span class=\"hljs-string\">\"thisComponent\"</span> propName:`refs.thisComponent`  /]\n</code></pre><p>The ref property allows you to update the state of one component based on properties of another. Idyll\nprovides some utilities automatically, for example keeping track of the position\nof a component on the page, and how far through a component&#39;s content the reader has\nscrolled.</p>\n<p>Each ref object has the following properties:</p>\n<pre><code class=\"lang-js\">{\n  <span class=\"hljs-attr\">domNode</span>: node,\n  <span class=\"hljs-attr\">scrollProgress</span>: {\n    <span class=\"hljs-attr\">x</span>: number,\n    <span class=\"hljs-attr\">y</span>: number\n  },\n  <span class=\"hljs-attr\">size</span>: {\n    <span class=\"hljs-attr\">x</span>: number,\n    <span class=\"hljs-attr\">y</span>: number\n  },\n  <span class=\"hljs-attr\">position</span>: {\n    <span class=\"hljs-attr\">left</span>: number,\n    <span class=\"hljs-attr\">top</span>: number,\n    <span class=\"hljs-attr\">right</span>: number,\n    <span class=\"hljs-attr\">bottom</span>: number\n  }\n}\n</code></pre>\n<p>For example:</p>\n<pre><code>[section ref:<span class=\"hljs-string\">'section'</span> style:`{ opacity: <span class=\"hljs-number\">1</span> - refs.section.scrollProgress.y }`]\n\nLorem ipsum...\n...\nlots <span class=\"hljs-keyword\">of</span> text here\n...\n\n[/section]\n</code></pre><p>The above code will create a section of text that fades out as the user scrolls to the bottom of it.\n<code>scrollProgress.y</code> in this case is a value from 0 to 1 that Idyll automatically computes,\nproviding the percentage that a user has scrolled through a certain component.</p>\n<p>You&#39;ve leared all about Idyll! All that&#39;s left is <a href=\"/publishing-deploying-to-the-web\">deploying you project to the web</a>.</p>\n","publishing-deploying-to-the-web":"<h1 id=\"building-your-idyll-project-for-the-web\"><a href=\"#building-your-idyll-project-for-the-web\" class=\"anchor\"></a>Building your Idyll project for the web</h1><p>Once you are happy with your project, the <code>idyll</code> command-line tool can also be used to\nbuild a stand alone bundle. If you used the Idyll project generator, npm tasks\nto build and deploy the project to github pages are available.</p>\n<h2 id=\"github-pages\"><a href=\"#github-pages\" class=\"anchor\"></a>Github Pages</h2><p>Once you&#39;ve initialized your\nproject with a repo on github, run the command</p>\n<pre><code class=\"lang-sh\">$ npm run deploy\n</code></pre>\n<p>this will compile the assets and push it to github\npages. Note that the <a href=\"https://idyll-lang.github.io/components-built-in#meta\">meta component</a>\nis useful for inserting metadata into the compiled output.</p>\n<h2 id=\"other-hosting\"><a href=\"#other-hosting\" class=\"anchor\"></a>Other Hosting</h2><p>Idyll&#39;s generated output is compatible with other static hosting services as well.</p>\n<p>To compile the project, run</p>\n<pre><code class=\"lang-sh\">$ npm run build\n</code></pre>\n<p>this will compile files and place them inside of the <code>build/</code> folder.</p>\n","open-source-github":"<h1 id=\"github\"><a href=\"#github\" class=\"anchor\"></a>Github</h1><p>The main repository for Idyll is here: <a href=\"https://github.com/idyll-lang/idyll\">https://github.com/idyll-lang/idyll</a>. Feel free to\nopen issues or create pull requests.</p>\n<p>There is also a <a href=\"https://gitter.im/idyll-lang/Lobby\">public chatroom on Gitter</a> if you&#39;d like to say &quot;Hi!&quot; or\nask a quick question.</p>\n<p>Contributions are welcome! If you want to start working on anything in particular, it&#39;s a good idea to\npost in the chatroom, or a post comment or an issue on GitHub so that multiple people aren&#39;t trying to fix the same thing. Feel\nfree to reach out to me <a href=\"https://twitter.com/mathisonian\">on twitter</a> or via email, idyll at mathisonian dot com.</p>\n"}})
+  app.start('#choo-root')
+  
+},{"minidocs":59}]},{},[129]);
