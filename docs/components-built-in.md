@@ -240,7 +240,7 @@ easy to style the SVG with css, as opposed to displaying the svg inside of an im
 Usage:
 
 ```
-[SVG src="path/to/filg.svg" /]
+[SVG src:"path/to/file.svg" /]
 ```
 
 ### Table
