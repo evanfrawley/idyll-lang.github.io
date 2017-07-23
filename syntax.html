@@ -63,13 +63,13 @@ closing,</p>
 <pre><code><span class="hljs-string">[Button]</span>
 Click Me
 <span class="hljs-string">[/Button]</span>
-</code></pre><h3 id="component-properties"><a href="#component-properties" class="anchor"></a>Component Properties</h3><p>Properties can be passed into components
+</code></pre><h3 id="component-properties"><a href="#component-properties" class="anchor"></a>Component properties</h3><p>Properties can be passed into components
 in the following ways:</p>
-<h4 id="literals-number-string-boolean"><a href="#literals-number-string-boolean" class="anchor"></a>Literals: Number, String, Boolean</h4><p>Number, string, or boolean literals may be used.</p>
+<h4 id="literals-number-string-boolean"><a href="#literals-number-string-boolean" class="anchor"></a>Literals: number, string, boolean</h4><p>Number, string, or boolean literals may be used.</p>
 <pre><code>[Component propName:<span class="hljs-number">10</span> /]
 [Component propName:<span class="hljs-string">"propValue"</span> /]
 [Component propName:<span class="hljs-literal">false</span> /]
-</code></pre><h4 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or Dataset</h4><p>A variable or dataset can be passed in directly, this will
+</code></pre><h4 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or dataset</h4><p>A variable or dataset can be passed in directly, this will
 automatically create a binding between that variable and property,
 more on this in the section on <a href="/components-variables-and-datasets">variables and datasets</a>.</p>
 <pre><code>[Component propName:myVar /]
@@ -97,7 +97,7 @@ the same syntax as a component, but must defined a <code>name</code> and a <code
 property.</p>
 <pre><code>[<span class="hljs-keyword">var</span> name:<span class="hljs-string">"x"</span> <span class="hljs-keyword">value</span>:<span class="hljs-number">10</span> /]
 </code></pre><p>The above code defines a variable <code>x</code>, with the initial value of <code>10</code>.</p>
-<h3 id="derived-variables"><a href="#derived-variables" class="anchor"></a>Derived Variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from
+<h3 id="derived-variables"><a href="#derived-variables" class="anchor"></a>Derived variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from
 other variables, and is recomputed whenever values change:</p>
 <pre><code>[<span class="hljs-name">derived</span> name:<span class="hljs-string">"xSquared"</span> value:`x * x` /]
 </code></pre><p>The above code defines a derived variable <code>xSquared</code> that depends
