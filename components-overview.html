@@ -22,9 +22,9 @@
         <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/syntax" class="content-link ">Syntax</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div>
             <a href="/components-overview" class="content-link active">Overview</a>
             <div class="minidocs-menu-toc">
-              <a href="#component-resolution" class="h3 content-link">Component Resolution</a>
+              <a href="#component-resolution" class="h3 content-link">Component resolution</a>
             </div>
-          </div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+          </div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-npm" class="content-link ">NPM components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
     </div>
   </div>
@@ -35,28 +35,17 @@
     
     
     <div><h1 id="components"><a href="#components" class="anchor"></a>Components</h1><p>Components are the basic building block for adding interactivity in Idyll.</p>
-<h3 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-in Components</h3><p>See <a href="/components-built-in">Idyll&#39;s built-in components</a>.</p>
-<h3 id="custom-components"><a href="#custom-components" class="anchor"></a>Custom Components</h3><p>See <a href="/components-custom">custom Idyll components</a>.</p>
-<h2 id="component-resolution"><a href="#component-resolution" class="anchor"></a>Component Resolution</h2><p>Components are resolved according to following algorithm:</p>
+<h3 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-in components</h3><p>See <a href="/components-built-in">Idyll&#39;s built-in components</a>.</p>
+<h3 id="installing-components-from-npm"><a href="#installing-components-from-npm" class="anchor"></a>Installing components from <code>npm</code></h3><p>See <a href="/components-npm">installing components from npm</a>.</p>
+<h3 id="custom-components"><a href="#custom-components" class="anchor"></a>Custom components</h3><p>See <a href="/components-custom">custom Idyll components</a>.</p>
+<h2 id="component-resolution"><a href="#component-resolution" class="anchor"></a>Component resolution</h2><p>Components are resolved according to following algorithm:</p>
 <ul>
 <li>If there is a custom component with this name, use it.</li>
+<li>If there is a component installed from npm with this name, use it.</li>
 <li>If there is a built-in component with this name, use it.</li>
 <li>If there is a valid HTML tag with this name, use it.</li>
-<li>If none of the above, just use a div, but give it the class of the component name</li>
 </ul>
-<p>So, for example, assume we have one custom component, named <code>Custom</code>.</p>
-<pre><code><span class="hljs-comment">// Renders our custom component</span>
-<span class="hljs-selector-attr">[Custom /]</span>
-
-<span class="hljs-comment">// Renders the built-in range component</span>
-<span class="hljs-selector-attr">[Range /]</span>
-
-<span class="hljs-comment">// Renders `&lt;img /&gt;` because it is a valid  HTML tag</span>
-<span class="hljs-selector-attr">[Img /]</span>
-
-<span class="hljs-comment">// Renders `&lt;div class="SomethingElse"&gt;&lt;/div&gt;`</span>
-<span class="hljs-selector-attr">[SomethingElse /]</span>
-</code></pre><p>Continue to read about <a href="/components-built-in">Idyll&#39;s built-in components</a>.</p>
+<p>Continue to read about <a href="/components-built-in">Idyll&#39;s built-in components</a>.</p>
 </div>
   </div>
       </div>

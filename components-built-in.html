@@ -24,7 +24,7 @@
             <div class="minidocs-menu-toc">
               <a href="#layout" class="h3 content-link">Layout</a><a href="#presentation" class="h3 content-link">Presentation</a><a href="#helpers" class="h3 content-link">Helpers</a>
             </div>
-          </div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+          </div><div><a href="/components-npm" class="content-link ">NPM components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
         <div class="_3f4b1fbc minidocs-content">
     
     
-    <div><h1 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-In Components</h1><p>Idyll ships with a handful of components that
+    <div><h1 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-in components</h1><p>Idyll ships with a handful of components that
 handle common tasks. They are broken into
 three categories:</p>
 <ul>
@@ -48,9 +48,11 @@ three categories:</p>
 <li><p><a href="#presentation">Presentation</a> - these components render something to the screen, for example the <code>Chart</code>
 component takes data as input and can display several types of charts.</p>
 <ul>
+<li><a href="#action">Action</a></li>
+<li><a href="#boolean">Boolean</a></li>
 <li><a href="#button">Button</a></li>
 <li><a href="#chart">Chart</a></li>
-<li><a href="#displayvar">DisplayVar</a></li>
+<li><a href="#display">Display</a></li>
 <li><a href="#dynamic">Dynamic</a></li>
 <li><a href="#equation">Equation</a></li>
 <li><a href="#gist">Gist</a></li>
@@ -60,7 +62,6 @@ component takes data as input and can display several types of charts.</p>
 <li><a href="#slideshow-slide">Slideshow / Slide</a></li>
 <li><a href="#svg">SVG</a></li>
 <li><a href="#table">Table</a></li>
-<li><a href="#vegalite">VegaLite</a></li>
 </ul>
 </li>
 <li><p><a href="#helpers">Helpers</a> - these components don&#39;t affect the page content, but help with common tasks. The <code>Analytics</code> component makes it
@@ -92,7 +93,17 @@ be displayed next to eachother. For example, this code,</p>
 [<span class="hljs-string">inline</span>][<span class="hljs-symbol">img src:"..." /</span>][<span class="hljs-string">/inline</span>]
 [/section]
 </code></pre><p>Will display three images side by side.</p>
-<h2 id="presentation"><a href="#presentation" class="anchor"></a>Presentation</h2><h3 id="button"><a href="#button" class="anchor"></a>Button</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>
+<h2 id="presentation"><a href="#presentation" class="anchor"></a>Presentation</h2><h3 id="action"><a href="#action" class="anchor"></a>Action</h3><p>The <code>action</code> compoennt allows you to add event handlers to text. For example:</p>
+<pre><code>This <span class="hljs-keyword">is</span> regular <span class="hljs-keyword">text</span>, but <span class="hljs-keyword">when</span> you [action onClick:`alert(<span class="hljs-comment">'clicked the text')`]click me[/action], an alert will appear.</span>
+</code></pre><h4 id="props"><a href="#props" class="anchor"></a>Props</h4><ul>
+<li>onClick</li>
+<li>onMouseEnter</li>
+<li>onMouseLeave</li>
+</ul>
+<h3 id="boolean"><a href="#boolean" class="anchor"></a>Boolean</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>
+<p><img src="images/button.gif" alt="button"></p>
+<pre><code>[<span class="hljs-keyword">button</span> <span class="hljs-keyword">onClick</span>:`myVar += <span class="hljs-number">1</span>`]Click Me![/<span class="hljs-keyword">button</span>]
+</code></pre><h3 id="button"><a href="#button" class="anchor"></a>Button</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>
 <p><img src="images/button.gif" alt="button"></p>
 <pre><code>[<span class="hljs-keyword">button</span> <span class="hljs-keyword">onClick</span>`myVar += <span class="hljs-number">1</span>`]Click Me![/<span class="hljs-keyword">button</span>]
 </code></pre><h3 id="chart"><a href="#chart" class="anchor"></a>Chart</h3><p>This will display a chart. It expects the following properties:</p>
@@ -111,12 +122,12 @@ be displayed next to eachother. For example, this code,</p>
 ]` /]
 
 [Chart <span class="hljs-string">type:</span><span class="hljs-string">"line"</span> <span class="hljs-string">data:</span>dataToBeCharted /]
-</code></pre><h3 id="displayvar"><a href="#displayvar" class="anchor"></a>DisplayVar</h3><p>This will render the value of a variable to the screen. It is mostly useful for debugging:</p>
-<p><img src="images/displayvar.gif" alt="displayvar"></p>
-<pre><code>[var <span class="hljs-string">name:</span><span class="hljs-string">"myVar"</span> <span class="hljs-string">value:</span><span class="hljs-number">10</span> /]
+</code></pre><h3 id="display"><a href="#display" class="anchor"></a>Display</h3><p>This will render the value of a variable to the screen. It is mostly useful for debugging:</p>
+<p><img src="images/displayvar.gif" alt="display"></p>
+<pre><code>[var <span class="hljs-keyword">name</span>:<span class="hljs-string">"myVar"</span> <span class="hljs-keyword">value</span>:<span class="hljs-number">10</span> /]
 
-[Range <span class="hljs-string">value:</span>myVar <span class="hljs-string">min:</span><span class="hljs-number">0</span> <span class="hljs-string">max:</span><span class="hljs-number">100</span> /]
-[DisplayVar <span class="hljs-string">var:</span>myVar /]
+[<span class="hljs-built_in">Range</span> <span class="hljs-keyword">value</span>:myVar <span class="hljs-built_in">min</span>:<span class="hljs-number">0</span> <span class="hljs-built_in">max</span>:<span class="hljs-number">100</span> /]
+[Display <span class="hljs-keyword">value</span>:myVar /]
 </code></pre><h3 id="dynamic"><a href="#dynamic" class="anchor"></a>Dynamic</h3><p>This will render a dynamic variable to the screen.</p>
 <p><img src="images/dynamic.gif" alt="dynamic"></p>
 <pre><code>[var name:<span class="hljs-string">"myVar"</span> value:<span class="hljs-number">10</span> /]
@@ -182,16 +193,6 @@ easy to style the SVG with css, as opposed to displaying the svg inside of an im
 </code></pre><h3 id="table"><a href="#table" class="anchor"></a>Table</h3><p>Display tabular data. Uses <a href="https://github.com/glittershark/reactable">https://github.com/glittershark/reactable</a> under the hood to render the table.</p>
 <p><img src="images/table.png" alt="table"></p>
 <pre><code>[Table data:`[{columnName1: value, columnName2: value}, {columnName1: value, {columnName2: value}}]` /]
-</code></pre><h3 id="vegalite"><a href="#vegalite" class="anchor"></a>VegaLite</h3><p>Render a <a href="https://vega.github.io/vega-lite/">Vega Lite</a> spec, using <a href="https://github.com/kristw/react-vega-lite">https://github.com/kristw/react-vega-lite</a>.</p>
-<pre><code>[data <span class="hljs-string">name:</span><span class="hljs-string">"myData"</span> <span class="hljs-string">src:</span><span class="hljs-string">"my-dataset.json"</span> /]
-
-[VegaLite <span class="hljs-string">data:</span>myData <span class="hljs-string">spec:</span>`{
-<span class="hljs-symbol">  mark:</span> <span class="hljs-string">"bar"</span>,
-<span class="hljs-symbol">  encoding:</span> {
-<span class="hljs-symbol">    x:</span> {<span class="hljs-string">field:</span> <span class="hljs-string">"a"</span>, <span class="hljs-string">type:</span> <span class="hljs-string">"ordinal"</span>},
-<span class="hljs-symbol">    y:</span> {<span class="hljs-string">field:</span> <span class="hljs-string">"b"</span>, <span class="hljs-string">type:</span> <span class="hljs-string">"quantitative"</span>}
-  }
-}`]
 </code></pre><h2 id="helpers"><a href="#helpers" class="anchor"></a>Helpers</h2><h3 id="analytics"><a href="#analytics" class="anchor"></a>Analytics</h3><p>This component makes it easy to insert a Google Analytics code on your page.</p>
 <pre><code>[Analytics google:<span class="hljs-string">"UA-XXXXXXXXX"</span> /]
 </code></pre><h3 id="meta"><a href="#meta" class="anchor"></a>Meta</h3><p>The meta component adds context to the page template when building your app for publication. The following variables are available and will be inserted
