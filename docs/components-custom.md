@@ -1,5 +1,5 @@
 
-# Custom Components
+# Custom components
 
 ## Overview
 
@@ -36,7 +36,7 @@ following code:
 [Custom /]
 ```
 
-## Idyll Component
+## Idyll component
 
 The `IdyllComponent` class adds an
 `updateProps` method that is used to keep
@@ -87,21 +87,12 @@ Notice that even thought the `Incrementer` component doesn't know
 anything about the variable `clickCount`, it will still correctly
 update.
 
-Of course, this trivial example could be accomplished using built-in components:
 
-```
-[var name:"clickCount" value:0 /]
-
-[Button onClick:`clickCount+=1` ]Click Me.[/Button]
-[DisplayVar var:clickCount /]
-```
-
-## Name Resolution
+## Name resolution
 
 Components lookup is based on filenames. If your component name
-is in `CamelCase`, it will automatically be converted to `kebab-case`,
-so for example if you want to create a component named `CustomComponent`,
-it should be stored in a file called `custom-component.js`.
+is `MyComponent`, it will match files like `mycomponent.js` or `my-component.js`.
+The component filenames are case insensitive.
 
 Custom component are meant for times when more complex and custom
 code is needed. By default Idyll will look for your custom components

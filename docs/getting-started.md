@@ -1,7 +1,25 @@
 
 # Getting Started
 
-The easiest way to get started with Idyll is to use the project generator.
+If you just want to quickly try out Idyll, we offer an [online editor](https://idyll-lang.github.io/editor/) where you
+can play around and try out the language.
+
+
+## Quickstart
+
+To install and use Idyll locally, install it using `npm`.
+
+```sh
+$ npm i -g idyll
+```
+
+Once its installed, the `idyll` command will be available in your shell. To compile a file run `$ idyll <input-file>`, this will
+compile and open the resulting webpage in your browser.
+
+## Project Generator
+
+If you are working on a more in-depth project, we provide a project
+generator to help set with the initial configuration.
 It will help get you set up using custom components, datasets, and stylesheets.
 To use the generator:
 

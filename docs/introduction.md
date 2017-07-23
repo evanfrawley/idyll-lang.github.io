@@ -13,6 +13,8 @@ its readable syntax facilitates
 collaboration between writers, editors, designers,
 and programmers on complex projects.
 
+[Try Idyll in your browser](https://idyll-lang.github.io/editor/).
+
 ### Examples
 
 ##### Full Articles

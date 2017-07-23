@@ -1,6 +1,6 @@
 
 
-# Built-In Components
+# Built-in components
 
 Idyll ships with a handful of components that
 handle common tasks. They are broken into
@@ -13,9 +13,11 @@ three categories:
 
 * [Presentation](#presentation) - these components render something to the screen, for example the `Chart`
 component takes data as input and can display several types of charts.
+  * [Action](#action)
+  * [Boolean](#boolean)
   * [Button](#button)
   * [Chart](#chart)
-  * [DisplayVar](#displayvar)
+  * [Display](#display)
   * [Dynamic](#dynamic)
   * [Equation](#equation)
   * [Gist](#gist)
@@ -25,7 +27,6 @@ component takes data as input and can display several types of charts.
   * [Slideshow / Slide](#slideshow-slide)
   * [SVG](#svg)
   * [Table](#table)
-  * [VegaLite](#vegalite)
 
 * [Helpers](#helpers) - these components don't affect the page content, but help with common tasks. The `Analytics` component makes it
 easy to add Google Analytics to your page.
@@ -79,6 +80,30 @@ Will display three images side by side.
 
 ## Presentation
 
+### Action
+
+The `action` compoennt allows you to add event handlers to text. For example:
+
+```
+This is regular text, but when you [action onClick:`alert('clicked the text')`]click me[/action], an alert will appear.
+```
+
+#### Props
+
+* onClick
+* onMouseEnter
+* onMouseLeave
+
+### Boolean
+
+This will display a button. To control what happens when the button is clicked, add an `onClick` property:
+
+![button](images/button.gif)
+
+```
+[button onClick:`myVar += 1`]Click Me![/button]
+```
+
 ### Button
 
 This will display a button. To control what happens when the button is clicked, add an `onClick` property:
@@ -111,17 +136,17 @@ This will display a chart. It expects the following properties:
 [Chart type:"line" data:dataToBeCharted /]
 ```
 
-### DisplayVar
+### Display
 
 This will render the value of a variable to the screen. It is mostly useful for debugging:
 
-![displayvar](images/displayvar.gif)
+![display](images/displayvar.gif)
 
 ```
 [var name:"myVar" value:10 /]
 
 [Range value:myVar min:0 max:100 /]
-[DisplayVar var:myVar /]
+[Display value:myVar /]
 ```
 
 ### Dynamic
@@ -253,21 +278,6 @@ Display tabular data. Uses https://github.com/glittershark/reactable under the h
 [Table data:`[{columnName1: value, columnName2: value}, {columnName1: value, {columnName2: value}}]` /]
 ```
 
-### VegaLite
-
-Render a [Vega Lite](https://vega.github.io/vega-lite/) spec, using https://github.com/kristw/react-vega-lite.
-
-```
-[data name:"myData" src:"my-dataset.json" /]
-
-[VegaLite data:myData spec:`{
-  mark: "bar",
-  encoding: {
-    x: {field: "a", type: "ordinal"},
-    y: {field: "b", type: "quantitative"}
-  }
-}`]
-```
 
 ## Helpers
 

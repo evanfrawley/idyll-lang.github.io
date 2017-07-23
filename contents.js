@@ -8,6 +8,7 @@ module.exports = {
   Components: {
     Overview: "components-overview.md",
     "Built-in components": "components-built-in.md",
+    "NPM components": "components-npm.md",
     "Custom components": "components-custom.md",
     "Refs": "components-refs.md"
   },

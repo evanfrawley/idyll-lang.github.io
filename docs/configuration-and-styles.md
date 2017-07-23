@@ -27,11 +27,11 @@ for you project.
 
 #### Centered
 
-This is the default layout. It puts your content in the center of the page and is mobile responsive.
+The `centered` layout puts your content in the center of the page and is mobile responsive.
 
 #### Blog
 
-The `blog` layout is fairly traditional article layout with room in the margin to
+This is the default layout. The `blog` layout is fairly traditional article layout with room in the margin to
 put notes and other callouts. See https://mathisonian.github.io/trig/etymology/ for an example of this layout.
 
 #### None
@@ -49,33 +49,40 @@ This is the default theme, it uses CSS that resembles the styles in GitHub READM
 
 This theme uses custom styles that go along with Idyll's look and feel. See https://mathisonian.github.io/trig/etymology/ for an example of this style.
 
+#### Tufte
+
+The `Tufte` theme uses styles from https://edwardtufte.github.io/tufte-css/.
+
+![tufte](images/tufte.png)
+
 ## Using Idyll as an API
 
-You can use Idyll directly from JavaScript as well.
-
-`idyll(idyllFile, options, callback)`
+You can use Idyll directly from JavaScript as well. This is useful if you want to build on
+top of Idyll, for example, you could make a static blog engine that uses Idyll to compile the
+blog posts.
 
 ### Example
 
 ```
-var idyll = require('idyll');
+var Idyll = require('idyll');
 
-idyll('index.idl', {
+var idyll = Idyll({
+  inputFile: 'my-file.idl'
   output: 'build/',
   htmlTemplate: '_index.html',
-  componentFolder: './components/',
-  defaultComponents: './components/default/',
+  componentFolder: './components/'
   dataFolder: './data',
   layout: 'centered',
-  theme: 'github',
-  compilerOptions: {
-    spellcheck: true
-  },
-  build: true
-}, function() {
-  // calls when Idyll is finished building
+  theme: 'github'
 });
+
+idyll.build()
+     .on('update', () => {}) // the compilation finished.
+     .on('error', () => {}) // there was an error
 ```
+
+If you pass `live: true` to Idyll, it will continue to watch the input files for changes,
+ and will emit the update event each time that the output is rebuilt.
 
 Continue to the next section to learn about [Idyll components](/components-overview).
 
