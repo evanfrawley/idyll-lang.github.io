@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <title>idyll-lang.github</title>
 <meta charset="utf-8">
@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/bundle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
 <div id="choo-root" class="minidocs">
@@ -94,7 +95,7 @@ a reader scrolls. See the section on <a href="/components-refs">refs</a> for mor
 <h2 id="variables"><a href="#variables" class="anchor"></a>Variables</h2><p>Variables can be declared at any point in an Idyll file. Variables use
 the same syntax as a component, but must defined a <code>name</code> and a <code>value</code>
 property.</p>
-<pre><code>[<span class="hljs-built_in">var</span> <span class="hljs-built_in">na</span><span class="hljs-symbol">me:</span><span class="hljs-string">"x"</span> val<span class="hljs-symbol">ue:10</span> /]
+<pre><code>[<span class="hljs-keyword">var</span> name:<span class="hljs-string">"x"</span> <span class="hljs-keyword">value</span>:<span class="hljs-number">10</span> /]
 </code></pre><p>The above code defines a variable <code>x</code>, with the initial value of <code>10</code>.</p>
 <h3 id="derived-variables"><a href="#derived-variables" class="anchor"></a>Derived Variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from
 other variables, and is recomputed whenever values change:</p>
