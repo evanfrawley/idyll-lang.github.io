@@ -16,6 +16,7 @@ module.exports = {
     "Deploying to the web": "publishing-deploying-to-the-web.md"
   },
   "Open Source": {
-    GitHub: "open-source-github.md"
+    GitHub: "open-source-github.md",
+    Gitter: "open-source-gitter.md"
   }
 }

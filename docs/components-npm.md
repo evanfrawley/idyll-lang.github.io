@@ -1,5 +1,5 @@
 
-# Installing components from NPM
+# Installing Components from NPM
 
 ## Overview
 
@@ -18,3 +18,4 @@ This could then be used in your markup as
 ```
 [SomeReactComponent /]
 ```
+

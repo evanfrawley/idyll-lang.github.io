@@ -7,16 +7,16 @@ can play around and try out the language.
 
 ## Quickstart
 
-To install and use Idyll locally, install it using `npm`.
+To install and use Idyll locally, install it using `npm`. If you don't have `npm` installed, first install it by following
+[these instructions](https://www.npmjs.com/get-npm).
 
 ```sh
-$ npm i -g idyll
+$ npm install -g idyll
 ```
 
-Once its installed, the `idyll` command will be available in your shell. To compile a file run `$ idyll <input-file>`, this will
-compile and open the resulting webpage in your browser.
+Once the installation has finished, the `idyll` command will be available in your shell. To compile a file run `$ idyll <input-file>`, this will compile and open the resulting webpage in your browser.
 
-## Project Generator
+## Project generator
 
 If you are working on a more in-depth project, we provide a project
 generator to help set with the initial configuration.

@@ -1,12 +1,14 @@
 
 # Syntax
 
+*Note: Idyll tries to maintain parity with popular markdown implementations, but sometimes doesn't get things exactly right. If something seems off, feel free to open an issue on the [compiler page](https://github.com/idyll-lang/idyll-compiler/issues).*
+
 ## Text
 
 By default everything in Idyll is text. To make common
 formatting tasks easier, Idyll borrows some syntax from markdown.
 
-#### Bold, Italic
+#### Bold, italic
 
 Text surrounded by asterisks (`*`) will be bolded,
 e.g. `*italic*` becomes *italic*, and `**bold**` becomes
@@ -63,12 +65,12 @@ Click Me
 [/Button]
 ```
 
-### Component Properties
+### Component properties
 
 Properties can be passed into components
 in the following ways:
 
-#### Literals: Number, String, Boolean
+#### Literals: number, string, boolean
 
 Number, string, or boolean literals may be used.
 
@@ -78,7 +80,7 @@ Number, string, or boolean literals may be used.
 [Component propName:false /]
 ```
 
-#### Variable or Dataset
+#### Variable or dataset
 
 A variable or dataset can be passed in directly, this will
 automatically create a binding between that variable and property,
@@ -137,7 +139,7 @@ property.
 
 The above code defines a variable `x`, with the initial value of `10`.
 
-### Derived Variables
+### Derived variables
 
 A derived variable is similar to a `var`, but its value is derived from
 other variables, and is recomputed whenever values change:

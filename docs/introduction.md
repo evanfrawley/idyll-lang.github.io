@@ -17,7 +17,7 @@ and programmers on complex projects.
 
 ### Examples
 
-##### Full Articles
+##### Full articles
 
 <div class="example">
   <a href="https://mathisonian.github.io/trig/etymology/">
@@ -40,7 +40,7 @@ and programmers on complex projects.
   </a>
 </div>
 
-##### With Popular JavaScript Libraries
+##### With popular JavaScript libraries
 
 
 <div class="example">
@@ -64,7 +64,7 @@ and programmers on complex projects.
   </a>
 </div>
 
-##### Other Examples
+##### Other examples
 
 <div class="example">
   <a href="https://mathisonian.github.io/lorenz/">

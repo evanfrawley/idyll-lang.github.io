@@ -1,5 +1,5 @@
 
-# Custom components
+# Custom Components
 
 ## Overview
 
@@ -12,7 +12,7 @@ or module loading.
 
 For example, this custom component
 
-```
+```js
 const React = require('react');
 const IdyllComponent = require('idyll-component');
 
@@ -50,7 +50,7 @@ For example, a component can change the value of a
 property that it receives, and Idyll will propegate
 the change to any bound variables on the page.
 
-```
+```js
 const React = require('react');
 const IdyllComponent = require('idyll-component');
 
@@ -80,7 +80,7 @@ The `Incrementer` component could then be used as follows:
 [var name:"clickCount" value:0 /]
 
 [Incrementer value:clickCount /]
-[DisplayVar var:clickCount /]
+[Display value:clickCount /]
 ```
 
 Notice that even thought the `Incrementer` component doesn't know

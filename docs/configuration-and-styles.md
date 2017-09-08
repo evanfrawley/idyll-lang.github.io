@@ -1,21 +1,25 @@
 
 # Configuration and Styles
 
-## Command Line Options
+## Command line options
 
 The `idyll` command line tool accepts the following options
 
-* `--css` the path to your CSS file. You can use this to override Idyll's default styles, e.g. `$ idyll index.idl --css my-custom-styles.css`.
 * `--components` the path to your custom components. By default this points to `components/`.
+* `--css` the path to your CSS file. You can use this to override Idyll's default styles, e.g. `$ idyll index.idl --css my-custom-styles.css`.
 * `--datasets` the path to the folder containing your datasets. By default this points to `data/`.
+* `--inputString` a string of Idyll markup. Use this flag to compile a string instead of a file.
 * `--layout` the name of the layout to use. By default this is `blog`. More on layouts below.
-* `--theme` the name of the theme to use. By default this is `idyll`. More on themes below.
+* `--no-minify` turn code minification off when building for production.
+* `--no-ssr` turn server-side rendering off when building for production.
 * `--output` the location to place built files in
-* `--build` the build flag tells Idyll to output the compiled JavaScript instead of running a server and opening your page in a web browser.
+* `--theme` the name of the theme to use. By default this is `idyll`. More on themes below.
+* `--template` a custom HTML template to use
+* `--watch` the watch flag tells Idyll if it should watch files for changes, or just run once and exit.
 
 If you are using Idyll via the project generator, open `package.json` to change these options.
 
-## Themes and Page Layout
+## Themes and page layout
 
 Idyll exposes two options to help you style your project, `layout` and `theme`. `layout` deals with CSS styles related to how your content is
 layed out on the page: width, columns, etc. The `theme` option allows you to choose diffent stylesheets to change the style of the content itself (text color, font, and so on).
@@ -63,7 +67,7 @@ blog posts.
 
 ### Example
 
-```
+```js
 var Idyll = require('idyll');
 
 var idyll = Idyll({
@@ -83,6 +87,18 @@ idyll.build()
 
 If you pass `live: true` to Idyll, it will continue to watch the input files for changes,
  and will emit the update event each time that the output is rebuilt.
+
+You can also compile an input string directly instead of a file:
+
+```js
+var idyll = Idyll();
+
+idyll
+  .build('# My Idyll markup')
+  .on('update', () => { console.log('Finished.') });
+```
+
+
 
 Continue to the next section to learn about [Idyll components](/components-overview).
 

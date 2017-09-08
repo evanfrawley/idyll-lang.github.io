@@ -1,6 +1,6 @@
 
 
-# Built-in components
+# Built-In Components
 
 Idyll ships with a handful of components that
 handle common tasks. They are broken into
@@ -90,19 +90,17 @@ This is regular text, but when you [action onClick:`alert('clicked the text')`]c
 
 #### Props
 
-* onClick
-* onMouseEnter
-* onMouseLeave
+* `onClick`
+* `onMouseEnter`
+* `onMouseLeave`
 
 ### Boolean
 
-This will display a button. To control what happens when the button is clicked, add an `onClick` property:
+This will display a checkbox.
 
-![button](images/button.gif)
+#### Props
 
-```
-[button onClick:`myVar += 1`]Click Me![/button]
-```
+* `value` -  A value for the checkbox. If this value is truthy, the checkbox will be shown
 
 ### Button
 
@@ -230,7 +228,7 @@ This component displays a range slider. The properties are:
 [var name:"myVar" value:10 /]
 
 [Range value:myVar min:0 max:100 /]
-[DisplayVar var:myVar /]
+[Display value:myVar /]
 ```
 
 
