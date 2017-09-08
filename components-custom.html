@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <title>idyll-lang.github</title>
 <meta charset="utf-8">
@@ -24,7 +24,7 @@
             <div class="minidocs-menu-toc">
               <a href="#overview" class="h3 content-link">Overview</a><a href="#idyll-component" class="h3 content-link">Idyll component</a><a href="#name-resolution" class="h3 content-link">Name resolution</a>
             </div>
-          </div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+          </div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div><div><a href="/open-source-gitter" class="content-link ">Gitter</a></div>
       </div>
     </div>
   </div>
@@ -34,28 +34,29 @@
         <div class="_3f4b1fbc minidocs-content">
     
     
-    <div><h1 id="custom-components"><a href="#custom-components" class="anchor"></a>Custom components</h1><h2 id="overview"><a href="#overview" class="anchor"></a>Overview</h2><p>Idyll is designed for people to use their own custom components as well.
+    <div><h1 id="custom-components"><a href="#custom-components" class="anchor"></a>Custom Components</h1><h2 id="overview"><a href="#overview" class="anchor"></a>Overview</h2><p>Idyll is designed for people to use their own custom components as well.
 Under the hood an Idyll component just needs to be anything that will
 function as a React component. If you create a custom component in
 JavaScript, point Idyll to the folder where you created it and
 everything will just work, no need to worry about compiling, bundling,
 or module loading.</p>
 <p>For example, this custom component</p>
-<pre><code>const <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t');
-const <span class="hljs-type">IdyllComponent</span> = require(<span class="hljs-symbol">'idyll</span>-component');
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>);
+<span class="hljs-keyword">const</span> IdyllComponent = <span class="hljs-built_in">require</span>(<span class="hljs-string">'idyll-component'</span>);
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Custom</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
   render() {
     <span class="hljs-keyword">return</span> (
-      &lt;div {...<span class="hljs-keyword">this</span>.props}&gt;
-        <span class="hljs-type">This</span> is a custom component
-      &lt;/div&gt;
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> {<span class="hljs-attr">...this.props</span>}&gt;</span>
+        This is a custom component
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
     );
   }
 }
 
-module.exports = <span class="hljs-type">Custom</span>;
-</code></pre><p>could be invoked inside of an Idyll file with the
+<span class="hljs-built_in">module</span>.exports = Custom;
+</code></pre>
+<p>could be invoked inside of an Idyll file with the
 following code:</p>
 <pre><code>[Custom /]
 </code></pre><h2 id="idyll-component"><a href="#idyll-component" class="anchor"></a>Idyll component</h2><p>The <code>IdyllComponent</code> class adds an
@@ -66,32 +67,33 @@ trigger events in scroll-based narratives.</p>
 <h3 id="example"><a href="#example" class="anchor"></a>Example</h3><p>For example, a component can change the value of a
 property that it receives, and Idyll will propegate
 the change to any bound variables on the page.</p>
-<pre><code>const <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t');
-const <span class="hljs-type">IdyllComponent</span> = require(<span class="hljs-symbol">'idyll</span>-component');
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>);
+<span class="hljs-keyword">const</span> IdyllComponent = <span class="hljs-built_in">require</span>(<span class="hljs-string">'idyll-component'</span>);
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Incrementer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
 
   increment() {
     <span class="hljs-keyword">this</span>.updateProps({
-      value: <span class="hljs-keyword">this</span>.props.value + <span class="hljs-number">1</span>
+      <span class="hljs-attr">value</span>: <span class="hljs-keyword">this</span>.props.value + <span class="hljs-number">1</span>
     })
   }
 
   render() {
     <span class="hljs-keyword">return</span> (
-      &lt;div onClick={<span class="hljs-keyword">this</span>.increment.bind(<span class="hljs-keyword">this</span>)}&gt;
-        <span class="hljs-type">Click</span> me.
-      &lt;/div&gt;
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.increment.bind(this)}</span>&gt;</span>
+        Click me.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
     );
   }
 }
 
-module.exports = <span class="hljs-type">Incrementer</span>;
-</code></pre><p>The <code>Incrementer</code> component could then be used as follows:</p>
+<span class="hljs-built_in">module</span>.exports = Incrementer;
+</code></pre>
+<p>The <code>Incrementer</code> component could then be used as follows:</p>
 <pre><code>[var name:<span class="hljs-string">"clickCount"</span> value:<span class="hljs-number">0</span> /]
 
 [Incrementer value:clickCount /]
-[DisplayVar var:clickCount /]
+[Display value:clickCount /]
 </code></pre><p>Notice that even thought the <code>Incrementer</code> component doesn&#39;t know
 anything about the variable <code>clickCount</code>, it will still correctly
 update.</p>

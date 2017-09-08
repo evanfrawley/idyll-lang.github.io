@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <title>idyll-lang.github</title>
 <meta charset="utf-8">
@@ -24,7 +24,7 @@
             <div class="minidocs-menu-toc">
               <a href="#layout" class="h3 content-link">Layout</a><a href="#presentation" class="h3 content-link">Presentation</a><a href="#helpers" class="h3 content-link">Helpers</a>
             </div>
-          </div><div><a href="/components-npm" class="content-link ">NPM components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+          </div><div><a href="/components-npm" class="content-link ">NPM components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div><div><a href="/open-source-gitter" class="content-link ">Gitter</a></div>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
         <div class="_3f4b1fbc minidocs-content">
     
     
-    <div><h1 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-in components</h1><p>Idyll ships with a handful of components that
+    <div><h1 id="built-in-components"><a href="#built-in-components" class="anchor"></a>Built-In Components</h1><p>Idyll ships with a handful of components that
 handle common tasks. They are broken into
 three categories:</p>
 <ul>
@@ -96,16 +96,17 @@ be displayed next to eachother. For example, this code,</p>
 <h2 id="presentation"><a href="#presentation" class="anchor"></a>Presentation</h2><h3 id="action"><a href="#action" class="anchor"></a>Action</h3><p>The <code>action</code> compoennt allows you to add event handlers to text. For example:</p>
 <pre><code>This <span class="hljs-keyword">is</span> regular <span class="hljs-keyword">text</span>, but <span class="hljs-keyword">when</span> you [action onClick:`alert(<span class="hljs-comment">'clicked the text')`]click me[/action], an alert will appear.</span>
 </code></pre><h4 id="props"><a href="#props" class="anchor"></a>Props</h4><ul>
-<li>onClick</li>
-<li>onMouseEnter</li>
-<li>onMouseLeave</li>
+<li><code>onClick</code></li>
+<li><code>onMouseEnter</code></li>
+<li><code>onMouseLeave</code></li>
 </ul>
-<h3 id="boolean"><a href="#boolean" class="anchor"></a>Boolean</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>
+<h3 id="boolean"><a href="#boolean" class="anchor"></a>Boolean</h3><p>This will display a checkbox.</p>
+<h4 id="props"><a href="#props" class="anchor"></a>Props</h4><ul>
+<li><code>value</code> -  A value for the checkbox. If this value is truthy, the checkbox will be shown</li>
+</ul>
+<h3 id="button"><a href="#button" class="anchor"></a>Button</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>
 <p><img src="images/button.gif" alt="button"></p>
-<pre><code>[<span class="hljs-keyword">button</span> <span class="hljs-keyword">onClick</span>:`myVar += <span class="hljs-number">1</span>`]Click Me![/<span class="hljs-keyword">button</span>]
-</code></pre><h3 id="button"><a href="#button" class="anchor"></a>Button</h3><p>This will display a button. To control what happens when the button is clicked, add an <code>onClick</code> property:</p>
-<p><img src="images/button.gif" alt="button"></p>
-<pre><code>[<span class="hljs-keyword">button</span> <span class="hljs-keyword">onClick</span>:`myVar += <span class="hljs-number">1</span>`]Click Me![/<span class="hljs-keyword">button</span>]
+<pre><code>[<span class="hljs-keyword">button</span> <span class="hljs-keyword">onClick</span>`myVar += <span class="hljs-number">1</span>`]Click Me![/<span class="hljs-keyword">button</span>]
 </code></pre><h3 id="chart"><a href="#chart" class="anchor"></a>Chart</h3><p>This will display a chart. It expects the following properties:</p>
 <ul>
 <li><code>data</code> - A JSON object containing the data for this chart. It uses the <a href="https://formidable.com/open-source/victory/docs">victory</a> library to handle rendering, so see those docs for more information on what types of data can be passed in.</li>
@@ -142,9 +143,9 @@ be displayed next to eachother. For example, this code,</p>
 </ul>
 <h3 id="equation"><a href="#equation" class="anchor"></a>Equation</h3><p>This uses <a href="https://github.com/Khan/KaTeX">KaTeX</a> to typeset mathematical equations. Example:</p>
 <p><img src="images/equation.png" alt="equation"></p>
-<pre><code>[<span class="hljs-meta">Equation</span>]
-  y = \<span class="hljs-keyword">int</span> x^<span class="hljs-number">2</span> dx
-[<span class="hljs-meta">/Equation</span>]
+<pre><code><span class="hljs-string">[Equation]</span>
+  y = \int x^<span class="hljs-number">2</span> dx
+<span class="hljs-string">[/Equation]</span>
 </code></pre><h3 id="header"><a href="#header" class="anchor"></a>Header</h3><p>This component makes it easy to add a title, subtitle, and byline to your article:</p>
 <p><img src="images/header.png" alt="header"></p>
 <pre><code>[Header
@@ -168,10 +169,10 @@ be displayed next to eachother. For example, this code,</p>
 <li><code>step</code>: The granularity of the slider</li>
 </ul>
 <p><img src="images/displayvar.gif" alt="displayvar"></p>
-<pre><code>[var <span class="hljs-string">name:</span><span class="hljs-string">"myVar"</span> <span class="hljs-string">value:</span><span class="hljs-number">10</span> /]
+<pre><code>[var <span class="hljs-keyword">name</span>:<span class="hljs-string">"myVar"</span> <span class="hljs-keyword">value</span>:<span class="hljs-number">10</span> /]
 
-[Range <span class="hljs-string">value:</span>myVar <span class="hljs-string">min:</span><span class="hljs-number">0</span> <span class="hljs-string">max:</span><span class="hljs-number">100</span> /]
-[DisplayVar <span class="hljs-string">var:</span>myVar /]
+[<span class="hljs-built_in">Range</span> <span class="hljs-keyword">value</span>:myVar <span class="hljs-built_in">min</span>:<span class="hljs-number">0</span> <span class="hljs-built_in">max</span>:<span class="hljs-number">100</span> /]
+[Display <span class="hljs-keyword">value</span>:myVar /]
 </code></pre><h3 id="slideshow-slide"><a href="#slideshow-slide" class="anchor"></a>Slideshow / Slide</h3><p>This component is used to dynamically display different content. It can be used to make slideshows,
 but is generally useful for dynamically displaying different content of any type.</p>
 <p><img src="images/slides.gif" alt="slides"></p>

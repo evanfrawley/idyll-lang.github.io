@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <title>idyll-lang.github</title>
 <meta charset="utf-8">
@@ -24,7 +24,7 @@
             <div class="minidocs-menu-toc">
               <a href="#text" class="h3 content-link">Text</a><a href="#components" class="h3 content-link">Components</a><a href="#variables" class="h3 content-link">Variables</a><a href="#datasets" class="h3 content-link">Datasets</a>
             </div>
-          </div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-npm" class="content-link ">NPM components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div>
+          </div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-npm" class="content-link ">NPM components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div><div><a href="/open-source-gitter" class="content-link ">Gitter</a></div>
       </div>
     </div>
   </div>
@@ -34,9 +34,10 @@
         <div class="_3f4b1fbc minidocs-content">
     
     
-    <div><h1 id="syntax"><a href="#syntax" class="anchor"></a>Syntax</h1><h2 id="text"><a href="#text" class="anchor"></a>Text</h2><p>By default everything in Idyll is text. To make common
+    <div><h1 id="syntax"><a href="#syntax" class="anchor"></a>Syntax</h1><p><em>Note: Idyll tries to maintain parity with popular markdown implementations, but sometimes doesn&#39;t get things exactly right. If something seems off, feel free to open an issue on the <a href="https://github.com/idyll-lang/idyll-compiler/issues">compiler page</a>.</em></p>
+<h2 id="text"><a href="#text" class="anchor"></a>Text</h2><p>By default everything in Idyll is text. To make common
 formatting tasks easier, Idyll borrows some syntax from markdown.</p>
-<h4 id="bold-italic"><a href="#bold-italic" class="anchor"></a>Bold, Italic</h4><p>Text surrounded by asterisks (<code>*</code>) will be bolded,
+<h4 id="bold-italic"><a href="#bold-italic" class="anchor"></a>Bold, italic</h4><p>Text surrounded by asterisks (<code>*</code>) will be bolded,
 e.g. <code>*italic*</code> becomes <em>italic</em>, and <code>**bold**</code> becomes
 <strong>bold</strong>.</p>
 <h4 id="headers"><a href="#headers" class="anchor"></a>Headers</h4><p>Use a pound sign (<code>#</code>) to denote a header:</p>
@@ -63,13 +64,13 @@ closing,</p>
 <pre><code><span class="hljs-string">[Button]</span>
 Click Me
 <span class="hljs-string">[/Button]</span>
-</code></pre><h3 id="component-properties"><a href="#component-properties" class="anchor"></a>Component Properties</h3><p>Properties can be passed into components
+</code></pre><h3 id="component-properties"><a href="#component-properties" class="anchor"></a>Component properties</h3><p>Properties can be passed into components
 in the following ways:</p>
-<h4 id="literals-number-string-boolean"><a href="#literals-number-string-boolean" class="anchor"></a>Literals: Number, String, Boolean</h4><p>Number, string, or boolean literals may be used.</p>
+<h4 id="literals-number-string-boolean"><a href="#literals-number-string-boolean" class="anchor"></a>Literals: number, string, boolean</h4><p>Number, string, or boolean literals may be used.</p>
 <pre><code>[Component propName:<span class="hljs-number">10</span> /]
 [Component propName:<span class="hljs-string">"propValue"</span> /]
 [Component propName:<span class="hljs-literal">false</span> /]
-</code></pre><h4 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or Dataset</h4><p>A variable or dataset can be passed in directly, this will
+</code></pre><h4 id="variable-or-dataset"><a href="#variable-or-dataset" class="anchor"></a>Variable or dataset</h4><p>A variable or dataset can be passed in directly, this will
 automatically create a binding between that variable and property,
 more on this in the section on <a href="/components-variables-and-datasets">variables and datasets</a>.</p>
 <pre><code>[Component propName:myVar /]
@@ -95,9 +96,9 @@ a reader scrolls. See the section on <a href="/components-refs">refs</a> for mor
 <h2 id="variables"><a href="#variables" class="anchor"></a>Variables</h2><p>Variables can be declared at any point in an Idyll file. Variables use
 the same syntax as a component, but must defined a <code>name</code> and a <code>value</code>
 property.</p>
-<pre><code>[<span class="hljs-built_in">var</span> <span class="hljs-built_in">na</span><span class="hljs-symbol">me:</span><span class="hljs-string">"x"</span> val<span class="hljs-symbol">ue:10</span> /]
+<pre><code>[<span class="hljs-keyword">var</span> name:<span class="hljs-string">"x"</span> <span class="hljs-keyword">value</span>:<span class="hljs-number">10</span> /]
 </code></pre><p>The above code defines a variable <code>x</code>, with the initial value of <code>10</code>.</p>
-<h3 id="derived-variables"><a href="#derived-variables" class="anchor"></a>Derived Variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from
+<h3 id="derived-variables"><a href="#derived-variables" class="anchor"></a>Derived variables</h3><p>A derived variable is similar to a <code>var</code>, but its value is derived from
 other variables, and is recomputed whenever values change:</p>
 <pre><code>[<span class="hljs-name">derived</span> name:<span class="hljs-string">"xSquared"</span> value:`x * x` /]
 </code></pre><p>The above code defines a derived variable <code>xSquared</code> that depends
