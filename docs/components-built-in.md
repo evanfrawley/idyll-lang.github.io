@@ -82,7 +82,7 @@ Will display three images side by side.
 
 ### Action
 
-The `action` compoennt allows you to add event handlers to text. For example:
+The `action` component allows you to add event handlers to text. For example:
 
 ```
 This is regular text, but when you [action onClick:`alert('clicked the text')`]click me[/action], an alert will appear.
