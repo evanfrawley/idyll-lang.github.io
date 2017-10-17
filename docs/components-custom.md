@@ -14,12 +14,13 @@ For example, this custom component
 
 ```js
 const React = require('react');
-const IdyllComponent = require('idyll-component');
 
 class Custom extends IdyllComponent {
   render() {
+    const { hasError, updateProps, ...props } = this.props;
+
     return (
-      <div {...this.props}>
+      <div {...props}>
         This is a custom component
       </div>
     );
@@ -38,26 +39,22 @@ following code:
 
 ## Idyll component
 
-The `IdyllComponent` class adds an
-`updateProps` method that is used to keep
-variables in sync with the rest of the document, and also
-adds a property `onEnteredView` that can be used to
-trigger events in scroll-based narratives.
+Idyll adds an `updateProps` method to the components input props.
+This function can be called to update variable values and propagate
+those changes to the rest of the Idyll document.
 
 ### Example
 
 For example, a component can change the value of a
-property that it receives, and Idyll will propegate
+property that it receives, and Idyll will propagate
 the change to any bound variables on the page.
 
 ```js
 const React = require('react');
-const IdyllComponent = require('idyll-component');
-
-class Incrementer extends IdyllComponent {
+class Incrementer extends React.Component {
 
   increment() {
-    this.updateProps({
+    this.props.updateProps({
       value: this.props.value + 1
     })
   }
