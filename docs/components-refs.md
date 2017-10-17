@@ -53,4 +53,4 @@ The above code will create a section of text that fades out as the user scrolls 
 providing the percentage that a user has scrolled through a certain component.
 
 
-You've leared all about Idyll! All that's left is [deploying you project to the web](/publishing-deploying-to-the-web).
+You've learned all about Idyll! All that's left is [deploying your project to the web](/publishing-deploying-to-the-web).

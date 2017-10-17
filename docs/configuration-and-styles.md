@@ -12,9 +12,9 @@ The `idyll` command line tool accepts the following options
 * `--layout` the name of the layout to use. By default this is `blog`. More on layouts below.
 * `--no-minify` turn code minification off when building for production.
 * `--no-ssr` turn server-side rendering off when building for production.
-* `--output` the location to place built files in
+* `--output` the folder in which to place build output.
 * `--theme` the name of the theme to use. By default this is `idyll`. More on themes below.
-* `--template` a custom HTML template to use
+* `--template` a custom HTML template to use.
 * `--watch` the watch flag tells Idyll if it should watch files for changes, or just run once and exit.
 
 If you are using Idyll via the project generator, open `package.json` to change these options.
@@ -22,11 +22,11 @@ If you are using Idyll via the project generator, open `package.json` to change 
 ## Themes and page layout
 
 Idyll exposes two options to help you style your project, `layout` and `theme`. `layout` deals with CSS styles related to how your content is
-layed out on the page: width, columns, etc. The `theme` option allows you to choose diffent stylesheets to change the style of the content itself (text color, font, and so on).
+layed out on the page: width, columns, etc. The `theme` option allows you to choose different stylesheets to change the style of the content itself (text color, font, and so on).
 
 ### Layout
 
-Idyll currently ships with several page layouts that can be used to modify the structure of how to content is displayed on the page, allowing you to quickly test out different narrative styles
+Idyll currently ships with several page layouts that can be used to modify how content is displayed on the page, allowing you to quickly test out different narrative styles
 for you project.
 
 #### Centered
@@ -61,8 +61,8 @@ The `Tufte` theme uses styles from https://edwardtufte.github.io/tufte-css/.
 
 ## Using Idyll as an API
 
-You can use Idyll directly from JavaScript as well. This is useful if you want to build on
-top of Idyll, for example, you could make a static blog engine that uses Idyll to compile the
+You can use Idyll directly from JavaScript as well; this is useful if you want to build on
+top of Idyll. For example, you could make a static blog engine that uses Idyll to compile the
 blog posts.
 
 ### Example

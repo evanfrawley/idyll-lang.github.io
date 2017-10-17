@@ -33,7 +33,7 @@ easy to add Google Analytics to your page.
   * [Analytics](#analytics)
   * [Meta](#meta)
 
-All built-in compononents expose a property `onEnteredView` that can be used to trigger events when a reader scrolls the page to
+All built-in components expose a property `onEnteredView` that can be used to trigger events when a reader scrolls the page to
 reveal specific content.
 
 ## Layout
@@ -66,7 +66,7 @@ Content inside of a `fixed` component will be locked in place, even when the res
 ### Inline
 
 The `inline` component adds the `display: inline-block` style property, so that items inside of `inline` component will
-be displayed next to eachother. For example, this code,
+be displayed next to each other. For example, this code,
 
 ```
 [section]
@@ -100,7 +100,7 @@ This will display a checkbox.
 
 #### Props
 
-* `value` -  A value for the checkbox. If this value is truthy, the checkbox will be shown
+* `value` -  A value for the checkbox. If this value is truthy, the checkbox will be shown.
 
 ### Button
 
@@ -161,10 +161,10 @@ This will render a dynamic variable to the screen.
 
 The properties are:
 
-* `value`: The value to display
+* `value`: The value to display.
 * `max`: The maximum value.
 * `min`: The minimum value.
-* `interval`: The granularity of the changes
+* `interval`: The granularity of the changes.
 
 ### Equation
 
@@ -220,7 +220,7 @@ This component displays a range slider. The properties are:
 * `value`: The value to display; if this is a variable, the variable will automatically be updated when the slider is moved.
 * `max`: The maximum value.
 * `min`: The minimum value.
-* `step`: The granularity of the slider
+* `step`: The granularity of the slider.
 
 ![displayvar](images/displayvar.gif)
 
@@ -292,12 +292,12 @@ This component makes it easy to insert a Google Analytics code on your page.
 The meta component adds context to the page template when building your app for publication. The following variables are available and will be inserted
 as `<meta>` properties into the head of your HTML page if you define them:
 
-* `title` - the page title
-* `description` - a short description of your project
-* `url` - the canonical URL from this project
-* `twitterHandle` - the author's twitter handle, it will create a link in the twitter card
+* `title` - the page title.
+* `description` - a short description of your project.
+* `url` - the canonical URL from this project.
+* `twitterHandle` - the author's twitter handle, it will create a link in the twitter card.
 * `shareImageUrl` - the URL of an image to be shared on social media (twitter cards, etc.). This must be a fully qualified URL, e.g. https://idyll-lang.github.io/images/logo.png.
-* `shareImageWidth` - the width of the share image in pixels
-* `shareImageHeight` - the height of the share image in pixels
+* `shareImageWidth` - the width of the share image in pixels.
+* `shareImageHeight` - the height of the share image in pixels.
 
 Continue to read about making [custom components](/components-custom).
