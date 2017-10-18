@@ -169,3 +169,4 @@ Datasets can be either `.csv` or `.json` files. CSV files will automatically be
 converted to a JSON object.
 
 Continue to the next section to learn about [customizing Idyll](/configuration-and-styles).
+
