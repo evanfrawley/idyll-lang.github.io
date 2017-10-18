@@ -14,7 +14,6 @@
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'UA-108267630-1');
-          ga && ga('send', 'pageview', location.pathname);
         </script>
       
 </head>
@@ -82,6 +81,10 @@ providing the percentage that a user has scrolled through a certain component.</
       </div>
     </div>
   </div>
+        <script>
+          ga && ga('send', 'pageview', location.pathname);
+        </script>
+      
 <script src="/bundle.js"></script>
 </body>
 </html>

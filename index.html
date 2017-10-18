@@ -14,7 +14,6 @@
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'UA-108267630-1');
-          ga && ga('send', 'pageview', location.pathname);
         </script>
       
 </head>
@@ -128,6 +127,10 @@ to use Idyll, but if you do, it is easy to extend with your own custom component
       </div>
     </div>
   </div>
+        <script>
+          ga && ga('send', 'pageview', location.pathname);
+        </script>
+      
 <script src="/bundle.js"></script>
 </body>
 </html>
