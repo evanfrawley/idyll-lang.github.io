@@ -10,7 +10,7 @@ module.exports = {
     "Built-in components": "components-built-in.md",
     "NPM components": "components-npm.md",
     "Custom components": "components-custom.md",
-    "Refs": "components-refs.md"
+    "Scrolling and Refs": "components-scrolling-and-refs.md"
   },
   Publishing: {
     "Deploying to the web": "publishing-deploying-to-the-web.md"

@@ -13,7 +13,11 @@ its readable syntax facilitates
 collaboration between writers, editors, designers,
 and programmers on complex projects.
 
-[Try Idyll in your browser](https://idyll-lang.github.io/editor/).
+**[Try Idyll in your browser](https://idyll-lang.github.io/editor/)**.
+
+<a href="https://opencollective.com/idyll/donate" target="_blank">
+  <img src="https://opencollective.com/idyll/donate/button@2x.png?color=blue" width="200" style="margin: 30px 0;" />
+</a>
 
 ### Examples
 
