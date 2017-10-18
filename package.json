@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && budo --dir site -- -t minidocs/transform"  ,
-    "build": "minidocs docs/ --contents contents.js --logo images/logo-text.svg --assets images/ --output site/ --css style.css --favicon images/favicon.ico --full-html",
+    "build": "minidocs docs/ --contents contents.js --logo images/logo-text.svg --assets images/ --output site/ --css style.css --favicon images/favicon.ico --full-html --ga UA-108267630-1",
     "test": "echo \"Error: no test specified\" && exit 1",
     "just-deploy": "gh-pages -d site --branch master",
     "deploy": "npm run build && gh-pages -d site --branch master"
