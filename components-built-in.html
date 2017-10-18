@@ -8,6 +8,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108267630-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-108267630-1');
+        </script>
+      
 </head>
 <body>
 <div id="choo-root" class="minidocs">
@@ -93,7 +101,7 @@ be displayed next to eachother. For example, this code,</p>
 [<span class="hljs-string">inline</span>][<span class="hljs-symbol">img src:"..." /</span>][<span class="hljs-string">/inline</span>]
 [/section]
 </code></pre><p>Will display three images side by side.</p>
-<h2 id="presentation"><a href="#presentation" class="anchor"></a>Presentation</h2><h3 id="action"><a href="#action" class="anchor"></a>Action</h3><p>The <code>action</code> compoennt allows you to add event handlers to text. For example:</p>
+<h2 id="presentation"><a href="#presentation" class="anchor"></a>Presentation</h2><h3 id="action"><a href="#action" class="anchor"></a>Action</h3><p>The <code>action</code> component allows you to add event handlers to text. For example:</p>
 <pre><code>This <span class="hljs-keyword">is</span> regular <span class="hljs-keyword">text</span>, but <span class="hljs-keyword">when</span> you [action onClick:`alert(<span class="hljs-comment">'clicked the text')`]click me[/action], an alert will appear.</span>
 </code></pre><h4 id="props"><a href="#props" class="anchor"></a>Props</h4><ul>
 <li><code>onClick</code></li>
