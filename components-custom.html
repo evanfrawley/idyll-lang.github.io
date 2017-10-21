@@ -32,7 +32,7 @@
             <div class="minidocs-menu-toc">
               <a href="#overview" class="h3 content-link">Overview</a><a href="#idyll-component" class="h3 content-link">Idyll component</a><a href="#name-resolution" class="h3 content-link">Name resolution</a>
             </div>
-          </div><div><a href="/components-refs" class="content-link ">Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div><div><a href="/open-source-gitter" class="content-link ">Gitter</a></div>
+          </div><div><a href="/components-scrolling-and-refs" class="content-link ">Scrolling and Refs</a></div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div><div><a href="/open-source-gitter" class="content-link ">Gitter</a></div>
       </div>
     </div>
   </div>
@@ -50,12 +50,13 @@ everything will just work, no need to worry about compiling, bundling,
 or module loading.</p>
 <p>For example, this custom component</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>);
-<span class="hljs-keyword">const</span> IdyllComponent = <span class="hljs-built_in">require</span>(<span class="hljs-string">'idyll-component'</span>);
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Custom</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
   render() {
+    <span class="hljs-keyword">const</span> { hasError, updateProps, ...props } = <span class="hljs-keyword">this</span>.props;
+
     <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> {<span class="hljs-attr">...this.props</span>}&gt;</span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> {<span class="hljs-attr">...props</span>}&gt;</span>
         This is a custom component
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
     );
@@ -67,21 +68,17 @@ or module loading.</p>
 <p>could be invoked inside of an Idyll file with the
 following code:</p>
 <pre><code>[Custom /]
-</code></pre><h2 id="idyll-component"><a href="#idyll-component" class="anchor"></a>Idyll component</h2><p>The <code>IdyllComponent</code> class adds an
-<code>updateProps</code> method that is used to keep
-variables in sync with the rest of the document, and also
-adds a property <code>onEnteredView</code> that can be used to
-trigger events in scroll-based narratives.</p>
+</code></pre><h2 id="idyll-component"><a href="#idyll-component" class="anchor"></a>Idyll component</h2><p>Idyll adds an <code>updateProps</code> method to the components input props.
+This function can be called to update variable values and propagate
+those changes to the rest of the Idyll document.</p>
 <h3 id="example"><a href="#example" class="anchor"></a>Example</h3><p>For example, a component can change the value of a
-property that it receives, and Idyll will propegate
+property that it receives, and Idyll will propagate
 the change to any bound variables on the page.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>);
-<span class="hljs-keyword">const</span> IdyllComponent = <span class="hljs-built_in">require</span>(<span class="hljs-string">'idyll-component'</span>);
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Incrementer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">IdyllComponent</span> </span>{
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Incrementer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
 
   increment() {
-    <span class="hljs-keyword">this</span>.updateProps({
+    <span class="hljs-keyword">this</span>.props.updateProps({
       <span class="hljs-attr">value</span>: <span class="hljs-keyword">this</span>.props.value + <span class="hljs-number">1</span>
     })
   }

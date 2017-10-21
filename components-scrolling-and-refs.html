@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>idyll-lang.github</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="/bundle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108267630-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-108267630-1');
+        </script>
+      
+</head>
+<body>
+<div id="choo-root" class="minidocs">
+    <div class="_2bbb10f8 minidocs-sidebar">
+    <div class="minidocs-header">
+      <h1><a href="/"><img src="/logo-text.svg" alt="idyll-lang.github" class="minidocs-logo" /></a></h1>
+    </div>
+    <div class="_689fec56 minidocs-contents">
+    <button class="minidocs-menu-toggle">Menu</button>
+    <div class="minidocs-menu menu-closed menu-small">
+      <div class="minidocs-menu-wrapper">
+        <div class="h1">Overview</div><div><a href="/introduction" class="content-link ">Introduction</a></div><div><a href="/getting-started" class="content-link ">Getting started</a></div><div><a href="/syntax" class="content-link ">Syntax</a></div><div><a href="/configuration-and-styles" class="content-link ">Configuration and styles</a></div><div class="h1">Components</div><div><a href="/components-overview" class="content-link ">Overview</a></div><div><a href="/components-built-in" class="content-link ">Built-in components</a></div><div><a href="/components-npm" class="content-link ">NPM components</a></div><div><a href="/components-custom" class="content-link ">Custom components</a></div><div>
+            <a href="/components-scrolling-and-refs" class="content-link active">Scrolling and Refs</a>
+            <div class="minidocs-menu-toc">
+              
+            </div>
+          </div><div class="h1">Publishing</div><div><a href="/publishing-deploying-to-the-web" class="content-link ">Deploying to the web</a></div><div class="h1">Open Source</div><div><a href="/open-source-github" class="content-link ">GitHub</a></div><div><a href="/open-source-gitter" class="content-link ">Gitter</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="_571b6797 minidocs-main">
+      <div class="markdown-body">
+        <div class="_3f4b1fbc minidocs-content">
+    
+    
+    <div><h1 id="viewport-events"><a href="#viewport-events" class="anchor"></a>Viewport Events</h1><p>The following events are added as properties to all Idyll components:</p>
+<ul>
+<li><code>onEnterView</code> - triggered when a component partially enters the viewport.</li>
+<li><code>onEnterViewFully</code> - triggered when a component fully enters the viewport.</li>
+<li><code>onExitView</code> - triggered when a component partially exits the viewport.</li>
+<li><code>onExitViewFully</code>  - triggered when a component fully enters the viewport.</li>
+</ul>
+<p>To customize the position at which these events get triggered (e.g. to trigger the <code>onEnterView</code> event only
+after a component is already 100 pixels inside the viewport), the <code>scrollOffset</code> property can be used.</p>
+<pre><code>A standard trigger
+[MyComponent <span class="hljs-keyword">on</span>EnterView:`<span class="hljs-keyword">state</span>Var++` /]
+
+Add a scroll offset of -<span class="hljs-number">100</span> pixels <span class="hljs-keyword">to</span> both the top and bottom of the viewport.
+This means that the event will get triggered when the component is <span class="hljs-number">100</span> pixels
+outside of the viewport.
+[MyComponent <span class="hljs-keyword">on</span>EnterView:`<span class="hljs-keyword">state</span>Var++` scrollOffset:-<span class="hljs-number">100</span> /]
+
+Add a different offset <span class="hljs-keyword">to</span> the top and bottom of the viewport
+[MyComponent <span class="hljs-keyword">on</span>EnterView:`<span class="hljs-keyword">state</span>Var++` scrollOffset:`{ top: -<span class="hljs-number">200</span>, bottom: <span class="hljs-number">200</span> }` /]
+</code></pre><h1 id="refs"><a href="#refs" class="anchor"></a>Refs</h1><p>Idyll exposes the <code>ref</code> property to allow you to refer to specific components in
+property expressions.</p>
+<pre><code>[<span class="hljs-name">Component</span> ref:<span class="hljs-string">"thisComponent"</span> propName:`refs.thisComponent`  /]
+</code></pre><p>The ref property allows you to update the state of one component based on properties of another. Idyll
+provides some utilities automatically, for example keeping track of the position
+of a component on the page, and how far through a component&#39;s content the reader has
+scrolled.</p>
+<p>Each ref object has the following properties:</p>
+<pre><code class="lang-js">{
+  <span class="hljs-attr">domNode</span>: node,
+  <span class="hljs-attr">isInViewport</span>: boolean,
+  <span class="hljs-attr">isFullyInViewport</span>: boolean,
+  <span class="hljs-attr">isAboveViewport</span>: boolean,
+  <span class="hljs-attr">isBelowViewport</span>: boolean
+  top: number <span class="hljs-comment">// distance from the top of the document to the top of this element.</span>
+  bottom: number <span class="hljs-comment">// distance from the top of the document to the bottom of this watcher.</span>
+  height: number <span class="hljs-comment">// top - bottom.</span>
+}
+</code></pre>
+<p>You&#39;ve learned all about Idyll! All that&#39;s left is <a href="/publishing-deploying-to-the-web">deploying your project to the web</a>.</p>
+</div>
+  </div>
+      </div>
+    </div>
+  </div>
+<script src="/bundle.js"></script>
+</body>
+</html>
