@@ -1,7 +1,12 @@
 
 # Syntax
 
-*Note: Idyll tries to maintain parity with popular markdown implementations, but sometimes doesn't get things exactly right. If something seems off, feel free to open an issue on the [compiler page](https://github.com/idyll-lang/idyll-compiler/issues).*
+*Note: Idyll tries to maintain parity with popular markdown implementations, but sometimes doesn't get things exactly right. If something seems off, feel free to open [an issue](https://github.com/idyll-lang/idyll/issues?q=is%3Aissue+is%3Aopen+label%3ACompiler).*
+
+We provide syntax highlighting plugins for several editors:
+
+* [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=mathisonian.idyll-syntax)
+* [Atom](https://atom.io/packages/language-idyll)
 
 ## Text
 
