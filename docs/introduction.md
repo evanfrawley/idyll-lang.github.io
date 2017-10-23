@@ -15,10 +15,6 @@ and programmers on complex projects.
 
 **[Try Idyll in your browser](https://idyll-lang.github.io/editor/)**.
 
-<a href="https://opencollective.com/idyll/donate" target="_blank">
-  <img src="https://opencollective.com/idyll/donate/button@2x.png?color=blue" width="200" style="margin: 30px 0;" />
-</a>
-
 ### Examples
 
 ##### Full articles
@@ -96,5 +92,9 @@ In Idyll the entire document is reactive, built on top of Facebook's React frame
 immediately propagate through the entire page, taking the pain out of creating
 data-driven experiences that respond to reader input. You don't need to know anything about React
 to use Idyll, but if you do, it is easy to extend with your own custom components.
+
+<a href="https://opencollective.com/idyll/donate" target="_blank">
+  <img src="https://opencollective.com/idyll/donate/button@2x.png?color=blue" width="200" style="margin: 30px 0;" />
+</a>
 
 Continue to the [next section](/getting-started) to start using Idyll.
